@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Host wrapper: `docker exec` into the long-lived toolchain container (no per-call startup cost).
+# Symlink a tool name to this file (ln -s _exec scripts/env/bin/<tool>) and put scripts/env/bin on PATH.
+set -euo pipefail
+CONTAINER="${TOOLCHAIN_CONTAINER:-static_student-toolchain}"
+if ! docker ps --format '{{.Names}}' | grep -q "^${CONTAINER}$"; then
+    echo "error: container '${CONTAINER}' not running; start it with: docker compose -f scripts/env/docker-compose.yml up -d" >&2
+    exit 127
+fi
+exec docker exec -i -w /work "${CONTAINER}" "$(basename "$0")" "$@"

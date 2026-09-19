@@ -1,0 +1,7 @@
+# Freeze record of the legacy telemetry parser. The parser was written against data/drift/sources_v0.json only,
+# before any drift operator or held-out family was implemented. Any later edit to these files changes the hashes;
+# tests/test_legacy_freeze.py fails if that happens.
+frozen_utc: 2026-09-19T22:39:35Z
+csrc/legacy/telemetry_legacy.cc: a87765cf400794760cf5e97b93d9a1bfbdd4a71ee5cbfe6a7d48cc2e95ce7045
+csrc/metric_struct.h: bf24e31e17a5328539159c418d6ae12f480cc1170ae8eab16531cc3222a3c1b1
+data/drift/sources_v0.json: d1475c6d7ea9fe1f604e4e710c3190a0b7888122852fb53a0898cff96e4df37c

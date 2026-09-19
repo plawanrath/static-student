@@ -1,0 +1,15 @@
+# Pinned system toolchain for static-student (compilers, runtimes, profilers: everything that is not a pip package).
+# Pin the base image by digest and every tool by exact version; record the image tag in .research-kit/project.json
+# ("docker_images") so handoff can `docker save` it instead of rebuilding.
+FROM ubuntu:24.04
+ARG DEBIAN_FRONTEND=noninteractive
+RUN apt-get update && apt-get install -y --no-install-recommends \
+      build-essential ca-certificates git \
+      clang-18 lld-18 llvm-18 cmake ninja-build binutils \
+      libre2-dev linux-tools-generic time \
+    && rm -rf /var/lib/apt/lists/*
+# Linux build + measurement toolchain for the x86-64 host: clang/lld for the generated kernel, RE2 for the legacy
+# parser, perf for counters. Engine baselines (ONNX Runtime C API, ggml, TFLite Micro) are built from pinned source
+# tags by scripts/env/build_engines.sh (added with the baselines). TODO: pin the base image by digest.
+WORKDIR /work
+CMD ["sleep", "infinity"]

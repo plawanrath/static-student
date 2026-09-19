@@ -1,0 +1,91 @@
+{
+ "run": "telemetry-mlx-pilot",
+ "spec": "specs/telemetry.spec",
+ "spec_sha256": "eb8d6ae4b5bebde44493e704b3cd42bda30967a9df7a623aa05e2dee6acc6450",
+ "teacher": "mlx-community/Mistral-Small-3.2-24B-Instruct-2506-8bit@1db83546",
+ "sampler": {
+  "temperature": 0.9,
+  "top_p": 0.95,
+  "max_tokens": 450,
+  "seed": 0
+ },
+ "seed": 0,
+ "task_card_sha256": "ce90fcba536c7f046a25808aafcfac837d803de4371ca74dd7f867bb3bb358cb",
+ "families_sha256": "f76276f9f490f761610a7e6a993d738a45e94c1585c4cb89e84f0013a18b8923",
+ "reject_tokens_sha256": "3e62dd7c9722f8bd389cebfe96de03ef9728d9cc03fd1b537e147929bcfbd587",
+ "families": 40,
+ "families_per_bucket": {
+  "clean": 14,
+  "near_miss": 10,
+  "should_defer": 6,
+  "drifted": 10
+ },
+ "proposed": 64,
+ "acceptance_rate": 0.625,
+ "validation": {
+  "clean": {
+   "schema": 5,
+   "accepted": 14,
+   "inverse_mismatch": 6,
+   "bucket_mismatch": 1
+  },
+  "near_miss": {
+   "inverse_mismatch": 1,
+   "accepted": 10,
+   "too_long": 2
+  },
+  "drifted": {
+   "accepted": 10,
+   "operator_not_applicable": 1
+  },
+  "should_defer": {
+   "bucket_mismatch": 5,
+   "schema": 3,
+   "accepted": 6
+  }
+ },
+ "pools": {
+  "tel-train": {
+   "n": 5000,
+   "families": 36,
+   "defer_rate": 0.153,
+   "seed": 0
+  },
+  "tel-dev": {
+   "n": 500,
+   "families": 4,
+   "defer_rate": 0.25,
+   "seed": 0
+  }
+ },
+ "seconds": 1014.2,
+ "defer_reasons_train": {
+  "non_numeric": 139,
+  "ambiguous_latency": 278,
+  "multi_record": 139,
+  "unit_unknown": 139,
+  "truncated": 28,
+  "corrupted": 42
+ },
+ "containers": {
+  "logfmt": 8,
+  "kv": 14,
+  "json_flat": 6,
+  "query_string": 1,
+  "csv_positional": 2,
+  "json_nested": 8,
+  "free_text": 1
+ },
+ "units": {
+  "min": 930,
+  "ms": 1805,
+  "s": 1083,
+  "ns": 139,
+  "us": 278
+ },
+ "payload_bytes": {
+  "mean": 133.2,
+  "max": 247
+ },
+ "train_dev_family_overlap": 0
+}

@@ -1,0 +1,532 @@
+{
+ "uap_core_commit": "73e7340c3ed8055051607b296bf46ead7aa5f19e",
+ "fixtures_raw": 14692,
+ "fixtures_unique": 14654,
+ "with_os_gold": 217,
+ "per_file_unique": {
+  "tests/test_ua.yaml": 1600,
+  "test_resources/pgts_browser_list.yaml": 12476,
+  "test_resources/firefox_user_agent_strings.yaml": 239,
+  "test_resources/opera_mini_user_agent_strings.yaml": 199,
+  "test_resources/podcasting_user_agent_strings.yaml": 140
+ },
+ "first_seen_by_year": {
+  "2012": 81,
+  "2013": 314,
+  "2014": 13138,
+  "2015": 453,
+  "2016": 78,
+  "2017": 206,
+  "2018": 64,
+  "2019": 85,
+  "2020": 41,
+  "2021": 11,
+  "2022": 6,
+  "2023": 7,
+  "2024": 41,
+  "2025": 45,
+  "2026": 84
+ },
+ "candidates": [
+  {
+   "D": "2013-01-01",
+   "pre": 81,
+   "post": 14573,
+   "post_share": 0.9945,
+   "post_span_years": 13.36,
+   "ok": true
+  },
+  {
+   "D": "2014-01-01",
+   "pre": 395,
+   "post": 14259,
+   "post_share": 0.973,
+   "post_span_years": 12.38,
+   "ok": true
+  },
+  {
+   "D": "2015-01-01",
+   "pre": 13533,
+   "post": 1121,
+   "post_share": 0.0765,
+   "post_span_years": 11.29,
+   "ok": false
+  },
+  {
+   "D": "2016-01-01",
+   "pre": 13986,
+   "post": 668,
+   "post_share": 0.0456,
+   "post_span_years": 10.31,
+   "ok": false
+  },
+  {
+   "D": "2017-01-01",
+   "pre": 14064,
+   "post": 590,
+   "post_share": 0.0403,
+   "post_span_years": 9.34,
+   "ok": false
+  },
+  {
+   "D": "2018-01-01",
+   "pre": 14270,
+   "post": 384,
+   "post_share": 0.0262,
+   "post_span_years": 8.39,
+   "ok": false
+  },
+  {
+   "D": "2019-01-01",
+   "pre": 14334,
+   "post": 320,
+   "post_share": 0.0218,
+   "post_span_years": 7.36,
+   "ok": false
+  },
+  {
+   "D": "2020-01-01",
+   "pre": 14419,
+   "post": 235,
+   "post_share": 0.016,
+   "post_span_years": 6.37,
+   "ok": false
+  },
+  {
+   "D": "2021-01-01",
+   "pre": 14460,
+   "post": 194,
+   "post_share": 0.0132,
+   "post_span_years": 5.36,
+   "ok": false
+  },
+  {
+   "D": "2022-01-01",
+   "pre": 14471,
+   "post": 183,
+   "post_share": 0.0125,
+   "post_span_years": 4.22,
+   "ok": false
+  },
+  {
+   "D": "2023-01-01",
+   "pre": 14477,
+   "post": 177,
+   "post_share": 0.0121,
+   "post_span_years": 3.36,
+   "ok": false
+  },
+  {
+   "D": "2024-01-01",
+   "pre": 14484,
+   "post": 170,
+   "post_share": 0.0116,
+   "post_span_years": 2.26,
+   "ok": false
+  },
+  {
+   "D": "2025-01-01",
+   "pre": 14525,
+   "post": 129,
+   "post_share": 0.0088,
+   "post_span_years": 1.39,
+   "ok": false
+  },
+  {
+   "D": "2026-01-01",
+   "pre": 14570,
+   "post": 84,
+   "post_share": 0.0057,
+   "post_span_years": 0.36,
+   "ok": false
+  }
+ ],
+ "rule_choice": {
+  "D": "2014-01-01",
+  "pre": 395,
+  "post": 14259,
+  "post_share": 0.973,
+  "post_span_years": 12.38,
+  "ok": true
+ },
+ "D": "2014-01-01",
+ "pre": 395,
+ "post": 14259,
+ "post_share": 0.973,
+ "legacy_regexes_commit": "b42ddd01d1b5985bde188beff86f3b47229267a6",
+ "legacy_regexes_commit_date": "2013-12-18T12:58:08-08:00",
+ "user_agent_parsers_at_D": 143,
+ "user_agent_parsers_at_pinned": 433,
+ "python_re_uncompilable": {
+  "at_D": 0,
+  "at_pinned": 0
+ },
+ "families_pre_D": 77,
+ "K_99pct": 74,
+ "post_D_fixtures_outside_vocab": 0.1985,
+ "python_re_preview": {
+  "frozen_pre_D": {
+   "n": 395,
+   "no_match": {
+    "point": 0.0,
+    "ci_low": 0.0,
+    "ci_high": 0.0,
+    "n": 395,
+    "n_resamples": 10000
+   },
+   "silent_wrong_family": {
+    "point": 0.005063291139240506,
+    "ci_low": 0.0,
+    "ci_high": 0.012658227848101266,
+    "n": 395,
+    "n_resamples": 10000
+   },
+   "silent_wrong_version_only": {
+    "point": 0.002531645569620253,
+    "ci_low": 0.0,
+    "ci_high": 0.007594936708860759,
+    "n": 395,
+    "n_resamples": 10000
+   },
+   "exact": {
+    "point": 0.9924050632911392,
+    "ci_low": 0.9822784810126582,
+    "ci_high": 1.0,
+    "n": 395,
+    "n_resamples": 10000
+   }
+  },
+  "frozen_post_D": {
+   "n": 14259,
+   "no_match": {
+    "point": 0.08534960375902939,
+    "ci_low": 0.08079107931832527,
+    "ci_high": 0.0899081281997335,
+    "n": 14259,
+    "n_resamples": 10000
+   },
+   "silent_wrong_family": {
+    "point": 0.03639806438039133,
+    "ci_low": 0.033382425135002454,
+    "ci_high": 0.03948383477102181,
+    "n": 14259,
+    "n_resamples": 10000
+   },
+   "silent_wrong_version_only": {
+    "point": 0.0018935409215232485,
+    "ci_low": 0.0011922294691072304,
+    "ci_high": 0.0025966056525702813,
+    "n": 14259,
+    "n_resamples": 10000
+   },
+   "exact": {
+    "point": 0.876358790939056,
+    "ci_low": 0.8710270706220632,
+    "ci_high": 0.8818991514131426,
+    "n": 14259,
+    "n_resamples": 10000
+   }
+  },
+  "frozen_post_D_by_year": {
+   "2014": {
+    "n": 13138,
+    "no_match": 0.0547,
+    "silent_wrong_family": 0.0097,
+    "silent_wrong_version_only": 0.0014
+   },
+   "2015": {
+    "n": 453,
+    "no_match": 0.3797,
+    "silent_wrong_family": 0.1766,
+    "silent_wrong_version_only": 0.0066
+   },
+   "2016": {
+    "n": 78,
+    "no_match": 0.5385,
+    "silent_wrong_family": 0.3205,
+    "silent_wrong_version_only": 0.0128
+   },
+   "2017": {
+    "n": 206,
+    "no_match": 0.6942,
+    "silent_wrong_family": 0.2524,
+    "silent_wrong_version_only": 0.0146
+   },
+   "2018": {
+    "n": 64,
+    "no_match": 0.5,
+    "silent_wrong_family": 0.4688,
+    "silent_wrong_version_only": 0.0156
+   },
+   "2019": {
+    "n": 85,
+    "no_match": 0.5647,
+    "silent_wrong_family": 0.4118,
+    "silent_wrong_version_only": 0.0
+   },
+   "2020": {
+    "n": 41,
+    "no_match": 0.7073,
+    "silent_wrong_family": 0.2683,
+    "silent_wrong_version_only": 0.0
+   },
+   "2021": {
+    "n": 11,
+    "no_match": 0.8182,
+    "silent_wrong_family": 0.1818,
+    "silent_wrong_version_only": 0.0
+   },
+   "2022": {
+    "n": 6,
+    "no_match": 0.3333,
+    "silent_wrong_family": 0.5,
+    "silent_wrong_version_only": 0.0
+   },
+   "2023": {
+    "n": 7,
+    "no_match": 0.2857,
+    "silent_wrong_family": 0.7143,
+    "silent_wrong_version_only": 0.0
+   },
+   "2024": {
+    "n": 41,
+    "no_match": 0.0976,
+    "silent_wrong_family": 0.8537,
+    "silent_wrong_version_only": 0.0
+   },
+   "2025": {
+    "n": 45,
+    "no_match": 0.0444,
+    "silent_wrong_family": 0.9556,
+    "silent_wrong_version_only": 0.0
+   },
+   "2026": {
+    "n": 84,
+    "no_match": 0.1667,
+    "silent_wrong_family": 0.8333,
+    "silent_wrong_version_only": 0.0
+   }
+  },
+  "pinned_post_D": {
+   "n": 14259,
+   "no_match": {
+    "point": 0.0,
+    "ci_low": 0.0,
+    "ci_high": 0.0,
+    "n": 14259,
+    "n_resamples": 10000
+   },
+   "silent_wrong_family": {
+    "point": 0.0,
+    "ci_low": 0.0,
+    "ci_high": 0.0,
+    "n": 14259,
+    "n_resamples": 10000
+   },
+   "silent_wrong_version_only": {
+    "point": 0.0005610491619328144,
+    "ci_low": 0.00021039343572480537,
+    "ci_high": 0.0009818360333824251,
+    "n": 14259,
+    "n_resamples": 10000
+   },
+   "exact": {
+    "point": 0.9994389508380672,
+    "ci_low": 0.9990181639666176,
+    "ci_high": 0.9997896065642752,
+    "n": 14259,
+    "n_resamples": 10000
+   }
+  }
+ },
+ "preview_note": "Preview with Python's re, not the RE2 legacy build; gold is uap-core's own fixture label, which the pinned regex list reproduces by construction, so pinned_post_D is a sanity check of this harness, not a baseline.",
+ "alternatives": [
+  {
+   "D": "2015-01-01",
+   "pre": 13533,
+   "post": 1121,
+   "post_share": 0.0765,
+   "legacy_regexes_commit": "f5a0250920fdb06024634f9a9dce00488a029298",
+   "legacy_regexes_commit_date": "2014-12-13T16:08:25+01:00",
+   "user_agent_parsers_at_D": 161,
+   "user_agent_parsers_at_pinned": 433,
+   "python_re_uncompilable": {
+    "at_D": 0,
+    "at_pinned": 0
+   },
+   "families_pre_D": 709,
+   "K_99pct": 574,
+   "post_D_fixtures_outside_vocab": 0.7163,
+   "python_re_preview": {
+    "frozen_pre_D": {
+     "n": 13533,
+     "no_match": {
+      "point": 0.04810463311904234,
+      "ci_low": 0.044483854282125174,
+      "ci_high": 0.051725411955959505,
+      "n": 13533,
+      "n_resamples": 10000
+     },
+     "silent_wrong_family": {
+      "point": 0.006798196999926107,
+      "ci_low": 0.0054681149782014335,
+      "ci_high": 0.00820217246730215,
+      "n": 13533,
+      "n_resamples": 10000
+     },
+     "silent_wrong_version_only": {
+      "point": 0.0002955737826054829,
+      "ci_low": 7.389344565137072e-05,
+      "ci_high": 0.0005911475652109658,
+      "n": 13533,
+      "n_resamples": 10000
+     },
+     "exact": {
+      "point": 0.9448015960984261,
+      "ci_low": 0.9408852434789035,
+      "ci_high": 0.9486440552722973,
+      "n": 13533,
+      "n_resamples": 10000
+     }
+    },
+    "frozen_post_D": {
+     "n": 1121,
+     "no_match": {
+      "point": 0.4005352363960749,
+      "ci_low": 0.3719892952720785,
+      "ci_high": 0.4299732381801962,
+      "n": 1121,
+      "n_resamples": 10000
+     },
+     "silent_wrong_family": {
+      "point": 0.39250669045495096,
+      "ci_low": 0.3639607493309545,
+      "ci_high": 0.42194469223907227,
+      "n": 1121,
+      "n_resamples": 10000
+     },
+     "silent_wrong_version_only": {
+      "point": 0.007136485280999108,
+      "ci_low": 0.0026761819803746653,
+      "ci_high": 0.012488849241748439,
+      "n": 1121,
+      "n_resamples": 10000
+     },
+     "exact": {
+      "point": 0.19982158786797502,
+      "ci_low": 0.17662801070472792,
+      "ci_high": 0.22301516503122212,
+      "n": 1121,
+      "n_resamples": 10000
+     }
+    },
+    "frozen_post_D_by_year": {
+     "2015": {
+      "n": 453,
+      "no_match": 0.3598,
+      "silent_wrong_family": 0.1965,
+      "silent_wrong_version_only": 0.0066
+     },
+     "2016": {
+      "n": 78,
+      "no_match": 0.4872,
+      "silent_wrong_family": 0.3718,
+      "silent_wrong_version_only": 0.0128
+     },
+     "2017": {
+      "n": 206,
+      "no_match": 0.5534,
+      "silent_wrong_family": 0.3932,
+      "silent_wrong_version_only": 0.0146
+     },
+     "2018": {
+      "n": 64,
+      "no_match": 0.5,
+      "silent_wrong_family": 0.4688,
+      "silent_wrong_version_only": 0.0156
+     },
+     "2019": {
+      "n": 85,
+      "no_match": 0.4706,
+      "silent_wrong_family": 0.5059,
+      "silent_wrong_version_only": 0.0
+     },
+     "2020": {
+      "n": 41,
+      "no_match": 0.7073,
+      "silent_wrong_family": 0.2439,
+      "silent_wrong_version_only": 0.0
+     },
+     "2021": {
+      "n": 11,
+      "no_match": 0.8182,
+      "silent_wrong_family": 0.1818,
+      "silent_wrong_version_only": 0.0
+     },
+     "2022": {
+      "n": 6,
+      "no_match": 0.3333,
+      "silent_wrong_family": 0.5,
+      "silent_wrong_version_only": 0.0
+     },
+     "2023": {
+      "n": 7,
+      "no_match": 0.2857,
+      "silent_wrong_family": 0.7143,
+      "silent_wrong_version_only": 0.0
+     },
+     "2024": {
+      "n": 41,
+      "no_match": 0.0976,
+      "silent_wrong_family": 0.8537,
+      "silent_wrong_version_only": 0.0
+     },
+     "2025": {
+      "n": 45,
+      "no_match": 0.0444,
+      "silent_wrong_family": 0.9556,
+      "silent_wrong_version_only": 0.0
+     },
+     "2026": {
+      "n": 84,
+      "no_match": 0.1667,
+      "silent_wrong_family": 0.8333,
+      "silent_wrong_version_only": 0.0
+     }
+    },
+    "pinned_post_D": {
+     "n": 1121,
+     "no_match": {
+      "point": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 1121,
+      "n_resamples": 10000
+     },
+     "silent_wrong_family": {
+      "point": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 1121,
+      "n_resamples": 10000
+     },
+     "silent_wrong_version_only": {
+      "point": 0.007136485280999108,
+      "ci_low": 0.0026761819803746653,
+      "ci_high": 0.012488849241748439,
+      "n": 1121,
+      "n_resamples": 10000
+     },
+     "exact": {
+      "point": 0.9928635147190009,
+      "ci_low": 0.9875111507582516,
+      "ci_high": 0.9973238180196253,
+      "n": 1121,
+      "n_resamples": 10000
+     }
+    }
+   }
+  }
+ ],
+ "flag": "13138 of 14654 fixtures (90%) first appear in 2014, one bulk import of a historical browser list; the freeze-date rule is therefore satisfied only by a D that leaves a few hundred pre-D fixtures."
+}

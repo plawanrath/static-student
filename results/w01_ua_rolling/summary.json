@@ -1,0 +1,336 @@
+{
+ "uap_core_commit": "73e7340c3ed8055051607b296bf46ead7aa5f19e",
+ "staleness_years": {
+  "0": {
+   "n": 1121,
+   "no_match": {
+    "point": 0.3791257805530776,
+    "ci_low": 0.35057983942908116,
+    "ci_high": 0.40767172167707405,
+    "n": 1121,
+    "n_resamples": 10000
+   },
+   "silent_wrong_family": {
+    "point": 0.3942908117752007,
+    "ci_low": 0.36574487065120426,
+    "ci_high": 0.42283675289919714,
+    "n": 1121,
+    "n_resamples": 10000
+   },
+   "new_family_share": 0.6539,
+   "silent_wrong_family_among_known_families": 0.2809,
+   "n_known_families": 388
+  },
+  "1": {
+   "n": 668,
+   "no_match": {
+    "point": 0.4026946107784431,
+    "ci_low": 0.36676646706586824,
+    "ci_high": 0.43862275449101795,
+    "n": 668,
+    "n_resamples": 10000
+   },
+   "silent_wrong_family": {
+    "point": 0.5224550898203593,
+    "ci_low": 0.48502994011976047,
+    "ci_high": 0.5598802395209581,
+    "n": 668,
+    "n_resamples": 10000
+   },
+   "new_family_share": 0.8593,
+   "silent_wrong_family_among_known_families": 0.5106,
+   "n_known_families": 94
+  },
+  "2": {
+   "n": 590,
+   "no_match": {
+    "point": 0.40508474576271186,
+    "ci_low": 0.36610169491525424,
+    "ci_high": 0.4440677966101695,
+    "n": 590,
+    "n_resamples": 10000
+   },
+   "silent_wrong_family": {
+    "point": 0.5423728813559322,
+    "ci_low": 0.5033898305084745,
+    "ci_high": 0.5813559322033899,
+    "n": 590,
+    "n_resamples": 10000
+   },
+   "new_family_share": 0.9,
+   "silent_wrong_family_among_known_families": 0.5085,
+   "n_known_families": 59
+  },
+  "3": {
+   "n": 384,
+   "no_match": {
+    "point": 0.3333333333333333,
+    "ci_low": 0.2864583333333333,
+    "ci_high": 0.3802083333333333,
+    "n": 384,
+    "n_resamples": 10000
+   },
+   "silent_wrong_family": {
+    "point": 0.6171875,
+    "ci_low": 0.5677083333333334,
+    "ci_high": 0.6666666666666666,
+    "n": 384,
+    "n_resamples": 10000
+   },
+   "new_family_share": 0.8932,
+   "silent_wrong_family_among_known_families": 0.561,
+   "n_known_families": 41
+  },
+  "4": {
+   "n": 320,
+   "no_match": {
+    "point": 0.30625,
+    "ci_low": 0.25625,
+    "ci_high": 0.35625,
+    "n": 320,
+    "n_resamples": 10000
+   },
+   "silent_wrong_family": {
+    "point": 0.65,
+    "ci_low": 0.596875,
+    "ci_high": 0.703125,
+    "n": 320,
+    "n_resamples": 10000
+   },
+   "new_family_share": 0.8844,
+   "silent_wrong_family_among_known_families": 0.5946,
+   "n_known_families": 37
+  },
+  "5": {
+   "n": 235,
+   "no_match": {
+    "point": 0.251063829787234,
+    "ci_low": 0.19574468085106383,
+    "ci_high": 0.30638297872340425,
+    "n": 235,
+    "n_resamples": 10000
+   },
+   "silent_wrong_family": {
+    "point": 0.7063829787234043,
+    "ci_low": 0.6468085106382979,
+    "ci_high": 0.7617021276595745,
+    "n": 235,
+    "n_resamples": 10000
+   },
+   "new_family_share": 0.8723,
+   "silent_wrong_family_among_known_families": 0.6,
+   "n_known_families": 30
+  },
+  "6": {
+   "n": 194,
+   "no_match": {
+    "point": 0.15463917525773196,
+    "ci_low": 0.10309278350515463,
+    "ci_high": 0.20618556701030927,
+    "n": 194,
+    "n_resamples": 10000
+   },
+   "silent_wrong_family": {
+    "point": 0.8041237113402062,
+    "ci_low": 0.7474226804123711,
+    "ci_high": 0.8608247422680413,
+    "n": 194,
+    "n_resamples": 10000
+   },
+   "new_family_share": 0.8763,
+   "silent_wrong_family_among_known_families": 0.6667,
+   "n_known_families": 24
+  },
+  "7": {
+   "n": 183,
+   "no_match": {
+    "point": 0.11475409836065574,
+    "ci_low": 0.07103825136612021,
+    "ci_high": 0.16393442622950818,
+    "n": 183,
+    "n_resamples": 10000
+   },
+   "silent_wrong_family": {
+    "point": 0.8415300546448088,
+    "ci_low": 0.7868852459016393,
+    "ci_high": 0.8907103825136612,
+    "n": 183,
+    "n_resamples": 10000
+   },
+   "new_family_share": 0.8743,
+   "silent_wrong_family_among_known_families": 0.6522,
+   "n_known_families": 23
+  },
+  "8": {
+   "n": 177,
+   "no_match": {
+    "point": 0.11299435028248588,
+    "ci_low": 0.06779661016949153,
+    "ci_high": 0.1638418079096045,
+    "n": 177,
+    "n_resamples": 10000
+   },
+   "silent_wrong_family": {
+    "point": 0.8587570621468926,
+    "ci_low": 0.807909604519774,
+    "ci_high": 0.9096045197740112,
+    "n": 177,
+    "n_resamples": 10000
+   },
+   "new_family_share": 0.9322,
+   "silent_wrong_family_among_known_families": 0.6667,
+   "n_known_families": 12
+  },
+  "9": {
+   "n": 170,
+   "no_match": {
+    "point": 0.10588235294117647,
+    "ci_low": 0.06470588235294118,
+    "ci_high": 0.15294117647058825,
+    "n": 170,
+    "n_resamples": 10000
+   },
+   "silent_wrong_family": {
+    "point": 0.8705882352941177,
+    "ci_low": 0.8176470588235294,
+    "ci_high": 0.9176470588235294,
+    "n": 170,
+    "n_resamples": 10000
+   },
+   "new_family_share": 0.9588,
+   "silent_wrong_family_among_known_families": 0.7143,
+   "n_known_families": 7
+  },
+  "10": {
+   "n": 129,
+   "no_match": {
+    "point": 0.12403100775193798,
+    "ci_low": 0.06976744186046512,
+    "ci_high": 0.18604651162790697,
+    "n": 129,
+    "n_resamples": 10000
+   },
+   "silent_wrong_family": {
+    "point": 0.875968992248062,
+    "ci_low": 0.813953488372093,
+    "ci_high": 0.9302325581395349,
+    "n": 129,
+    "n_resamples": 10000
+   },
+   "new_family_share": 0.9845,
+   "silent_wrong_family_among_known_families": 1.0,
+   "n_known_families": 2
+  }
+ },
+ "per_freeze_date": {
+  "2015-01-01": {
+   "regex_commit": "f5a02509",
+   "patterns": 161,
+   "pre": 13533,
+   "post": 1121,
+   "families_pre": 709,
+   "families_pre_with_5plus": 51,
+   "post_new_family_share": 0.7074
+  },
+  "2016-01-01": {
+   "regex_commit": "1d0a6b1f",
+   "patterns": 171,
+   "pre": 13986,
+   "post": 668,
+   "families_pre": 872,
+   "families_pre_with_5plus": 56,
+   "post_new_family_share": 0.8862
+  },
+  "2017-01-01": {
+   "regex_commit": "6e98843f",
+   "patterns": 183,
+   "pre": 14064,
+   "post": 590,
+   "families_pre": 909,
+   "families_pre_with_5plus": 61,
+   "post_new_family_share": 0.8898
+  },
+  "2018-01-01": {
+   "regex_commit": "1b571f0e",
+   "patterns": 257,
+   "pre": 14270,
+   "post": 384,
+   "families_pre": 1005,
+   "families_pre_with_5plus": 67,
+   "post_new_family_share": 0.8854
+  },
+  "2019-01-01": {
+   "regex_commit": "43db37e3",
+   "patterns": 279,
+   "pre": 14334,
+   "post": 320,
+   "families_pre": 1046,
+   "families_pre_with_5plus": 68,
+   "post_new_family_share": 0.8594
+  },
+  "2020-01-01": {
+   "regex_commit": "334dd9c5",
+   "patterns": 294,
+   "pre": 14419,
+   "post": 235,
+   "families_pre": 1086,
+   "families_pre_with_5plus": 71,
+   "post_new_family_share": 0.8426
+  },
+  "2021-01-01": {
+   "regex_commit": "b2f4af97",
+   "patterns": 323,
+   "pre": 14460,
+   "post": 194,
+   "families_pre": 1111,
+   "families_pre_with_5plus": 73,
+   "post_new_family_share": 0.8711
+  },
+  "2022-01-01": {
+   "regex_commit": "d37fbc9b",
+   "patterns": 344,
+   "pre": 14471,
+   "post": 183,
+   "families_pre": 1119,
+   "families_pre_with_5plus": 73,
+   "post_new_family_share": 0.8634
+  },
+  "2023-01-01": {
+   "regex_commit": "dffe7f6a",
+   "patterns": 347,
+   "pre": 14477,
+   "post": 177,
+   "families_pre": 1122,
+   "families_pre_with_5plus": 73,
+   "post_new_family_share": 0.8701
+  },
+  "2024-01-01": {
+   "regex_commit": "785a6d57",
+   "patterns": 351,
+   "pre": 14484,
+   "post": 170,
+   "families_pre": 1126,
+   "families_pre_with_5plus": 73,
+   "post_new_family_share": 0.8706
+  },
+  "2025-01-01": {
+   "regex_commit": "d4cde4c5",
+   "patterns": 368,
+   "pre": 14525,
+   "post": 129,
+   "families_pre": 1141,
+   "families_pre_with_5plus": 75,
+   "post_new_family_share": 0.907
+  },
+  "2026-01-01": {
+   "regex_commit": "7d0290f2",
+   "patterns": 397,
+   "pre": 14570,
+   "post": 84,
+   "families_pre": 1170,
+   "families_pre_with_5plus": 76,
+   "post_new_family_share": 0.7976
+  }
+ },
+ "note": "Staleness k: list frozen on 1 January of (fixture year - k). Buckets with n < 100 are dropped. Python re preview, family only."
+}

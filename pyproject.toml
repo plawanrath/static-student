@@ -1,0 +1,24 @@
+[project]
+name = "static_student"
+version = "0.1.0"
+description = "A build pipeline that distills a tiny task model from a one-line spec and links it into a native binary as read-only data, with a generated C kernel, a calibrated deferral threshold, and a deterministic fallback."
+readme = "README.md"
+requires-python = ">=3.11"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["static_student*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-ra --strict-markers"
+markers = [
+    "slow: tests that take >5s",
+    "gpu: tests requiring an accelerator (MLX / CUDA)",
+    "docker: tests requiring the pinned toolchain container",
+]

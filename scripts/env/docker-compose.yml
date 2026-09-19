@@ -1,0 +1,17 @@
+services:
+  toolchain:
+    build:
+      context: .
+      dockerfile: Dockerfile.toolchain
+    image: static_student-toolchain:0.1
+    container_name: static_student-toolchain
+    volumes:
+      - ../..:/work
+      - toolchain-cache:/cache
+    working_dir: /work
+    tty: true
+    stdin_open: true
+    restart: unless-stopped
+
+volumes:
+  toolchain-cache:

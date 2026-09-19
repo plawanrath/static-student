@@ -1,0 +1,18 @@
+# Host-side Python deps (venv only), loose and hand-edited. The resolved set is captured per platform in
+# requirements.lock.<platform>.txt by scripts/env/lock.sh. Platform-only packages take an environment marker.
+numpy>=1.26.0,<3
+scipy>=1.14.0
+pandas>=2.2.0
+matplotlib>=3.9.0
+tqdm>=4.67.0
+pyyaml>=6.0
+pytest>=8.3.0
+pytest-xdist>=3.6.0
+# student training and the float reference model (MPS on macOS, CPU on Linux)
+torch>=2.6
+# build-time teacher (never ships); Apple silicon only
+mlx-lm>=0.24 ; sys_platform == "darwin"
+huggingface_hub>=0.30
+# engine baselines: export path
+onnx>=1.17
+onnxruntime>=1.20

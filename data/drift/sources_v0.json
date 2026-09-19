@@ -1,0 +1,602 @@
+{
+ "version": 0,
+ "note": "T=0 source formats of the simulated deployment; the legacy parser is written against these.",
+ "sources": [
+  {
+   "id": "nginx_kv",
+   "envelope": "<syslog_ts> <host> nginx: ",
+   "container": "kv",
+   "sep": " ",
+   "assign": "=",
+   "slots": [
+    {
+     "role": "distractor",
+     "key": "method",
+     "value": {
+      "gen": "method"
+     }
+    },
+    {
+     "role": "distractor",
+     "key": "path",
+     "value": {
+      "gen": "path"
+     }
+    },
+    {
+     "role": "distractor",
+     "key": "status",
+     "value": {
+      "gen": "status"
+     }
+    },
+    {
+     "role": "latency",
+     "key": "request_time",
+     "value": {
+      "gen": "duration",
+      "unit": "s",
+      "unit_pos": "implicit",
+      "numfmt": "decimal"
+     }
+    },
+    {
+     "role": "user",
+     "key": "user",
+     "value": {
+      "gen": "id",
+      "scheme": "decimal"
+     }
+    },
+    {
+     "role": "distractor",
+     "key": "bytes",
+     "value": {
+      "gen": "bytes"
+     }
+    }
+   ],
+   "bucket": "clean",
+   "order": "fixed",
+   "defer_reason": null
+  },
+  {
+   "id": "app_logfmt",
+   "envelope": "",
+   "container": "logfmt",
+   "slots": [
+    {
+     "role": "distractor",
+     "key": "ts",
+     "value": {
+      "gen": "iso_ts"
+     }
+    },
+    {
+     "role": "distractor",
+     "key": "level",
+     "value": {
+      "gen": "level"
+     }
+    },
+    {
+     "role": "distractor",
+     "key": "msg",
+     "value": {
+      "gen": "free_text"
+     }
+    },
+    {
+     "role": "latency",
+     "key": "duration",
+     "value": {
+      "gen": "duration",
+      "unit": "ms"
+     }
+    },
+    {
+     "role": "user",
+     "key": "user_id",
+     "value": {
+      "gen": "id",
+      "scheme": "prefixed",
+      "prefix": "u-"
+     }
+    },
+    {
+     "role": "distractor",
+     "key": "trace_id",
+     "value": {
+      "gen": "id",
+      "scheme": "hex"
+     }
+    }
+   ],
+   "bucket": "clean",
+   "order": "fixed",
+   "defer_reason": null
+  },
+  {
+   "id": "edge_json",
+   "envelope": "",
+   "container": "json_flat",
+   "slots": [
+    {
+     "role": "distractor",
+     "key": "ts",
+     "value": {
+      "gen": "iso_ts"
+     }
+    },
+    {
+     "role": "distractor",
+     "key": "host",
+     "value": {
+      "gen": "hostname"
+     }
+    },
+    {
+     "role": "distractor",
+     "key": "status",
+     "value": {
+      "gen": "status"
+     }
+    },
+    {
+     "role": "latency",
+     "key": "latency_ms",
+     "value": {
+      "gen": "duration",
+      "unit": "ms",
+      "unit_pos": "key"
+     }
+    },
+    {
+     "role": "user",
+     "key": "user",
+     "value": {
+      "gen": "id",
+      "scheme": "decimal"
+     }
+    },
+    {
+     "role": "distractor",
+     "key": "bytes",
+     "value": {
+      "gen": "bytes"
+     }
+    }
+   ],
+   "bucket": "clean",
+   "order": "fixed",
+   "defer_reason": null
+  },
+  {
+   "id": "gateway_json_nested",
+   "envelope": "<date_time> <level> ",
+   "container": "json_nested",
+   "json_spaced": true,
+   "slots": [
+    {
+     "role": "distractor",
+     "key": "method",
+     "value": {
+      "gen": "method"
+     },
+     "path": [
+      "http"
+     ]
+    },
+    {
+     "role": "distractor",
+     "key": "path",
+     "value": {
+      "gen": "path"
+     },
+     "path": [
+      "http"
+     ]
+    },
+    {
+     "role": "latency",
+     "key": "elapsed_us",
+     "value": {
+      "gen": "duration",
+      "unit": "us",
+      "unit_pos": "key"
+     },
+     "path": [
+      "timing"
+     ]
+    },
+    {
+     "role": "distractor",
+     "key": "db_time_us",
+     "value": {
+      "gen": "int",
+      "lo": 100,
+      "hi": 90000
+     },
+     "path": [
+      "timing"
+     ]
+    },
+    {
+     "role": "user",
+     "key": "id",
+     "value": {
+      "gen": "id",
+      "scheme": "uuid"
+     },
+     "path": [
+      "user"
+     ]
+    }
+   ],
+   "bucket": "clean",
+   "order": "fixed",
+   "defer_reason": null
+  },
+  {
+   "id": "java_kv",
+   "envelope": "<date_time> <level> [<component>] ",
+   "container": "kv",
+   "sep": "; ",
+   "assign": ": ",
+   "slots": [
+    {
+     "role": "user",
+     "key": "uid",
+     "value": {
+      "gen": "id",
+      "scheme": "decimal"
+     }
+    },
+    {
+     "role": "latency",
+     "key": "rt",
+     "value": {
+      "gen": "duration",
+      "unit": "ms",
+      "unit_pos": "suffix_space"
+     }
+    },
+    {
+     "role": "distractor",
+     "key": "db_time",
+     "value": {
+      "gen": "duration",
+      "unit": "ms",
+      "unit_pos": "suffix_space"
+     }
+    },
+    {
+     "role": "distractor",
+     "key": "host",
+     "value": {
+      "gen": "hostname"
+     }
+    }
+   ],
+   "bucket": "clean",
+   "order": "fixed",
+   "defer_reason": null
+  },
+  {
+   "id": "access_qs",
+   "envelope": "<host> <method> <path>?",
+   "suffix": " HTTP/1.1",
+   "container": "query_string",
+   "slots": [
+    {
+     "role": "user",
+     "key": "uid",
+     "value": {
+      "gen": "id",
+      "scheme": "hex"
+     }
+    },
+    {
+     "role": "latency",
+     "key": "took",
+     "value": {
+      "gen": "duration",
+      "unit": "ms",
+      "unit_pos": "implicit"
+     }
+    },
+    {
+     "role": "distractor",
+     "key": "status",
+     "value": {
+      "gen": "status"
+     }
+    },
+    {
+     "role": "distractor",
+     "key": "session",
+     "value": {
+      "gen": "id",
+      "scheme": "hex"
+     }
+    }
+   ],
+   "bucket": "clean",
+   "order": "fixed",
+   "defer_reason": null
+  },
+  {
+   "id": "batch_csv",
+   "envelope": "",
+   "container": "csv_positional",
+   "sep": ",",
+   "slots": [
+    {
+     "role": "distractor",
+     "value": {
+      "gen": "iso_ts"
+     }
+    },
+    {
+     "role": "distractor",
+     "value": {
+      "gen": "method"
+     }
+    },
+    {
+     "role": "distractor",
+     "value": {
+      "gen": "path"
+     }
+    },
+    {
+     "role": "distractor",
+     "value": {
+      "gen": "status"
+     }
+    },
+    {
+     "role": "latency",
+     "value": {
+      "gen": "duration",
+      "unit": "ms"
+     }
+    },
+    {
+     "role": "user",
+     "value": {
+      "gen": "id",
+      "scheme": "prefixed",
+      "prefix": "acct-"
+     }
+    }
+   ],
+   "bucket": "clean",
+   "order": "fixed",
+   "defer_reason": null
+  },
+  {
+   "id": "worker_text",
+   "envelope": "<iso_ts> <level> <component>: ",
+   "container": "free_text",
+   "template": "handled {2} for user {1} in {0}",
+   "slots": [
+    {
+     "role": "latency",
+     "value": {
+      "gen": "duration",
+      "unit": "ms",
+      "unit_pos": "suffix_space"
+     }
+    },
+    {
+     "role": "user",
+     "value": {
+      "gen": "id",
+      "scheme": "decimal"
+     }
+    },
+    {
+     "role": "distractor",
+     "value": {
+      "gen": "path"
+     }
+    }
+   ],
+   "bucket": "clean",
+   "order": "fixed",
+   "defer_reason": null
+  },
+  {
+   "id": "metrics_pipe",
+   "envelope": "<epoch>|",
+   "container": "kv",
+   "sep": "|",
+   "assign": "=",
+   "slots": [
+    {
+     "role": "distractor",
+     "key": "host",
+     "value": {
+      "gen": "hostname"
+     }
+    },
+    {
+     "role": "latency",
+     "key": "elapsed_ms",
+     "value": {
+      "gen": "duration",
+      "unit": "ms",
+      "unit_pos": "key",
+      "numfmt": "decimal"
+     }
+    },
+    {
+     "role": "user",
+     "key": "account",
+     "value": {
+      "gen": "id",
+      "scheme": "hex"
+     }
+    },
+    {
+     "role": "distractor",
+     "key": "status",
+     "value": {
+      "gen": "status"
+     }
+    }
+   ],
+   "bucket": "clean",
+   "order": "fixed",
+   "defer_reason": null
+  },
+  {
+   "id": "quoted_kv",
+   "envelope": "<iso_ts> <host> svc[<pid>]: ",
+   "container": "kv",
+   "sep": " ",
+   "assign": "=",
+   "quote": "double_all",
+   "slots": [
+    {
+     "role": "distractor",
+     "key": "op",
+     "value": {
+      "gen": "choice",
+      "choices": [
+       "read",
+       "write",
+       "list",
+       "delete"
+      ]
+     }
+    },
+    {
+     "role": "latency",
+     "key": "time",
+     "value": {
+      "gen": "duration",
+      "unit": "ms"
+     }
+    },
+    {
+     "role": "user",
+     "key": "user",
+     "value": {
+      "gen": "id",
+      "scheme": "prefixed",
+      "prefix": "usr_"
+     }
+    },
+    {
+     "role": "distractor",
+     "key": "tenant",
+     "value": {
+      "gen": "id",
+      "scheme": "decimal"
+     }
+    }
+   ],
+   "bucket": "clean",
+   "order": "fixed",
+   "defer_reason": null
+  },
+  {
+   "id": "proxy_text",
+   "envelope": "<syslog_ts> <host> proxy[<pid>]: ",
+   "container": "free_text",
+   "template": "user {1} {3} {2} -> {4} ({0})",
+   "slots": [
+    {
+     "role": "latency",
+     "value": {
+      "gen": "duration",
+      "unit": "s",
+      "numfmt": "decimal"
+     }
+    },
+    {
+     "role": "user",
+     "value": {
+      "gen": "id",
+      "scheme": "uuid"
+     }
+    },
+    {
+     "role": "distractor",
+     "value": {
+      "gen": "path"
+     }
+    },
+    {
+     "role": "distractor",
+     "value": {
+      "gen": "method"
+     }
+    },
+    {
+     "role": "distractor",
+     "value": {
+      "gen": "status"
+     }
+    }
+   ],
+   "bucket": "clean",
+   "order": "fixed",
+   "defer_reason": null
+  },
+  {
+   "id": "audit_json",
+   "envelope": "",
+   "container": "json_flat",
+   "json_spaced": true,
+   "slots": [
+    {
+     "role": "distractor",
+     "key": "level",
+     "value": {
+      "gen": "level"
+     }
+    },
+    {
+     "role": "user",
+     "key": "principal",
+     "value": {
+      "gen": "id",
+      "scheme": "prefixed",
+      "prefix": "emp"
+     }
+    },
+    {
+     "role": "latency",
+     "key": "duration",
+     "value": {
+      "gen": "duration",
+      "unit": "s",
+      "numfmt": "decimal"
+     }
+    },
+    {
+     "role": "distractor",
+     "key": "timeout",
+     "value": {
+      "gen": "duration",
+      "unit": "s"
+     }
+    },
+    {
+     "role": "distractor",
+     "key": "request_id",
+     "value": {
+      "gen": "id",
+      "scheme": "uuid"
+     }
+    }
+   ],
+   "bucket": "clean",
+   "order": "fixed",
+   "defer_reason": null
+  }
+ ]
+}

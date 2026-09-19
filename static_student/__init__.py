@@ -1,0 +1,1 @@
+"""A build pipeline that distills a tiny task model from a one-line spec and links it into a native binary as read-only data, with a generated C kernel, a calibrated deferral threshold, and a deterministic fallback."""

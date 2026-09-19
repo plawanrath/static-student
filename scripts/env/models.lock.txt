@@ -1,0 +1,3 @@
+# Pinned upstream model revisions (HF commit hashes). Regenerate with scripts/env/pin_models.py.
+# Format: <hf_repo>@<revision>
+mlx-community/Mistral-Small-3.2-24B-Instruct-2506-8bit@1db835463eb0f953019af1048077b90403b70424
