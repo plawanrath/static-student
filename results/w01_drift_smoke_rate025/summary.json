@@ -1,0 +1,1474 @@
+{
+ "rate": 0.25,
+ "n_timelines_per_track": 5,
+ "payloads_per_source_per_step": 500,
+ "regime_thresholds": {
+  "far_delta_no_match": 0.05,
+  "near_delta_silent_wrong": 0.01
+ },
+ "tracks": {
+  "none": {
+   "final_step": {
+    "no_match": {
+     "point": 0.0,
+     "ci_low": 0.0,
+     "ci_high": 0.0,
+     "n": 20000,
+     "n_resamples": 10000
+    },
+    "silent_wrong": {
+     "point": 0.0,
+     "ci_low": 0.0,
+     "ci_high": 0.0,
+     "n": 20000,
+     "n_resamples": 10000
+    },
+    "yield": {
+     "point": 1.0,
+     "ci_low": 1.0,
+     "ci_high": 1.0,
+     "n": 20000,
+     "n_resamples": 10000
+    }
+   },
+   "curve": [
+    {
+     "step": 0,
+     "no_match": 0.0,
+     "silent_wrong": 0.0,
+     "yield": 1.0,
+     "no_match_min": 0.0,
+     "silent_wrong_min": 0.0,
+     "yield_min": 1.0,
+     "no_match_max": 0.0,
+     "silent_wrong_max": 0.0,
+     "yield_max": 1.0
+    },
+    {
+     "step": 1,
+     "no_match": 0.0,
+     "silent_wrong": 0.0,
+     "yield": 1.0,
+     "no_match_min": 0.0,
+     "silent_wrong_min": 0.0,
+     "yield_min": 1.0,
+     "no_match_max": 0.0,
+     "silent_wrong_max": 0.0,
+     "yield_max": 1.0
+    },
+    {
+     "step": 2,
+     "no_match": 0.0,
+     "silent_wrong": 0.0,
+     "yield": 1.0,
+     "no_match_min": 0.0,
+     "silent_wrong_min": 0.0,
+     "yield_min": 1.0,
+     "no_match_max": 0.0,
+     "silent_wrong_max": 0.0,
+     "yield_max": 1.0
+    },
+    {
+     "step": 3,
+     "no_match": 0.0,
+     "silent_wrong": 0.0,
+     "yield": 1.0,
+     "no_match_min": 0.0,
+     "silent_wrong_min": 0.0,
+     "yield_min": 1.0,
+     "no_match_max": 0.0,
+     "silent_wrong_max": 0.0,
+     "yield_max": 1.0
+    },
+    {
+     "step": 4,
+     "no_match": 0.0,
+     "silent_wrong": 0.0,
+     "yield": 1.0,
+     "no_match_min": 0.0,
+     "silent_wrong_min": 0.0,
+     "yield_min": 1.0,
+     "no_match_max": 0.0,
+     "silent_wrong_max": 0.0,
+     "yield_max": 1.0
+    },
+    {
+     "step": 5,
+     "no_match": 0.0,
+     "silent_wrong": 0.0,
+     "yield": 1.0,
+     "no_match_min": 0.0,
+     "silent_wrong_min": 0.0,
+     "yield_min": 1.0,
+     "no_match_max": 0.0,
+     "silent_wrong_max": 0.0,
+     "yield_max": 1.0
+    },
+    {
+     "step": 6,
+     "no_match": 0.0,
+     "silent_wrong": 0.0,
+     "yield": 1.0,
+     "no_match_min": 0.0,
+     "silent_wrong_min": 0.0,
+     "yield_min": 1.0,
+     "no_match_max": 0.0,
+     "silent_wrong_max": 0.0,
+     "yield_max": 1.0
+    },
+    {
+     "step": 7,
+     "no_match": 0.0,
+     "silent_wrong": 0.0,
+     "yield": 1.0,
+     "no_match_min": 0.0,
+     "silent_wrong_min": 0.0,
+     "yield_min": 1.0,
+     "no_match_max": 0.0,
+     "silent_wrong_max": 0.0,
+     "yield_max": 1.0
+    },
+    {
+     "step": 8,
+     "no_match": 0.0,
+     "silent_wrong": 0.0,
+     "yield": 1.0,
+     "no_match_min": 0.0,
+     "silent_wrong_min": 0.0,
+     "yield_min": 1.0,
+     "no_match_max": 0.0,
+     "silent_wrong_max": 0.0,
+     "yield_max": 1.0
+    },
+    {
+     "step": 9,
+     "no_match": 0.0,
+     "silent_wrong": 0.0,
+     "yield": 1.0,
+     "no_match_min": 0.0,
+     "silent_wrong_min": 0.0,
+     "yield_min": 1.0,
+     "no_match_max": 0.0,
+     "silent_wrong_max": 0.0,
+     "yield_max": 1.0
+    },
+    {
+     "step": 10,
+     "no_match": 0.0,
+     "silent_wrong": 0.0,
+     "yield": 1.0,
+     "no_match_min": 0.0,
+     "silent_wrong_min": 0.0,
+     "yield_min": 1.0,
+     "no_match_max": 0.0,
+     "silent_wrong_max": 0.0,
+     "yield_max": 1.0
+    },
+    {
+     "step": 11,
+     "no_match": 0.0,
+     "silent_wrong": 0.0,
+     "yield": 1.0,
+     "no_match_min": 0.0,
+     "silent_wrong_min": 0.0,
+     "yield_min": 1.0,
+     "no_match_max": 0.0,
+     "silent_wrong_max": 0.0,
+     "yield_max": 1.0
+    },
+    {
+     "step": 12,
+     "no_match": 0.0,
+     "silent_wrong": 0.0,
+     "yield": 1.0,
+     "no_match_min": 0.0,
+     "silent_wrong_min": 0.0,
+     "yield_min": 1.0,
+     "no_match_max": 0.0,
+     "silent_wrong_max": 0.0,
+     "yield_max": 1.0
+    },
+    {
+     "step": 13,
+     "no_match": 0.0,
+     "silent_wrong": 0.0,
+     "yield": 1.0,
+     "no_match_min": 0.0,
+     "silent_wrong_min": 0.0,
+     "yield_min": 1.0,
+     "no_match_max": 0.0,
+     "silent_wrong_max": 0.0,
+     "yield_max": 1.0
+    },
+    {
+     "step": 14,
+     "no_match": 0.0,
+     "silent_wrong": 0.0,
+     "yield": 1.0,
+     "no_match_min": 0.0,
+     "silent_wrong_min": 0.0,
+     "yield_min": 1.0,
+     "no_match_max": 0.0,
+     "silent_wrong_max": 0.0,
+     "yield_max": 1.0
+    },
+    {
+     "step": 15,
+     "no_match": 0.0,
+     "silent_wrong": 0.0,
+     "yield": 1.0,
+     "no_match_min": 0.0,
+     "silent_wrong_min": 0.0,
+     "yield_min": 1.0,
+     "no_match_max": 0.0,
+     "silent_wrong_max": 0.0,
+     "yield_max": 1.0
+    },
+    {
+     "step": 16,
+     "no_match": 0.0,
+     "silent_wrong": 0.0,
+     "yield": 1.0,
+     "no_match_min": 0.0,
+     "silent_wrong_min": 0.0,
+     "yield_min": 1.0,
+     "no_match_max": 0.0,
+     "silent_wrong_max": 0.0,
+     "yield_max": 1.0
+    },
+    {
+     "step": 17,
+     "no_match": 0.0,
+     "silent_wrong": 0.0,
+     "yield": 1.0,
+     "no_match_min": 0.0,
+     "silent_wrong_min": 0.0,
+     "yield_min": 1.0,
+     "no_match_max": 0.0,
+     "silent_wrong_max": 0.0,
+     "yield_max": 1.0
+    },
+    {
+     "step": 18,
+     "no_match": 0.0,
+     "silent_wrong": 0.0,
+     "yield": 1.0,
+     "no_match_min": 0.0,
+     "silent_wrong_min": 0.0,
+     "yield_min": 1.0,
+     "no_match_max": 0.0,
+     "silent_wrong_max": 0.0,
+     "yield_max": 1.0
+    },
+    {
+     "step": 19,
+     "no_match": 0.0,
+     "silent_wrong": 0.0,
+     "yield": 1.0,
+     "no_match_min": 0.0,
+     "silent_wrong_min": 0.0,
+     "yield_min": 1.0,
+     "no_match_max": 0.0,
+     "silent_wrong_max": 0.0,
+     "yield_max": 1.0
+    },
+    {
+     "step": 20,
+     "no_match": 0.0,
+     "silent_wrong": 0.0,
+     "yield": 1.0,
+     "no_match_min": 0.0,
+     "silent_wrong_min": 0.0,
+     "yield_min": 1.0,
+     "no_match_max": 0.0,
+     "silent_wrong_max": 0.0,
+     "yield_max": 1.0
+    },
+    {
+     "step": 21,
+     "no_match": 0.0,
+     "silent_wrong": 0.0,
+     "yield": 1.0,
+     "no_match_min": 0.0,
+     "silent_wrong_min": 0.0,
+     "yield_min": 1.0,
+     "no_match_max": 0.0,
+     "silent_wrong_max": 0.0,
+     "yield_max": 1.0
+    },
+    {
+     "step": 22,
+     "no_match": 0.0,
+     "silent_wrong": 0.0,
+     "yield": 1.0,
+     "no_match_min": 0.0,
+     "silent_wrong_min": 0.0,
+     "yield_min": 1.0,
+     "no_match_max": 0.0,
+     "silent_wrong_max": 0.0,
+     "yield_max": 1.0
+    },
+    {
+     "step": 23,
+     "no_match": 0.0,
+     "silent_wrong": 0.0,
+     "yield": 1.0,
+     "no_match_min": 0.0,
+     "silent_wrong_min": 0.0,
+     "yield_min": 1.0,
+     "no_match_max": 0.0,
+     "silent_wrong_max": 0.0,
+     "yield_max": 1.0
+    },
+    {
+     "step": 24,
+     "no_match": 0.0,
+     "silent_wrong": 0.0,
+     "yield": 1.0,
+     "no_match_min": 0.0,
+     "silent_wrong_min": 0.0,
+     "yield_min": 1.0,
+     "no_match_max": 0.0,
+     "silent_wrong_max": 0.0,
+     "yield_max": 1.0
+    },
+    {
+     "step": 25,
+     "no_match": 0.0,
+     "silent_wrong": 0.0,
+     "yield": 1.0,
+     "no_match_min": 0.0,
+     "silent_wrong_min": 0.0,
+     "yield_min": 1.0,
+     "no_match_max": 0.0,
+     "silent_wrong_max": 0.0,
+     "yield_max": 1.0
+    },
+    {
+     "step": 26,
+     "no_match": 0.0,
+     "silent_wrong": 0.0,
+     "yield": 1.0,
+     "no_match_min": 0.0,
+     "silent_wrong_min": 0.0,
+     "yield_min": 1.0,
+     "no_match_max": 0.0,
+     "silent_wrong_max": 0.0,
+     "yield_max": 1.0
+    }
+   ]
+  },
+  "in_curriculum": {
+   "final_step": {
+    "no_match": {
+     "point": 0.9339115351257589,
+     "ci_low": 0.9302110436542353,
+     "ci_high": 0.937669846776525,
+     "n": 17295,
+     "n_resamples": 10000
+    },
+    "silent_wrong": {
+     "point": 0.0,
+     "ci_low": 0.0,
+     "ci_high": 0.0,
+     "n": 20000,
+     "n_resamples": 10000
+    },
+    "yield": {
+     "point": 0.1924,
+     "ci_low": 0.18695,
+     "ci_high": 0.19785,
+     "n": 20000,
+     "n_resamples": 10000
+    }
+   },
+   "curve": [
+    {
+     "step": 0,
+     "no_match": 0.0,
+     "silent_wrong": 0.0,
+     "yield": 1.0,
+     "no_match_min": 0.0,
+     "silent_wrong_min": 0.0,
+     "yield_min": 1.0,
+     "no_match_max": 0.0,
+     "silent_wrong_max": 0.0,
+     "yield_max": 1.0
+    },
+    {
+     "step": 1,
+     "no_match": 0.1,
+     "silent_wrong": 0.0,
+     "yield": 0.9,
+     "no_match_min": 0.0,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.75,
+     "no_match_max": 0.25,
+     "silent_wrong_max": 0.0,
+     "yield_max": 1.0
+    },
+    {
+     "step": 2,
+     "no_match": 0.22475,
+     "silent_wrong": 0.0,
+     "yield": 0.77525,
+     "no_match_min": 0.0,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.5,
+     "no_match_max": 0.5,
+     "silent_wrong_max": 0.0,
+     "yield_max": 1.0
+    },
+    {
+     "step": 3,
+     "no_match": 0.30027,
+     "silent_wrong": 0.0,
+     "yield": 0.70025,
+     "no_match_min": 0.24875,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.5,
+     "no_match_max": 0.5,
+     "silent_wrong_max": 0.0,
+     "yield_max": 0.75125
+    },
+    {
+     "step": 4,
+     "no_match": 0.352,
+     "silent_wrong": 0.0,
+     "yield": 0.6502,
+     "no_match_min": 0.249,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.375,
+     "no_match_max": 0.63291,
+     "silent_wrong_max": 0.0,
+     "yield_max": 0.751
+    },
+    {
+     "step": 5,
+     "no_match": 0.45279,
+     "silent_wrong": 0.0,
+     "yield": 0.55,
+     "no_match_min": 0.25,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.375,
+     "no_match_max": 0.63403,
+     "silent_wrong_max": 0.0,
+     "yield_max": 0.75
+    },
+    {
+     "step": 6,
+     "no_match": 0.4483,
+     "silent_wrong": 0.0,
+     "yield": 0.5586,
+     "no_match_min": 0.25,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.375,
+     "no_match_max": 0.63211,
+     "silent_wrong_max": 0.0,
+     "yield_max": 0.75
+    },
+    {
+     "step": 7,
+     "no_match": 0.47235,
+     "silent_wrong": 0.0,
+     "yield": 0.5376,
+     "no_match_min": 0.25329,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.375,
+     "no_match_max": 0.6342,
+     "silent_wrong_max": 0.0,
+     "yield_max": 0.75
+    },
+    {
+     "step": 8,
+     "no_match": 0.49687,
+     "silent_wrong": 0.0,
+     "yield": 0.51745,
+     "no_match_min": 0.25221,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.397,
+     "no_match_max": 0.62584,
+     "silent_wrong_max": 0.0,
+     "yield_max": 0.75
+    },
+    {
+     "step": 9,
+     "no_match": 0.56957,
+     "silent_wrong": 0.0,
+     "yield": 0.45345,
+     "no_match_min": 0.25336,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.279,
+     "no_match_max": 0.74581,
+     "silent_wrong_max": 0.0,
+     "yield_max": 0.75
+    },
+    {
+     "step": 10,
+     "no_match": 0.62115,
+     "silent_wrong": 0.0,
+     "yield": 0.4138,
+     "no_match_min": 0.38921,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.29325,
+     "no_match_max": 0.75832,
+     "silent_wrong_max": 0.0,
+     "yield_max": 0.625
+    },
+    {
+     "step": 11,
+     "no_match": 0.7221,
+     "silent_wrong": 0.0,
+     "yield": 0.3171,
+     "no_match_min": 0.50323,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.19,
+     "no_match_max": 0.86631,
+     "silent_wrong_max": 0.0,
+     "yield_max": 0.5135
+    },
+    {
+     "step": 12,
+     "no_match": 0.77251,
+     "silent_wrong": 0.0,
+     "yield": 0.2693,
+     "no_match_min": 0.50337,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.14275,
+     "no_match_max": 0.87274,
+     "silent_wrong_max": 0.0,
+     "yield_max": 0.514
+    },
+    {
+     "step": 13,
+     "no_match": 0.77309,
+     "silent_wrong": 0.0,
+     "yield": 0.27335,
+     "no_match_min": 0.50607,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.1655,
+     "no_match_max": 0.86972,
+     "silent_wrong_max": 0.0,
+     "yield_max": 0.51
+    },
+    {
+     "step": 14,
+     "no_match": 0.7704,
+     "silent_wrong": 0.0,
+     "yield": 0.28475,
+     "no_match_min": 0.50401,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.19475,
+     "no_match_max": 0.86563,
+     "silent_wrong_max": 0.0,
+     "yield_max": 0.5135
+    },
+    {
+     "step": 15,
+     "no_match": 0.76991,
+     "silent_wrong": 0.0,
+     "yield": 0.29025,
+     "no_match_min": 0.50465,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.18875,
+     "no_match_max": 0.86649,
+     "silent_wrong_max": 0.0,
+     "yield_max": 0.51125
+    },
+    {
+     "step": 16,
+     "no_match": 0.76826,
+     "silent_wrong": 0.0,
+     "yield": 0.3019,
+     "no_match_min": 0.50558,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.1965,
+     "no_match_max": 0.86537,
+     "silent_wrong_max": 0.0,
+     "yield_max": 0.513
+    },
+    {
+     "step": 17,
+     "no_match": 0.77555,
+     "silent_wrong": 0.0,
+     "yield": 0.2997,
+     "no_match_min": 0.48885,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.17325,
+     "no_match_max": 0.88304,
+     "silent_wrong_max": 0.0,
+     "yield_max": 0.5505
+    },
+    {
+     "step": 18,
+     "no_match": 0.79977,
+     "silent_wrong": 0.0,
+     "yield": 0.28255,
+     "no_match_min": 0.61825,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.1815,
+     "no_match_max": 0.88082,
+     "silent_wrong_max": 0.0,
+     "yield_max": 0.43075
+    },
+    {
+     "step": 19,
+     "no_match": 0.7753,
+     "silent_wrong": 0.0,
+     "yield": 0.3022,
+     "no_match_min": 0.4882,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.17825,
+     "no_match_max": 0.88289,
+     "silent_wrong_max": 0.0,
+     "yield_max": 0.55025
+    },
+    {
+     "step": 20,
+     "no_match": 0.8565,
+     "silent_wrong": 0.0,
+     "yield": 0.23325,
+     "no_match_min": 0.76105,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.10425,
+     "no_match_max": 1.0,
+     "silent_wrong_max": 0.0,
+     "yield_max": 0.374
+    },
+    {
+     "step": 21,
+     "no_match": 0.87849,
+     "silent_wrong": 0.0,
+     "yield": 0.2202,
+     "no_match_min": 0.77788,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.13375,
+     "no_match_max": 1.0,
+     "silent_wrong_max": 0.0,
+     "yield_max": 0.374
+    },
+    {
+     "step": 22,
+     "no_match": 0.87824,
+     "silent_wrong": 0.0,
+     "yield": 0.2255,
+     "no_match_min": 0.77165,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.13175,
+     "no_match_max": 1.0,
+     "silent_wrong_max": 0.0,
+     "yield_max": 0.40525
+    },
+    {
+     "step": 23,
+     "no_match": 0.90325,
+     "silent_wrong": 0.0,
+     "yield": 0.2056,
+     "no_match_min": 0.76781,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.07725,
+     "no_match_max": 1.0,
+     "silent_wrong_max": 0.0,
+     "yield_max": 0.40725
+    },
+    {
+     "step": 24,
+     "no_match": 0.92957,
+     "silent_wrong": 0.0,
+     "yield": 0.18595,
+     "no_match_min": 0.7703,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.088,
+     "no_match_max": 1.0,
+     "silent_wrong_max": 0.0,
+     "yield_max": 0.40475
+    },
+    {
+     "step": 25,
+     "no_match": 0.92969,
+     "silent_wrong": 0.0,
+     "yield": 0.18605,
+     "no_match_min": 0.76896,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.086,
+     "no_match_max": 1.0,
+     "silent_wrong_max": 0.0,
+     "yield_max": 0.40925
+    },
+    {
+     "step": 26,
+     "no_match": 0.92975,
+     "silent_wrong": 0.0,
+     "yield": 0.1924,
+     "no_match_min": 0.76941,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.08825,
+     "no_match_max": 1.0,
+     "silent_wrong_max": 0.0,
+     "yield_max": 0.41025
+    }
+   ]
+  },
+  "heldout_params": {
+   "final_step": {
+    "no_match": {
+     "point": 0.9,
+     "ci_low": 0.89575,
+     "ci_high": 0.9041,
+     "n": 20000,
+     "n_resamples": 10000
+    },
+    "silent_wrong": {
+     "point": 0.0,
+     "ci_low": 0.0,
+     "ci_high": 0.0,
+     "n": 20000,
+     "n_resamples": 10000
+    },
+    "yield": {
+     "point": 0.1,
+     "ci_low": 0.0959,
+     "ci_high": 0.10425,
+     "n": 20000,
+     "n_resamples": 10000
+    }
+   },
+   "curve": [
+    {
+     "step": 0,
+     "no_match": 0.0,
+     "silent_wrong": 0.0,
+     "yield": 1.0,
+     "no_match_min": 0.0,
+     "silent_wrong_min": 0.0,
+     "yield_min": 1.0,
+     "no_match_max": 0.0,
+     "silent_wrong_max": 0.0,
+     "yield_max": 1.0
+    },
+    {
+     "step": 1,
+     "no_match": 0.1,
+     "silent_wrong": 0.0,
+     "yield": 0.9,
+     "no_match_min": 0.0,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.75,
+     "no_match_max": 0.25,
+     "silent_wrong_max": 0.0,
+     "yield_max": 1.0
+    },
+    {
+     "step": 2,
+     "no_match": 0.175,
+     "silent_wrong": 0.0,
+     "yield": 0.825,
+     "no_match_min": 0.0,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.5,
+     "no_match_max": 0.5,
+     "silent_wrong_max": 0.0,
+     "yield_max": 1.0
+    },
+    {
+     "step": 3,
+     "no_match": 0.32485,
+     "silent_wrong": 0.0,
+     "yield": 0.6753,
+     "no_match_min": 0.0,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.5,
+     "no_match_max": 0.5,
+     "silent_wrong_max": 0.0,
+     "yield_max": 1.0
+    },
+    {
+     "step": 4,
+     "no_match": 0.4248,
+     "silent_wrong": 0.0,
+     "yield": 0.5754,
+     "no_match_min": 0.375,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.5,
+     "no_match_max": 0.5,
+     "silent_wrong_max": 0.0,
+     "yield_max": 0.625
+    },
+    {
+     "step": 5,
+     "no_match": 0.47489,
+     "silent_wrong": 0.0,
+     "yield": 0.5253,
+     "no_match_min": 0.375,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.375,
+     "no_match_max": 0.625,
+     "silent_wrong_max": 0.0,
+     "yield_max": 0.625
+    },
+    {
+     "step": 6,
+     "no_match": 0.47483,
+     "silent_wrong": 0.0,
+     "yield": 0.52545,
+     "no_match_min": 0.375,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.375,
+     "no_match_max": 0.625,
+     "silent_wrong_max": 0.0,
+     "yield_max": 0.625
+    },
+    {
+     "step": 7,
+     "no_match": 0.52464,
+     "silent_wrong": 0.0,
+     "yield": 0.47555,
+     "no_match_min": 0.375,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.25125,
+     "no_match_max": 0.74969,
+     "silent_wrong_max": 0.0,
+     "yield_max": 0.625
+    },
+    {
+     "step": 8,
+     "no_match": 0.54969,
+     "silent_wrong": 0.0,
+     "yield": 0.45065,
+     "no_match_min": 0.375,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.25225,
+     "no_match_max": 0.74944,
+     "silent_wrong_max": 0.0,
+     "yield_max": 0.625
+    },
+    {
+     "step": 9,
+     "no_match": 0.6324,
+     "silent_wrong": 0.0,
+     "yield": 0.3676,
+     "no_match_min": 0.538,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.25,
+     "no_match_max": 0.75,
+     "silent_wrong_max": 0.0,
+     "yield_max": 0.462
+    },
+    {
+     "step": 10,
+     "no_match": 0.65725,
+     "silent_wrong": 0.0,
+     "yield": 0.34275,
+     "no_match_min": 0.53775,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.25,
+     "no_match_max": 0.75,
+     "silent_wrong_max": 0.0,
+     "yield_max": 0.46225
+    },
+    {
+     "step": 11,
+     "no_match": 0.6577,
+     "silent_wrong": 0.0,
+     "yield": 0.3423,
+     "no_match_min": 0.5385,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.25,
+     "no_match_max": 0.75,
+     "silent_wrong_max": 0.0,
+     "yield_max": 0.4615
+    },
+    {
+     "step": 12,
+     "no_match": 0.6827,
+     "silent_wrong": 0.0,
+     "yield": 0.3173,
+     "no_match_min": 0.5385,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.25,
+     "no_match_max": 0.75,
+     "silent_wrong_max": 0.0,
+     "yield_max": 0.4615
+    },
+    {
+     "step": 13,
+     "no_match": 0.75,
+     "silent_wrong": 0.0,
+     "yield": 0.25,
+     "no_match_min": 0.625,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.125,
+     "no_match_max": 0.875,
+     "silent_wrong_max": 0.0,
+     "yield_max": 0.375
+    },
+    {
+     "step": 14,
+     "no_match": 0.75,
+     "silent_wrong": 0.0,
+     "yield": 0.25,
+     "no_match_min": 0.625,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.125,
+     "no_match_max": 0.875,
+     "silent_wrong_max": 0.0,
+     "yield_max": 0.375
+    },
+    {
+     "step": 15,
+     "no_match": 0.75795,
+     "silent_wrong": 0.0,
+     "yield": 0.24205,
+     "no_match_min": 0.625,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.125,
+     "no_match_max": 0.875,
+     "silent_wrong_max": 0.0,
+     "yield_max": 0.375
+    },
+    {
+     "step": 16,
+     "no_match": 0.775,
+     "silent_wrong": 0.0,
+     "yield": 0.225,
+     "no_match_min": 0.625,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.125,
+     "no_match_max": 0.875,
+     "silent_wrong_max": 0.0,
+     "yield_max": 0.375
+    },
+    {
+     "step": 17,
+     "no_match": 0.8,
+     "silent_wrong": 0.0,
+     "yield": 0.2,
+     "no_match_min": 0.625,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.125,
+     "no_match_max": 0.875,
+     "silent_wrong_max": 0.0,
+     "yield_max": 0.375
+    },
+    {
+     "step": 18,
+     "no_match": 0.79996,
+     "silent_wrong": 0.0,
+     "yield": 0.2003,
+     "no_match_min": 0.625,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.125,
+     "no_match_max": 0.875,
+     "silent_wrong_max": 0.0,
+     "yield_max": 0.375
+    },
+    {
+     "step": 19,
+     "no_match": 0.78331,
+     "silent_wrong": 0.0,
+     "yield": 0.21705,
+     "no_match_min": 0.625,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.125,
+     "no_match_max": 0.875,
+     "silent_wrong_max": 0.0,
+     "yield_max": 0.375
+    },
+    {
+     "step": 20,
+     "no_match": 0.83368,
+     "silent_wrong": 0.0,
+     "yield": 0.1665,
+     "no_match_min": 0.625,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.0,
+     "no_match_max": 1.0,
+     "silent_wrong_max": 0.0,
+     "yield_max": 0.375
+    },
+    {
+     "step": 21,
+     "no_match": 0.85807,
+     "silent_wrong": 0.0,
+     "yield": 0.1422,
+     "no_match_min": 0.75,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.0,
+     "no_match_max": 1.0,
+     "silent_wrong_max": 0.0,
+     "yield_max": 0.25
+    },
+    {
+     "step": 22,
+     "no_match": 0.85833,
+     "silent_wrong": 0.0,
+     "yield": 0.1419,
+     "no_match_min": 0.75,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.0,
+     "no_match_max": 1.0,
+     "silent_wrong_max": 0.0,
+     "yield_max": 0.25
+    },
+    {
+     "step": 23,
+     "no_match": 0.85787,
+     "silent_wrong": 0.0,
+     "yield": 0.14245,
+     "no_match_min": 0.75,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.0,
+     "no_match_max": 1.0,
+     "silent_wrong_max": 0.0,
+     "yield_max": 0.25
+    },
+    {
+     "step": 24,
+     "no_match": 0.8836,
+     "silent_wrong": 0.0,
+     "yield": 0.1164,
+     "no_match_min": 0.75,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.0,
+     "no_match_max": 1.0,
+     "silent_wrong_max": 0.0,
+     "yield_max": 0.25
+    },
+    {
+     "step": 25,
+     "no_match": 0.9,
+     "silent_wrong": 0.0,
+     "yield": 0.1,
+     "no_match_min": 0.875,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.0,
+     "no_match_max": 1.0,
+     "silent_wrong_max": 0.0,
+     "yield_max": 0.125
+    },
+    {
+     "step": 26,
+     "no_match": 0.9,
+     "silent_wrong": 0.0,
+     "yield": 0.1,
+     "no_match_min": 0.875,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.0,
+     "no_match_max": 1.0,
+     "silent_wrong_max": 0.0,
+     "yield_max": 0.125
+    }
+   ]
+  },
+  "heldout_operators": {
+   "final_step": {
+    "no_match": {
+     "point": 0.7727272727272727,
+     "ci_low": 0.765,
+     "ci_high": 0.7805454545454545,
+     "n": 11000,
+     "n_resamples": 10000
+    },
+    "silent_wrong": {
+     "point": 0.0,
+     "ci_low": 0.0,
+     "ci_high": 0.0,
+     "n": 20000,
+     "n_resamples": 10000
+    },
+    "yield": {
+     "point": 0.575,
+     "ci_low": 0.56815,
+     "ci_high": 0.5819,
+     "n": 20000,
+     "n_resamples": 10000
+    }
+   },
+   "curve": [
+    {
+     "step": 0,
+     "no_match": 0.0,
+     "silent_wrong": 0.0,
+     "yield": 1.0,
+     "no_match_min": 0.0,
+     "silent_wrong_min": 0.0,
+     "yield_min": 1.0,
+     "no_match_max": 0.0,
+     "silent_wrong_max": 0.0,
+     "yield_max": 1.0
+    },
+    {
+     "step": 1,
+     "no_match": 0.0,
+     "silent_wrong": 0.0,
+     "yield": 1.0,
+     "no_match_min": 0.0,
+     "silent_wrong_min": 0.0,
+     "yield_min": 1.0,
+     "no_match_max": 0.0,
+     "silent_wrong_max": 0.0,
+     "yield_max": 1.0
+    },
+    {
+     "step": 2,
+     "no_match": 0.08333,
+     "silent_wrong": 0.0,
+     "yield": 0.925,
+     "no_match_min": 0.0,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.875,
+     "no_match_max": 0.16667,
+     "silent_wrong_max": 0.0,
+     "yield_max": 1.0
+    },
+    {
+     "step": 3,
+     "no_match": 0.23333,
+     "silent_wrong": 0.0,
+     "yield": 0.775,
+     "no_match_min": 0.125,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.625,
+     "no_match_max": 0.375,
+     "silent_wrong_max": 0.0,
+     "yield_max": 0.875
+    },
+    {
+     "step": 4,
+     "no_match": 0.25833,
+     "silent_wrong": 0.0,
+     "yield": 0.75,
+     "no_match_min": 0.125,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.625,
+     "no_match_max": 0.375,
+     "silent_wrong_max": 0.0,
+     "yield_max": 0.875
+    },
+    {
+     "step": 5,
+     "no_match": 0.32262,
+     "silent_wrong": 0.0,
+     "yield": 0.7,
+     "no_match_min": 0.16667,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.5,
+     "no_match_max": 0.57143,
+     "silent_wrong_max": 0.0,
+     "yield_max": 0.875
+    },
+    {
+     "step": 6,
+     "no_match": 0.40429,
+     "silent_wrong": 0.0,
+     "yield": 0.625,
+     "no_match_min": 0.2,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.25,
+     "no_match_max": 0.75,
+     "silent_wrong_max": 0.0,
+     "yield_max": 0.875
+    },
+    {
+     "step": 7,
+     "no_match": 0.46143,
+     "silent_wrong": 0.0,
+     "yield": 0.575,
+     "no_match_min": 0.2,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.25,
+     "no_match_max": 0.75,
+     "silent_wrong_max": 0.0,
+     "yield_max": 0.875
+    },
+    {
+     "step": 8,
+     "no_match": 0.49,
+     "silent_wrong": 0.0,
+     "yield": 0.55,
+     "no_match_min": 0.2,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.25,
+     "no_match_max": 0.75,
+     "silent_wrong_max": 0.0,
+     "yield_max": 0.875
+    },
+    {
+     "step": 9,
+     "no_match": 0.505,
+     "silent_wrong": 0.0,
+     "yield": 0.55,
+     "no_match_min": 0.28571,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.375,
+     "no_match_max": 0.71429,
+     "silent_wrong_max": 0.0,
+     "yield_max": 0.75
+    },
+    {
+     "step": 10,
+     "no_match": 0.48119,
+     "silent_wrong": 0.0,
+     "yield": 0.575,
+     "no_match_min": 0.16667,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.375,
+     "no_match_max": 0.71429,
+     "silent_wrong_max": 0.0,
+     "yield_max": 0.875
+    },
+    {
+     "step": 11,
+     "no_match": 0.46143,
+     "silent_wrong": 0.0,
+     "yield": 0.625,
+     "no_match_min": 0.2,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.375,
+     "no_match_max": 0.71429,
+     "silent_wrong_max": 0.0,
+     "yield_max": 0.875
+    },
+    {
+     "step": 12,
+     "no_match": 0.49,
+     "silent_wrong": 0.0,
+     "yield": 0.6,
+     "no_match_min": 0.2,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.375,
+     "no_match_max": 0.71429,
+     "silent_wrong_max": 0.0,
+     "yield_max": 0.875
+    },
+    {
+     "step": 13,
+     "no_match": 0.57095,
+     "silent_wrong": 0.0,
+     "yield": 0.575,
+     "no_match_min": 0.2,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.25,
+     "no_match_max": 1.0,
+     "silent_wrong_max": 0.0,
+     "yield_max": 0.875
+    },
+    {
+     "step": 14,
+     "no_match": 0.61095,
+     "silent_wrong": 0.0,
+     "yield": 0.55,
+     "no_match_min": 0.25,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.25,
+     "no_match_max": 1.0,
+     "silent_wrong_max": 0.0,
+     "yield_max": 0.875
+    },
+    {
+     "step": 15,
+     "no_match": 0.66095,
+     "silent_wrong": 0.0,
+     "yield": 0.525,
+     "no_match_min": 0.4,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.25,
+     "no_match_max": 1.0,
+     "silent_wrong_max": 0.0,
+     "yield_max": 0.75
+    },
+    {
+     "step": 16,
+     "no_match": 0.73429,
+     "silent_wrong": 0.0,
+     "yield": 0.475,
+     "no_match_min": 0.5,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.25,
+     "no_match_max": 1.0,
+     "silent_wrong_max": 0.0,
+     "yield_max": 0.75
+    },
+    {
+     "step": 17,
+     "no_match": 0.71429,
+     "silent_wrong": 0.0,
+     "yield": 0.5,
+     "no_match_min": 0.5,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.25,
+     "no_match_max": 1.0,
+     "silent_wrong_max": 0.0,
+     "yield_max": 0.75
+    },
+    {
+     "step": 18,
+     "no_match": 0.71426,
+     "silent_wrong": 0.0,
+     "yield": 0.50005,
+     "no_match_min": 0.5,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.25,
+     "no_match_max": 1.0,
+     "silent_wrong_max": 0.0,
+     "yield_max": 0.75
+    },
+    {
+     "step": 19,
+     "no_match": 0.73333,
+     "silent_wrong": 0.0,
+     "yield": 0.5,
+     "no_match_min": 0.5,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.25,
+     "no_match_max": 1.0,
+     "silent_wrong_max": 0.0,
+     "yield_max": 0.75
+    },
+    {
+     "step": 20,
+     "no_match": 0.77,
+     "silent_wrong": 0.0,
+     "yield": 0.525,
+     "no_match_min": 0.5,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.25,
+     "no_match_max": 1.0,
+     "silent_wrong_max": 0.0,
+     "yield_max": 0.75
+    },
+    {
+     "step": 21,
+     "no_match": 0.77,
+     "silent_wrong": 0.0,
+     "yield": 0.525,
+     "no_match_min": 0.5,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.25,
+     "no_match_max": 1.0,
+     "silent_wrong_max": 0.0,
+     "yield_max": 0.75
+    },
+    {
+     "step": 22,
+     "no_match": 0.75333,
+     "silent_wrong": 0.0,
+     "yield": 0.55,
+     "no_match_min": 0.5,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.25,
+     "no_match_max": 1.0,
+     "silent_wrong_max": 0.0,
+     "yield_max": 0.75
+    },
+    {
+     "step": 23,
+     "no_match": 0.72,
+     "silent_wrong": 0.0,
+     "yield": 0.575,
+     "no_match_min": 0.5,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.25,
+     "no_match_max": 1.0,
+     "silent_wrong_max": 0.0,
+     "yield_max": 0.875
+    },
+    {
+     "step": 24,
+     "no_match": 0.72,
+     "silent_wrong": 0.0,
+     "yield": 0.575,
+     "no_match_min": 0.5,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.25,
+     "no_match_max": 1.0,
+     "silent_wrong_max": 0.0,
+     "yield_max": 0.875
+    },
+    {
+     "step": 25,
+     "no_match": 0.72,
+     "silent_wrong": 0.0,
+     "yield": 0.575,
+     "no_match_min": 0.5,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.25,
+     "no_match_max": 1.0,
+     "silent_wrong_max": 0.0,
+     "yield_max": 0.875
+    },
+    {
+     "step": 26,
+     "no_match": 0.72,
+     "silent_wrong": 0.0,
+     "yield": 0.575,
+     "no_match_min": 0.5,
+     "silent_wrong_min": 0.0,
+     "yield_min": 0.25,
+     "no_match_max": 1.0,
+     "silent_wrong_max": 0.0,
+     "yield_max": 0.875
+    }
+   ]
+  }
+ },
+ "regime_by_operator": {
+  "D1": {
+   "far": 16,
+   "already_broken": 41
+  },
+  "D2": {
+   "already_broken": 34,
+   "far": 10
+  },
+  "D3": {
+   "already_broken": 35,
+   "far": 6,
+   "benign": 9
+  },
+  "D4": {
+   "benign": 4,
+   "far": 21,
+   "already_broken": 42
+  },
+  "D5": {
+   "already_broken": 46,
+   "far": 7,
+   "benign": 12
+  },
+  "D6": {
+   "far": 13,
+   "already_broken": 44
+  },
+  "D7": {
+   "benign": 4,
+   "far": 7,
+   "already_broken": 30
+  },
+  "D8": {
+   "already_broken": 27,
+   "benign": 6
+  },
+  "D9": {
+   "far": 8,
+   "benign": 33,
+   "already_broken": 24
+  },
+  "D10": {
+   "benign": 23,
+   "already_broken": 18,
+   "far": 5
+  },
+  "D11": {
+   "far": 10,
+   "already_broken": 25,
+   "benign": 30
+  },
+  "D12": {
+   "already_broken": 19,
+   "far": 9,
+   "benign": 15
+  }
+ },
+ "note": "Final-step CIs resample payloads pooled over timelines; payloads of one source share a family, so these intervals understate between-timeline variance. The per-step min/max over timelines is reported next to them."
+}

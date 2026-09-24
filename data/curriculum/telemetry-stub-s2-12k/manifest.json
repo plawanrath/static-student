@@ -1,0 +1,58 @@
+{
+ "run": "telemetry-stub-s2-12k",
+ "spec": "specs/telemetry.spec",
+ "spec_sha256": "eb8d6ae4b5bebde44493e704b3cd42bda30967a9df7a623aa05e2dee6acc6450",
+ "teacher": "stub",
+ "sampler": null,
+ "seed": 2,
+ "task_card_sha256": "f41a3dc99662e1c98b4e8bc7eec5ee64b009b27f29130ac4afea7ada4889f03d",
+ "families_sha256": "4526d4b8a44ceef802e4e7b582657e43b44a257f2185d28630195d03025d4473",
+ "reject_tokens_sha256": "3e62dd7c9722f8bd389cebfe96de03ef9728d9cc03fd1b537e147929bcfbd587",
+ "families": 12000,
+ "families_per_bucket": {
+  "clean": 4200,
+  "near_miss": 3000,
+  "should_defer": 1800,
+  "drifted": 3000
+ },
+ "proposed": 13110,
+ "acceptance_rate": 0.9153,
+ "validation": {
+  "clean": {
+   "accepted": 4200,
+   "inverse_mismatch": 128,
+   "duplicate_signature": 38
+  },
+  "near_miss": {
+   "accepted": 3000,
+   "inverse_mismatch": 81,
+   "too_long": 61,
+   "duplicate_signature": 51
+  },
+  "drifted": {
+   "accepted": 3000,
+   "duplicate_signature": 472,
+   "operator_not_applicable": 260,
+   "too_long": 10
+  },
+  "should_defer": {
+   "accepted": 1800,
+   "inverse_mismatch": 7,
+   "duplicate_signature": 2
+  }
+ },
+ "pools": {
+  "tel-train": {
+   "n": 20000,
+   "families": 10800,
+   "defer_rate": 0.1685,
+   "seed": 2
+  },
+  "tel-dev": {
+   "n": 2000,
+   "families": 1200,
+   "defer_rate": 0.135,
+   "seed": 2
+  }
+ }
+}

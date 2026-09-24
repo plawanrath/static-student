@@ -1,0 +1,37 @@
+{
+ "model": "models/tel-mlx-S-w4",
+ "cal": 20000,
+ "cases": {
+  "permuted_pointer_head": {
+   "build_failed": true,
+   "binary_exists": false,
+   "reason": "contract not met, no binary produced: no threshold on the grid certifies risk <= 0.01 at confidence 0.95 (n = 20000)",
+   "VERDICT": "refused"
+  },
+  "sign_flipped_block": {
+   "build_failed": true,
+   "binary_exists": false,
+   "reason": "contract not met, no binary produced: no threshold on the grid certifies risk <= 0.01 at confidence 0.95 (n = 20000)",
+   "VERDICT": "refused"
+  },
+  "random_last_block": {
+   "build_failed": true,
+   "binary_exists": false,
+   "reason": "contract not met, no binary produced: no threshold on the grid certifies risk <= 0.01 at confidence 0.95 (n = 20000)",
+   "VERDICT": "refused"
+  },
+  "shuffled_group_scales": {
+   "build_failed": true,
+   "binary_exists": false,
+   "reason": "contract not met, no binary produced: no threshold on the grid certifies risk <= 0.01 at confidence 0.95 (n = 20000)",
+   "VERDICT": "refused"
+  },
+  "zeroed_block_levels": {
+   "build_failed": true,
+   "binary_exists": false,
+   "reason": "contract not met, no binary produced: no threshold on the grid certifies risk <= 0.01 at confidence 0.95 (n = 20000)",
+   "VERDICT": "refused"
+  }
+ },
+ "G1c_build_fails_on_a_broken_student": true
+}

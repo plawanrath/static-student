@@ -1,0 +1,29 @@
+{
+ "tvm_version": "0.26.0",
+ "what_works": {
+  "import": "onnx -> relax via from_onnx(keep_params_in_input=False), so the weights become constants in the IR",
+  "compile_seconds": 0.5,
+  "shared_object_bytes": 7840496,
+  "numerics_vs_onnxruntime": {
+   "max_abs_delta_pointers": 1.57e-05,
+   "max_abs_delta_unit": 5.7e-06,
+   "argmax_identical": true
+  },
+  "target": {
+   "kind": "llvm",
+   "mtriple": "arm64-apple-darwin",
+   "mcpu": "apple-m1"
+  }
+ },
+ "what_does_not_work_here": {
+  "relay_aot_link_params": "TVM 0.26 removed Relay entirely, and with it the AOT executor and --link-params that the plan names as the baseline",
+  "static_library_export": "tvm.contrib.cc.create_staticlib is gone; export_library produces a shared object only",
+  "cpp_host": "the Relax VM has no constructor reachable from the shipped wheel: no VirtualMachine symbol is exported by any runtime dylib and no vm.* constructor is in the global registry, so a C++ start-to-first-struct host cannot be written against this build"
+ },
+ "consequence": "the footprint comparison is available now; the start-up comparison is not, on this TVM",
+ "options": [
+  "build TVM from source at a tag that still has Relay AOT + link-params (0.14-0.16) on the x86 Linux host in W5, which is a source build we are doing anyway",
+  "keep TVM 0.26 and compare footprint only, stating that the AOT-with-linked-parameters configuration no longer exists upstream",
+  "drop TVM and lean on ONNX Runtime plus llama.cpp, noting in related work that the nearest compiler baseline was not measurable at the versions available"
+ ]
+}

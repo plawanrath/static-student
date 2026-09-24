@@ -1,6 +1,7 @@
 # data
 
-Tracked: small, frozen inputs. Not tracked: `raw/` (third-party downloads), `processed/` (rendered pools), `cache/`.
+Tracked: small, frozen inputs. Not tracked: `raw/` (third-party downloads, unpacked), `irreplaceable/` (downloaded archives whose source may
+disappear), `processed/` (rendered pools), `cache/`.
 Third-party data is referenced by URL and hash and fetched by a script; none of it is redistributed here.
 
 ## Tracked files
@@ -22,7 +23,7 @@ Third-party data is referenced by URL and hash and fetched by a script; none of 
 
 | dataset | source | pinned | licence | fetch |
 |---|---|---|---|---|
-| LOGEVOL (Spark 2.4.0 / 3.0.3, Hadoop 2.10.2 / 3.3.3; 931,960 / 1,600,273 / 2,120,739 / 2,050,488 lines) | link in the README of `github.com/YintongHuo/EvLog` | `Logevol.zip`, 58,909,926 bytes, sha256 `1f82141b93ff120058a51f9305f669e77cb34223c9d792f15684193c00566285` | **none stated** (no licence file in the repository, none in the archive): not redistributed; labels we derive are released as scripts and as offsets keyed by session id and line index, without log text | `bash scripts/data/fetch_logevol.sh` |
+| LOGEVOL (Spark 2.4.0 / 3.0.3, Hadoop 2.10.2 / 3.3.3; 931,960 / 1,600,273 / 2,120,739 / 2,050,488 lines) | link in the README of `github.com/YintongHuo/EvLog` | `Logevol.zip`, 58,909,926 bytes, sha256 `1f82141b93ff120058a51f9305f669e77cb34223c9d792f15684193c00566285` | **none stated** (no licence file in the repository, none in the archive): not redistributed, and no file in this repository contains text from it; labels we derive are released as extractor code and as coordinates (session id, line index, byte span, sha256 of the line), and results as per-line 0/1 outcomes, from which the tables regenerate without the download | `bash scripts/data/fetch_logevol.sh` |
 | uap-core (regex list, fixtures, full history) | `github.com/ua-parser/uap-core` | commit `73e7340c3ed8055051607b296bf46ead7aa5f19e` (2026-05-15) | Apache-2.0 | `git clone https://github.com/ua-parser/uap-core.git data/raw/uap-core` |
 
 Notes. The LOGEVOL archive is a gzipped tar despite its `.zip` name, and its files are Python pickles; they are read

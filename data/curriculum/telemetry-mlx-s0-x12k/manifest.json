@@ -1,0 +1,23 @@
+{
+ "run": "telemetry-mlx-s0-x12k",
+ "source": "telemetry-mlx-s0",
+ "source_families_sha256": "43607c22bba841045e7c441e53fa6373ffd2427ee7f2901c5a3fab6cf2c76b4b",
+ "seed": 0,
+ "families": 12000,
+ "teacher_or_source_families": 1300,
+ "rewrites": 10700,
+ "validation": {
+  "attempts": 14423,
+  "accepted": 10700,
+  "duplicate_signature": 2163,
+  "operator_not_applicable": 1546,
+  "too_long": 14
+ },
+ "families_per_bucket": {
+  "clean": 5421,
+  "near_miss": 3879,
+  "should_defer": 2169,
+  "drifted": 531
+ },
+ "families_sha256": "f86d657ba4b63e60afdc96489ac0891eb004cdce59177a271f47b7166220140d"
+}

@@ -1,0 +1,614 @@
+{
+ "model": "models/tel-stub12k-v2-S-fp",
+ "params": {
+  "total": 1881034,
+  "trunk": 1779456
+ },
+ "thresholds": {
+  "far_no_match": 0.2,
+  "rescue": 0.5,
+  "risk": 0.02
+ },
+ "tau_rule": "dev pool, empirical selective risk <= 1%",
+ "dev": {
+  "defer_head": {
+   "tau": -3.3133535385131836,
+   "coverage": 0.8344,
+   "risk": 0.007790028763183125
+  },
+  "max_prob": {
+   "tau": -1.8352383375167847,
+   "coverage": 0.8344,
+   "risk": 0.007790028763183125
+  }
+ },
+ "n_timelines_per_track": 20,
+ "tracks": {
+  "in_curriculum": {
+   "9": {
+    "n": 80000,
+    "legacy_no_match_on_struct": 0.236255291271921,
+    "n_rescue": 19296,
+    "n_rescue_struct": 18753,
+    "defer_head": {
+     "rescue_rate": {
+      "point": 0.959153202154322,
+      "ci_low": 0.9562736628806058,
+      "ci_high": 0.9619794166266731,
+      "n": 18753,
+      "n_resamples": 10000
+     },
+     "risk_on_rescue": {
+      "risk": 0.007559037740013242,
+      "risk_ci_low": 0.006305301016370286,
+      "risk_ci_high": 0.008839290646925584,
+      "coverage": 0.939262023217247,
+      "coverage_ci_low": 0.935892153814262,
+      "coverage_ci_high": 0.9426824212271974,
+      "n": 19296,
+      "n_accepted": 18124,
+      "n_resamples": 10000
+     },
+     "yield_hybrid_minus_legacy": {
+      "point": 0.2248,
+      "ci_low": 0.22182499999999994,
+      "ci_high": 0.22773781250000003,
+      "p_value": 0.0,
+      "n": 80000,
+      "n_resamples": 10000
+     }
+    },
+    "max_prob": {
+     "rescue_rate": {
+      "point": 0.959153202154322,
+      "ci_low": 0.9562736628806058,
+      "ci_high": 0.9619794166266731,
+      "n": 18753,
+      "n_resamples": 10000
+     },
+     "risk_on_rescue": {
+      "risk": 0.007559037740013242,
+      "risk_ci_low": 0.006305301016370286,
+      "risk_ci_high": 0.008839290646925584,
+      "coverage": 0.939262023217247,
+      "coverage_ci_low": 0.935892153814262,
+      "coverage_ci_high": 0.9426824212271974,
+      "n": 19296,
+      "n_accepted": 18124,
+      "n_resamples": 10000
+     },
+     "yield_hybrid_minus_legacy": {
+      "point": 0.2248,
+      "ci_low": 0.22182499999999994,
+      "ci_high": 0.22773781250000003,
+      "p_value": 0.0,
+      "n": 80000,
+      "n_resamples": 10000
+     }
+    },
+    "oracle_best_rescue_at_risk_2pct": 0.959153202154322
+   },
+   "18": {
+    "n": 80000,
+    "legacy_no_match_on_struct": 0.42462043183031967,
+    "n_rescue": 34669,
+    "n_rescue_struct": 33393,
+    "defer_head": {
+     "rescue_rate": {
+      "point": 0.9700236576528015,
+      "ci_low": 0.9681669811038242,
+      "ci_high": 0.9718503878058276,
+      "n": 33393,
+      "n_resamples": 10000
+     },
+     "risk_on_rescue": {
+      "risk": 0.013311401504767126,
+      "risk_ci_low": 0.01210618682023193,
+      "risk_ci_high": 0.014575417128748942,
+      "coverage": 0.9469266491678445,
+      "coverage_ci_low": 0.9445325795379157,
+      "coverage_ci_high": 0.9492918745853645,
+      "n": 34669,
+      "n_accepted": 32829,
+      "n_resamples": 10000
+     },
+     "yield_hybrid_minus_legacy": {
+      "point": 0.4048625,
+      "ci_low": 0.4014496875,
+      "ci_high": 0.4082874999999999,
+      "p_value": 0.0,
+      "n": 80000,
+      "n_resamples": 10000
+     }
+    },
+    "max_prob": {
+     "rescue_rate": {
+      "point": 0.9700236576528015,
+      "ci_low": 0.9681669811038242,
+      "ci_high": 0.9718503878058276,
+      "n": 33393,
+      "n_resamples": 10000
+     },
+     "risk_on_rescue": {
+      "risk": 0.013311401504767126,
+      "risk_ci_low": 0.01210618682023193,
+      "risk_ci_high": 0.014575417128748942,
+      "coverage": 0.9469266491678445,
+      "coverage_ci_low": 0.9445325795379157,
+      "coverage_ci_high": 0.9492918745853645,
+      "n": 34669,
+      "n_accepted": 32829,
+      "n_resamples": 10000
+     },
+     "yield_hybrid_minus_legacy": {
+      "point": 0.4048625,
+      "ci_low": 0.4014496875,
+      "ci_high": 0.4082874999999999,
+      "p_value": 0.0,
+      "n": 80000,
+      "n_resamples": 10000
+     }
+    },
+    "oracle_best_rescue_at_risk_2pct": 0.9700236576528015
+   },
+   "26": {
+    "n": 80000,
+    "legacy_no_match_on_struct": 0.547035867416365,
+    "n_rescue": 44640,
+    "n_rescue_struct": 42613,
+    "defer_head": {
+     "rescue_rate": {
+      "point": 0.956257480111703,
+      "ci_low": 0.9542862506746768,
+      "ci_high": 0.9581817755145143,
+      "n": 42613,
+      "n_resamples": 10000
+     },
+     "risk_on_rescue": {
+      "risk": 0.01192987560922383,
+      "risk_ci_low": 0.010886418768906886,
+      "risk_ci_high": 0.01297789270631989,
+      "coverage": 0.9238575268817204,
+      "coverage_ci_low": 0.921326164874552,
+      "coverage_ci_high": 0.9263216845878136,
+      "n": 44640,
+      "n_accepted": 41241,
+      "n_resamples": 10000
+     },
+     "yield_hybrid_minus_legacy": {
+      "point": 0.5092749999999999,
+      "ci_low": 0.5057875000000001,
+      "ci_high": 0.5127375000000001,
+      "p_value": 0.0,
+      "n": 80000,
+      "n_resamples": 10000
+     }
+    },
+    "max_prob": {
+     "rescue_rate": {
+      "point": 0.9563748151972403,
+      "ci_low": 0.954403585760214,
+      "ci_high": 0.9582991106000516,
+      "n": 42613,
+      "n_resamples": 10000
+     },
+     "risk_on_rescue": {
+      "risk": 0.011928429423459244,
+      "risk_ci_low": 0.010885105769322598,
+      "risk_ci_high": 0.012976625701545426,
+      "coverage": 0.9239695340501792,
+      "coverage_ci_low": 0.9214381720430107,
+      "coverage_ci_high": 0.9264336917562724,
+      "n": 44640,
+      "n_accepted": 41246,
+      "n_resamples": 10000
+     },
+     "yield_hybrid_minus_legacy": {
+      "point": 0.5093375,
+      "ci_low": 0.50585,
+      "ci_high": 0.5127999999999999,
+      "p_value": 0.0,
+      "n": 80000,
+      "n_resamples": 10000
+     }
+    },
+    "oracle_best_rescue_at_risk_2pct": 0.9563748151972403
+   }
+  },
+  "heldout_params": {
+   "9": {
+    "n": 80000,
+    "legacy_no_match_on_struct": 0.3329125,
+    "n_rescue": 26633,
+    "n_rescue_struct": 26633,
+    "defer_head": {
+     "rescue_rate": {
+      "point": 0.8838658806743513,
+      "ci_low": 0.879960950700259,
+      "ci_high": 0.8877332632448466,
+      "n": 26633,
+      "n_resamples": 10000
+     },
+     "risk_on_rescue": {
+      "risk": 0.004819480848905048,
+      "risk_ci_low": 0.0039333362945949794,
+      "risk_ci_high": 0.005711874034387215,
+      "coverage": 0.888146284684414,
+      "coverage_ci_low": 0.884315510832426,
+      "coverage_ci_high": 0.8919761198513123,
+      "n": 26633,
+      "n_accepted": 23654,
+      "n_resamples": 10000
+     },
+     "yield_hybrid_minus_legacy": {
+      "point": 0.2942499999999999,
+      "ci_low": 0.2912121875,
+      "ci_high": 0.29746281250000006,
+      "p_value": 0.0,
+      "n": 80000,
+      "n_resamples": 10000
+     }
+    },
+    "max_prob": {
+     "rescue_rate": {
+      "point": 0.8838283332707543,
+      "ci_low": 0.8799234032966621,
+      "ci_high": 0.8877332632448466,
+      "n": 26633,
+      "n_resamples": 10000
+     },
+     "risk_on_rescue": {
+      "risk": 0.0048196846066038135,
+      "risk_ci_low": 0.003933664876559951,
+      "risk_ci_high": 0.005712605181695577,
+      "coverage": 0.8881087372808171,
+      "coverage_ci_low": 0.8842789021139188,
+      "coverage_ci_high": 0.8919385724477152,
+      "n": 26633,
+      "n_accepted": 23653,
+      "n_resamples": 10000
+     },
+     "yield_hybrid_minus_legacy": {
+      "point": 0.29423749999999993,
+      "ci_low": 0.2912,
+      "ci_high": 0.29746249999999996,
+      "p_value": 0.0,
+      "n": 80000,
+      "n_resamples": 10000
+     }
+    },
+    "oracle_best_rescue_at_risk_2pct": 0.8838658806743513
+   },
+   "18": {
+    "n": 80000,
+    "legacy_no_match_on_struct": 0.5831875,
+    "n_rescue": 46655,
+    "n_rescue_struct": 46655,
+    "defer_head": {
+     "rescue_rate": {
+      "point": 0.8439395563176508,
+      "ci_low": 0.840531561461794,
+      "ci_high": 0.8472403815239524,
+      "n": 46655,
+      "n_resamples": 10000
+     },
+     "risk_on_rescue": {
+      "risk": 0.006960907944514502,
+      "risk_ci_low": 0.006157849151794486,
+      "risk_ci_high": 0.007787622440886223,
+      "coverage": 0.8498553209731005,
+      "coverage_ci_low": 0.8465330618368878,
+      "coverage_ci_high": 0.8530709463080056,
+      "n": 46655,
+      "n_accepted": 39650,
+      "n_resamples": 10000
+     },
+     "yield_hybrid_minus_legacy": {
+      "point": 0.492175,
+      "ci_low": 0.48868750000000005,
+      "ci_high": 0.4956875,
+      "p_value": 0.0,
+      "n": 80000,
+      "n_resamples": 10000
+     }
+    },
+    "max_prob": {
+     "rescue_rate": {
+      "point": 0.8439395563176508,
+      "ci_low": 0.840531561461794,
+      "ci_high": 0.8472403815239524,
+      "n": 46655,
+      "n_resamples": 10000
+     },
+     "risk_on_rescue": {
+      "risk": 0.006935862190723599,
+      "risk_ci_low": 0.006132956740070246,
+      "risk_ci_high": 0.00776382397237071,
+      "coverage": 0.8498338870431894,
+      "coverage_ci_low": 0.8465116279069768,
+      "coverage_ci_high": 0.8530495123780946,
+      "n": 46655,
+      "n_accepted": 39649,
+      "n_resamples": 10000
+     },
+     "yield_hybrid_minus_legacy": {
+      "point": 0.492175,
+      "ci_low": 0.48868750000000005,
+      "ci_high": 0.4956875,
+      "p_value": 0.0,
+      "n": 80000,
+      "n_resamples": 10000
+     }
+    },
+    "oracle_best_rescue_at_risk_2pct": 0.8439395563176508
+   },
+   "26": {
+    "n": 80000,
+    "legacy_no_match_on_struct": 0.70195,
+    "n_rescue": 56156,
+    "n_rescue_struct": 56156,
+    "defer_head": {
+     "rescue_rate": {
+      "point": 0.8261450245743999,
+      "ci_low": 0.8230104530237197,
+      "ci_high": 0.8292791509366764,
+      "n": 56156,
+      "n_resamples": 10000
+     },
+     "risk_on_rescue": {
+      "risk": 0.011905776111773726,
+      "risk_ci_low": 0.01093267524595952,
+      "risk_ci_high": 0.01290870455750317,
+      "coverage": 0.8360994372818576,
+      "coverage_ci_low": 0.8330182883396253,
+      "coverage_ci_high": 0.8391979485718356,
+      "n": 56156,
+      "n_accepted": 46952,
+      "n_resamples": 10000
+     },
+     "yield_hybrid_minus_legacy": {
+      "point": 0.5799125,
+      "ci_low": 0.5764871875,
+      "ci_high": 0.5833628125,
+      "p_value": 0.0,
+      "n": 80000,
+      "n_resamples": 10000
+     }
+    },
+    "max_prob": {
+     "rescue_rate": {
+      "point": 0.8261094095021013,
+      "ci_low": 0.8229752831398248,
+      "ci_high": 0.8292435358643778,
+      "n": 56156,
+      "n_resamples": 10000
+     },
+     "risk_on_rescue": {
+      "risk": 0.011843142266811511,
+      "risk_ci_low": 0.010868409128125254,
+      "risk_ci_high": 0.012843465134683589,
+      "coverage": 0.8360103996011112,
+      "coverage_ci_low": 0.8329118883111333,
+      "coverage_ci_high": 0.8391267184272384,
+      "n": 56156,
+      "n_accepted": 46947,
+      "n_resamples": 10000
+     },
+     "yield_hybrid_minus_legacy": {
+      "point": 0.5798875000000001,
+      "ci_low": 0.5764625,
+      "ci_high": 0.5833378125,
+      "p_value": 0.0,
+      "n": 80000,
+      "n_resamples": 10000
+     }
+    },
+    "oracle_best_rescue_at_risk_2pct": 0.8261450245743999
+   }
+  },
+  "heldout_operators": {
+   "9": {
+    "n": 80000,
+    "legacy_no_match_on_struct": 0.20945945945945946,
+    "n_rescue": 21500,
+    "n_rescue_struct": 15500,
+    "defer_head": {
+     "rescue_rate": {
+      "point": 0.6196129032258064,
+      "ci_low": 0.6118064516129033,
+      "ci_high": 0.6271612903225806,
+      "n": 15500,
+      "n_resamples": 10000
+     },
+     "risk_on_rescue": {
+      "risk": 0.10142215568862276,
+      "risk_ci_low": 0.09578169872488741,
+      "risk_ci_high": 0.10734757199067502,
+      "coverage": 0.49711627906976746,
+      "coverage_ci_low": 0.49041860465116277,
+      "coverage_ci_high": 0.5036744186046511,
+      "n": 21500,
+      "n_accepted": 10688,
+      "n_resamples": 10000
+     },
+     "yield_hybrid_minus_legacy": {
+      "point": 0.11326249999999993,
+      "ci_low": 0.11091250000000008,
+      "ci_high": 0.1156125,
+      "p_value": 0.0,
+      "n": 80000,
+      "n_resamples": 10000
+     }
+    },
+    "max_prob": {
+     "rescue_rate": {
+      "point": 0.6196129032258064,
+      "ci_low": 0.6118064516129033,
+      "ci_high": 0.6271612903225806,
+      "n": 15500,
+      "n_resamples": 10000
+     },
+     "risk_on_rescue": {
+      "risk": 0.10125397716638593,
+      "risk_ci_low": 0.09560737391045872,
+      "risk_ci_high": 0.10714990315669408,
+      "coverage": 0.4970232558139535,
+      "coverage_ci_low": 0.4903255813953488,
+      "coverage_ci_high": 0.5035360465116279,
+      "n": 21500,
+      "n_accepted": 10686,
+      "n_resamples": 10000
+     },
+     "yield_hybrid_minus_legacy": {
+      "point": 0.11326249999999993,
+      "ci_low": 0.11091250000000008,
+      "ci_high": 0.1156125,
+      "p_value": 0.0,
+      "n": 80000,
+      "n_resamples": 10000
+     }
+    },
+    "oracle_best_rescue_at_risk_2pct": 0.47677419354838707
+   },
+   "18": {
+    "n": 80000,
+    "legacy_no_match_on_struct": 0.3741168683540297,
+    "n_rescue": 36503,
+    "n_rescue_struct": 26000,
+    "defer_head": {
+     "rescue_rate": {
+      "point": 0.5116923076923077,
+      "ci_low": 0.5056153846153846,
+      "ci_high": 0.5176538461538461,
+      "n": 26000,
+      "n_resamples": 10000
+     },
+     "risk_on_rescue": {
+      "risk": 0.2075763893025195,
+      "risk_ci_low": 0.20144859793621664,
+      "risk_ci_high": 0.21370802885424503,
+      "coverage": 0.45993479987946195,
+      "coverage_ci_low": 0.45475714324850014,
+      "coverage_ci_high": 0.4650035613511218,
+      "n": 36503,
+      "n_accepted": 16789,
+      "n_resamples": 10000
+     },
+     "yield_hybrid_minus_legacy": {
+      "point": 0.1574375,
+      "ci_low": 0.15476250000000003,
+      "ci_high": 0.1601128125000001,
+      "p_value": 0.0,
+      "n": 80000,
+      "n_resamples": 10000
+     }
+    },
+    "max_prob": {
+     "rescue_rate": {
+      "point": 0.511576923076923,
+      "ci_low": 0.5055,
+      "ci_high": 0.5175384615384615,
+      "n": 26000,
+      "n_resamples": 10000
+     },
+     "risk_on_rescue": {
+      "risk": 0.2071884127078739,
+      "risk_ci_low": 0.20109209347223048,
+      "risk_ci_high": 0.21330413110872987,
+      "coverage": 0.45960605977590885,
+      "coverage_ci_low": 0.454428403144947,
+      "coverage_ci_high": 0.46467413637235294,
+      "n": 36503,
+      "n_accepted": 16777,
+      "n_resamples": 10000
+     },
+     "yield_hybrid_minus_legacy": {
+      "point": 0.15739999999999998,
+      "ci_low": 0.15473718749999998,
+      "ci_high": 0.16007531250000007,
+      "p_value": 0.0,
+      "n": 80000,
+      "n_resamples": 10000
+     }
+    },
+    "oracle_best_rescue_at_risk_2pct": 0.19473076923076924
+   },
+   "26": {
+    "n": 80000,
+    "legacy_no_match_on_struct": 0.4737055807028889,
+    "n_rescue": 45003,
+    "n_rescue_struct": 31500,
+    "defer_head": {
+     "rescue_rate": {
+      "point": 0.4120634920634921,
+      "ci_low": 0.4066031746031746,
+      "ci_high": 0.41755555555555557,
+      "n": 31500,
+      "n_resamples": 10000
+     },
+     "risk_on_rescue": {
+      "risk": 0.3304101109104978,
+      "risk_ci_low": 0.32375217572210635,
+      "risk_ci_high": 0.33733586118307873,
+      "coverage": 0.43074906117369954,
+      "coverage_ci_low": 0.42623769526476013,
+      "coverage_ci_high": 0.4353043130457969,
+      "n": 45003,
+      "n_accepted": 19385,
+      "n_resamples": 10000
+     },
+     "yield_hybrid_minus_legacy": {
+      "point": 0.15557500000000002,
+      "ci_low": 0.15293749999999995,
+      "ci_high": 0.15821249999999998,
+      "p_value": 0.0,
+      "n": 80000,
+      "n_resamples": 10000
+     }
+    },
+    "max_prob": {
+     "rescue_rate": {
+      "point": 0.412031746031746,
+      "ci_low": 0.4065714285714286,
+      "ci_high": 0.4175238095238095,
+      "n": 31500,
+      "n_resamples": 10000
+     },
+     "risk_on_rescue": {
+      "risk": 0.33039261208275295,
+      "risk_ci_low": 0.32374546314508396,
+      "risk_ci_high": 0.3372937974458696,
+      "coverage": 0.4307046196920205,
+      "coverage_ci_low": 0.4261715885607626,
+      "coverage_ci_high": 0.4352376508232784,
+      "n": 45003,
+      "n_accepted": 19383,
+      "n_resamples": 10000
+     },
+     "yield_hybrid_minus_legacy": {
+      "point": 0.15556250000000005,
+      "ci_low": 0.1529246875,
+      "ci_high": 0.1582,
+      "p_value": 0.0,
+      "n": 80000,
+      "n_resamples": 10000
+     }
+    },
+    "oracle_best_rescue_at_risk_2pct": 0.015904761904761904
+   }
+  }
+ },
+ "G0": {
+  "far_no_match": 0.547035867416365,
+  "defer_head": {
+   "rescue": 0.956257480111703,
+   "risk": 0.01192987560922383,
+   "pass": true
+  },
+  "max_prob": {
+   "rescue": 0.9563748151972403,
+   "risk": 0.011928429423459244,
+   "pass": true
+  }
+ }
+}

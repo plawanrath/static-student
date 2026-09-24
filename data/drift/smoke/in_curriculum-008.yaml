@@ -1,0 +1,5 @@
+name: in_curriculum-008
+track: in_curriculum
+seed: 8
+rate: 0.1
+payloads_per_source: 500

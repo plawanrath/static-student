@@ -1,0 +1,122 @@
+{
+ "launches": 1000,
+ "host": "Darwin 24.6.0 arm64",
+ "modes": {
+  "exec_floor": {
+   "cmd": "exec_floor",
+   "n": 1000,
+   "p50_ms": 0.688,
+   "p99_ms": 1.0001099999999998,
+   "mean_ms": 0.7163430000000001,
+   "bytes_on_disk": 33432,
+   "model_file_bytes": 0
+  },
+  "null_binary": {
+   "cmd": "null_binary",
+   "n": 1000,
+   "p50_ms": 12.472,
+   "p99_ms": 14.138309999999999,
+   "mean_ms": 12.517873,
+   "bytes_on_disk": 36712,
+   "model_file_bytes": 0
+  },
+  "ours_S_w4": {
+   "cmd": "ss_hybrid --first-struct",
+   "n": 1000,
+   "p50_ms": 24.993,
+   "p99_ms": 26.007,
+   "mean_ms": 25.01358,
+   "bytes_on_disk": 1243848,
+   "model_file_bytes": 0,
+   "ratio_to_null": {
+    "point": 2.0039288005131493,
+    "ci_low": 1.9994797075955877,
+    "ci_high": 2.009006210534645
+   }
+  },
+  "ours_S_w3": {
+   "cmd": "ss_hybrid --first-struct",
+   "n": 1000,
+   "p50_ms": 25.421,
+   "p99_ms": 26.516019999999997,
+   "mean_ms": 25.443193,
+   "bytes_on_disk": 1012680,
+   "model_file_bytes": 0,
+   "ratio_to_null": {
+    "point": 2.0382456703014755,
+    "ci_low": 2.033825301515552,
+    "ci_high": 2.0433683124222086
+   }
+  },
+  "ours_S_w2": {
+   "cmd": "ss_hybrid --first-struct",
+   "n": 1000,
+   "p50_ms": 25.5265,
+   "p99_ms": 26.587909999999997,
+   "mean_ms": 25.555974000000003,
+   "bytes_on_disk": 798024,
+   "model_file_bytes": 0,
+   "ratio_to_null": {
+    "point": 2.046704618345093,
+    "ci_low": 2.0419130424937686,
+    "ci_high": 2.0522068354913756
+   }
+  },
+  "ours_XS_w4": {
+   "cmd": "ss_hybrid --first-struct",
+   "n": 1000,
+   "p50_ms": 15.9115,
+   "p99_ms": 17.17131,
+   "mean_ms": 15.922632,
+   "bytes_on_disk": 352232,
+   "model_file_bytes": 0,
+   "ratio_to_null": {
+    "point": 1.275777742142399,
+    "ci_low": 1.271933967527302,
+    "ci_high": 1.2793042500200853
+   }
+  },
+  "ours_XS_w3": {
+   "cmd": "ss_hybrid --first-struct",
+   "n": 1000,
+   "p50_ms": 15.902,
+   "p99_ms": 16.77311,
+   "mean_ms": 15.895290000000001,
+   "bytes_on_disk": 302696,
+   "model_file_bytes": 0,
+   "ratio_to_null": {
+    "point": 1.2750160359204619,
+    "ci_low": 1.2715706775174513,
+    "ci_high": 1.2789185138938726
+   }
+  },
+  "ours_XS_w2": {
+   "cmd": "ss_hybrid --first-struct",
+   "n": 1000,
+   "p50_ms": 15.910499999999999,
+   "p99_ms": 16.781029999999998,
+   "mean_ms": 15.909761999999999,
+   "bytes_on_disk": 269672,
+   "model_file_bytes": 0,
+   "ratio_to_null": {
+    "point": 1.2756975625400897,
+    "ci_low": 1.2722473303203614,
+    "ci_high": 1.2796052665384345
+   }
+  },
+  "onnxruntime_tel_S_fp": {
+   "cmd": "ort_first_struct student.onnx",
+   "n": 1000,
+   "p50_ms": 51.6695,
+   "p99_ms": 53.792030000000004,
+   "mean_ms": 51.772034,
+   "bytes_on_disk": 77456,
+   "model_file_bytes": 7559905,
+   "ratio_to_null": {
+    "point": 4.142839961513791,
+    "ci_low": 4.1336426365701175,
+    "ci_high": 4.153691652607054
+   }
+  }
+ }
+}

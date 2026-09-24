@@ -1,0 +1,5 @@
+name: heldout_operators-006
+track: heldout_operators
+seed: 6
+rate: 0.1
+payloads_per_source: 500

@@ -1,4 +1,5 @@
 name: none-004
 track: none
 seed: 4
+rate: 0.1
 payloads_per_source: 500

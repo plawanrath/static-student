@@ -1,0 +1,109 @@
+{
+ "run": "telemetry-mlx-s0",
+ "spec": "specs/telemetry.spec",
+ "spec_sha256": "eb8d6ae4b5bebde44493e704b3cd42bda30967a9df7a623aa05e2dee6acc6450",
+ "teacher": "mlx-community/Mistral-Small-3.2-24B-Instruct-2506-8bit@1db83546",
+ "sampler": {
+  "temperature": 0.9,
+  "top_p": 0.95,
+  "max_tokens": 450,
+  "seed": 0
+ },
+ "seed": 0,
+ "task_card_sha256": "85f925997b93556fc1b2457c8f1c82f7b91f9a48cc3fed3fbcbe3cddb753c6ec",
+ "families_sha256": "43607c22bba841045e7c441e53fa6373ffd2427ee7f2901c5a3fab6cf2c76b4b",
+ "reject_tokens_sha256": "3e62dd7c9722f8bd389cebfe96de03ef9728d9cc03fd1b537e147929bcfbd587",
+ "families": 1300,
+ "families_per_bucket": {
+  "clean": 455,
+  "near_miss": 325,
+  "should_defer": 195,
+  "drifted": 325
+ },
+ "proposed": 1991,
+ "acceptance_rate": 0.6529,
+ "validation": {
+  "clean": {
+   "accepted": 455,
+   "schema": 173,
+   "held_out_token": 13,
+   "inverse_mismatch": 62,
+   "too_long": 7,
+   "invalid_json": 3,
+   "bucket_mismatch": 1
+  },
+  "near_miss": {
+   "accepted": 325,
+   "inverse_mismatch": 10,
+   "schema": 45,
+   "duplicate_signature": 7,
+   "invalid_json": 4,
+   "too_long": 1,
+   "crash:TypeError": 2,
+   "bucket_mismatch": 1,
+   "held_out_token": 2
+  },
+  "drifted": {
+   "operator_not_applicable": 42,
+   "accepted": 325,
+   "duplicate_signature": 42,
+   "too_long": 1
+  },
+  "should_defer": {
+   "accepted": 195,
+   "schema": 111,
+   "bucket_mismatch": 132,
+   "inverse_mismatch": 18,
+   "invalid_json": 10,
+   "held_out_token": 3,
+   "crash:TypeError": 1
+  }
+ },
+ "pools": {
+  "tel-train": {
+   "n": 50000,
+   "families": 1170,
+   "defer_rate": 0.1575,
+   "seed": 0
+  },
+  "tel-dev": {
+   "n": 5000,
+   "families": 130,
+   "defer_rate": 0.1576,
+   "seed": 0
+  }
+ },
+ "seconds": 32034.5,
+ "defer_reasons_train": {
+  "target_missing": 86,
+  "ambiguous_latency": 2016,
+  "non_numeric": 815,
+  "truncated": 996,
+  "multi_record": 1243,
+  "id_too_long": 1115,
+  "corrupted": 403,
+  "out_of_range": 730,
+  "unit_unknown": 472
+ },
+ "containers": {
+  "json_flat": 236,
+  "query_string": 68,
+  "csv_positional": 71,
+  "kv": 446,
+  "free_text": 108,
+  "logfmt": 220,
+  "json_nested": 151
+ },
+ "units": {
+  "s": 12089,
+  "ns": 4313,
+  "ms": 16618,
+  "min": 2785,
+  "us": 6319
+ },
+ "payload_bytes": {
+  "mean": 129.3,
+  "max": 377
+ },
+ "train_dev_family_overlap": 0
+}

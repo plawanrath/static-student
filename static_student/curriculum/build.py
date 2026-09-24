@@ -52,15 +52,17 @@ def validate(fam: dict, bucket: str, seen: set, reject: set[str], seed: int) -> 
     return None
 
 
-def propose_families(teacher, card: dict, n: int, seed: int, reject: set[str], max_attempts: int = 50, on_accept=None) -> tuple[list[dict], dict]:
+def propose_families(teacher, card: dict, n: int, seed: int, reject: set[str], max_attempts: int = 50, on_accept=None, resume: list[dict] | None = None) -> tuple[list[dict], dict]:
     rng = random.Random(f"families:{seed}")
     quota = {b: round(n * share) for b, share in BUCKETS.items()}
     quota["clean"] += n - sum(quota.values())
-    accepted, seen = [], set()
+    accepted, seen = list(resume or []), {T.family_signature(f) for f in resume or []}  # a run cut short continues from what it had accepted
     stats = {b: collections.Counter() for b in BUCKETS}
+    for f in accepted:
+        stats[f["bucket"]]["accepted"] += 1
     for bucket in ("clean", "near_miss", "should_defer", "drifted"):  # drifted rewrites families accepted before it
         bases = [f for f in accepted if f["defer_reason"] is None]
-        got = attempts = 0
+        got, attempts = stats[bucket]['accepted'], 0
         while got < quota[bucket] and attempts < max_attempts * max(1, quota[bucket]):
             attempts += 1
             if bucket == "drifted":
@@ -125,6 +127,8 @@ def main(argv: list[str] | None = None) -> dict:
     ap.add_argument("--run", default=None, help="run name (default: <task>-<teacher>-s<seed>)")
     ap.add_argument("--out", default=None, help="report directory")
     ap.add_argument("--reject-tokens", default=None)
+    ap.add_argument("--card-drop", nargs="*", default=[], help="key names removed from the task card by the hand review")
+    ap.add_argument("--resume", action="store_true", help="continue from families.partial.jsonl of the same run")
     args = ap.parse_args(argv)
 
     t0 = time.time()
@@ -141,13 +145,18 @@ def main(argv: list[str] | None = None) -> dict:
     for group in [f["synonyms"] for f in card["fields"]] + list(card["near_miss"].values()):
         removed += [k for k in group if family_tokens({"slots": [{"key": k}]}) & reject]
         group[:] = [k for k in group if not family_tokens({"slots": [{"key": k}]}) & reject]
+    for group in [f["synonyms"] for f in card["fields"]] + list(card["near_miss"].values()):
+        group[:] = [k for k in group if k not in args.card_drop]
+    card["removed_by_review"] = sorted(args.card_drop)
     card["removed_held_out"] = len(removed)  # a count only: the names themselves stay out of every tracked file
     card.pop("teacher_raw", None)
     cdir, pdir = REPO / "data/curriculum" / run, REPO / "data/processed" / run
     cdir.mkdir(parents=True, exist_ok=True), pdir.mkdir(parents=True, exist_ok=True)
     (cdir / "task_card.json").write_text(json.dumps(card, indent=1) + "\n")
     progress = cdir / "families.partial.jsonl"  # a long teacher run leaves its accepted families here as it goes
-    progress.write_text("")
+    resume = [json.loads(l) for l in progress.read_text().splitlines() if l.strip()] if args.resume and progress.exists() else []
+    if not resume:
+        progress.write_text("")
 
     def on_accept(fam, stats):
         with progress.open("a") as fh:
@@ -156,7 +165,7 @@ def main(argv: list[str] | None = None) -> dict:
         if n % 10 == 0:
             print(f"[curriculum] {n} accepted, {sum(sum(c.values()) for c in stats.values())} proposed, {time.time() - t0:.0f}s", flush=True)
 
-    families, stats = propose_families(teacher, card, args.families, args.seed, reject, max_attempts=4 if args.teacher == "mlx" else 50, on_accept=on_accept)
+    families, stats = propose_families(teacher, card, args.families, args.seed, reject, max_attempts=4 if args.teacher == "mlx" else 50, on_accept=on_accept, resume=resume)
     progress.unlink()
     if getattr(teacher, "transcript", None):
         (pdir / "teacher_transcript.jsonl").write_text("".join(json.dumps(t, ensure_ascii=False) + "\n" for t in teacher.transcript))

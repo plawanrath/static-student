@@ -1,4 +1,5 @@
 name: in_curriculum-003
 track: in_curriculum
 seed: 3
+rate: 0.1
 payloads_per_source: 500

@@ -1,0 +1,55 @@
+{
+ "run": "telemetry-stub-s1-1500",
+ "spec": "specs/telemetry.spec",
+ "spec_sha256": "eb8d6ae4b5bebde44493e704b3cd42bda30967a9df7a623aa05e2dee6acc6450",
+ "teacher": "stub",
+ "sampler": null,
+ "seed": 1,
+ "task_card_sha256": "f41a3dc99662e1c98b4e8bc7eec5ee64b009b27f29130ac4afea7ada4889f03d",
+ "families_sha256": "a2193c9a85b3b815e2c6b81ac6d19c979af6a74560bd74bdc54f7e0299f3cd20",
+ "reject_tokens_sha256": "3e62dd7c9722f8bd389cebfe96de03ef9728d9cc03fd1b537e147929bcfbd587",
+ "families": 1500,
+ "families_per_bucket": {
+  "clean": 525,
+  "near_miss": 375,
+  "should_defer": 225,
+  "drifted": 375
+ },
+ "proposed": 1630,
+ "acceptance_rate": 0.9202,
+ "validation": {
+  "clean": {
+   "accepted": 525,
+   "inverse_mismatch": 16
+  },
+  "near_miss": {
+   "accepted": 375,
+   "inverse_mismatch": 16,
+   "too_long": 6
+  },
+  "drifted": {
+   "operator_not_applicable": 32,
+   "accepted": 375,
+   "duplicate_signature": 58,
+   "too_long": 1
+  },
+  "should_defer": {
+   "accepted": 225,
+   "inverse_mismatch": 1
+  }
+ },
+ "pools": {
+  "tel-train": {
+   "n": 20000,
+   "families": 1350,
+   "defer_rate": 0.1582,
+   "seed": 1
+  },
+  "tel-dev": {
+   "n": 2000,
+   "families": 150,
+   "defer_rate": 0.15,
+   "seed": 1
+  }
+ }
+}

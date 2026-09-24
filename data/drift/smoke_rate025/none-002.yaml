@@ -1,0 +1,5 @@
+name: none-002
+track: none
+seed: 2
+rate: 0.25
+payloads_per_source: 500

@@ -68,6 +68,10 @@ def test_to_micros_is_exact_and_truncates():
     assert T.to_micros("0.1", "us") == 0
     assert T.to_micros("1.5", "min") == 90_000_000
     assert T.to_micros("0.1", "s") == 100_000      # no binary floating point on the path
+    import time
+    t0 = time.time()  # a span over a hex id reads as a number with a huge exponent; exact arithmetic on it must not be attempted
+    assert T.to_micros("3e81234567", "ms") is None and T.to_micros("1" * 60, "ms") is None and T.to_micros("9e99", "s") is None
+    assert time.time() - t0 < 0.5
     for bad in ("0,812", "12,34", "NaN", "-5", "", "1e", "99999999999999999999999"):
         assert T.to_micros(bad, "ms") is None, bad
 

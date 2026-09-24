@@ -1,0 +1,51 @@
+{
+ "model": "models/tel-stub12k-v2-S-w3",
+ "size": "S",
+ "bits": 3,
+ "bytes": {
+  "trunk": 801792,
+  "other_at_8bit": 104650,
+  "total": 906442
+ },
+ "spec": {
+  "alpha": 0.01,
+  "delta": 0.05,
+  "min_coverage": 0.5
+ },
+ "score": "max_prob",
+ "pools": {
+  "dev": 20000,
+  "cal": 20000,
+  "test": 20000
+ },
+ "note": "pilot: float model, stub curriculum, calibration pool = rendered payloads of families unseen in training and selection (not the real-anchored pool)",
+ "student": {
+  "certified": true,
+  "certificate": {
+   "alpha": 0.01,
+   "delta": 0.05,
+   "min_coverage": 0.5,
+   "tau": -0.25614258646965027,
+   "n_calibration": 20000,
+   "n_accepted": 16656,
+   "k_wrong": 116,
+   "coverage": 0.8328,
+   "empirical_risk": 0.006964457252641691,
+   "p_value": 1.9997289582604053e-05,
+   "grid_sha256": "866e91c76deb692ffed0da9eaa537945e5b4f6228afa82853b06f75f10a4c9a4",
+   "pool_sha256": "bb23d25c3f2eced90599d7f15d987133b5e38300bd63c490e3bc9600fed143f7",
+   "thresholds_tested": 96
+  },
+  "test": {
+   "risk": 0.007321171387421987,
+   "risk_ci_low": 0.006031986163538975,
+   "risk_ci_high": 0.008636743950561337,
+   "coverage": 0.8332,
+   "coverage_ci_low": 0.82815,
+   "coverage_ci_high": 0.83835125,
+   "n": 20000,
+   "n_accepted": 16664,
+   "n_resamples": 10000
+  }
+ }
+}

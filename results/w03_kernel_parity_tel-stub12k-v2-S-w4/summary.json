@@ -1,0 +1,31 @@
+{
+ "model": "models/tel-stub12k-v2-S-w4",
+ "bits": 4,
+ "n": 400,
+ "weight_bytes": 1140132,
+ "scratch_bytes": 1975816,
+ "build_seconds": 0.6,
+ "seconds": {
+  "c_kernel": 6.28,
+  "numpy_reference": 56.3
+ },
+ "c_vs_reference": {
+  "pointers_identical": 1.0,
+  "unit_identical": 1.0,
+  "score_bit_identical": true,
+  "score_max_abs_delta": 0.0,
+  "score_ulp_max": 0,
+  "defer_bit_identical": true,
+  "defer_max_abs_delta": 0.0
+ },
+ "c_vs_float_model": {
+  "pointers_identical": 0.9975,
+  "unit_identical": 1.0,
+  "score_max_abs_delta": 0.21601247787475586,
+  "defer_max_abs_delta": 0.163604736328125
+ },
+ "G1a": {
+  "bit_exact_vs_reference": true,
+  "argmax_vs_float_model": false
+ }
+}

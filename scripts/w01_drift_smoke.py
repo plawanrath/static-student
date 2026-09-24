@@ -51,9 +51,9 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--seeds", type=int, default=5)
     ap.add_argument("--payloads", type=int, default=500)
-    ap.add_argument("--rate", type=float, default=0.25, help="operator arrivals per source and step")
+    ap.add_argument("--rate", type=float, default=0.1, help="operator arrivals per source and step")
     args = ap.parse_args()
-    tag = "" if args.rate == 0.25 else f"_rate{int(round(args.rate * 100)):03d}"
+    tag = "" if args.rate == 0.1 else f"_rate{int(round(args.rate * 100)):03d}"
     out_dir = REPO / f"results/w01_drift_smoke{tag}"
     legacy.build()
     out_dir.mkdir(parents=True, exist_ok=True)

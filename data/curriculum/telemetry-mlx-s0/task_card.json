@@ -1,0 +1,114 @@
+{
+ "target": "extract latency + user id",
+ "fields": [
+  {
+   "role": "latency",
+   "type": "duration -> uint64 microseconds",
+   "synonyms": [
+    "latency",
+    "lat",
+    "elapsed",
+    "duration",
+    "rt",
+    "resp_time",
+    "took",
+    "time",
+    "request_time",
+    "response_time",
+    "processing_time",
+    "elapsed_time",
+    "exec_time",
+    "service_time",
+    "time_taken"
+   ],
+   "units": [
+    "ns",
+    "us",
+    "ms",
+    "s",
+    "min"
+   ]
+  },
+  {
+   "role": "user",
+   "type": "byte string <= 36",
+   "synonyms": [
+    "user",
+    "usr",
+    "uid",
+    "user_id",
+    "userId",
+    "account",
+    "principal",
+    "username",
+    "acct",
+    "principal_id",
+    "account_id"
+   ],
+   "schemes": [
+    "decimal",
+    "hex",
+    "uuid",
+    "prefixed"
+   ]
+  }
+ ],
+ "near_miss": {
+  "durations": [
+   "db_time",
+   "ttfb",
+   "upstream_latency",
+   "timeout",
+   "latency_p99",
+   "queue_wait",
+   "dns_time",
+   "wait_time",
+   "queue_time",
+   "io_time",
+   "network_time",
+   "cache_time",
+   "compute_time",
+   "idle_time"
+  ],
+  "ids": [
+   "request_id",
+   "trace_id",
+   "session",
+   "tenant",
+   "target_user",
+   "span_id",
+   "device",
+   "correlation_id",
+   "instance_id",
+   "job_id",
+   "task_id",
+   "resource_id"
+  ]
+ },
+ "defer_reasons": [
+  "target_missing",
+  "ambiguous_latency",
+  "non_numeric",
+  "unit_unknown",
+  "out_of_range",
+  "id_too_long",
+  "multi_record",
+  "truncated",
+  "corrupted"
+ ],
+ "containers": [
+  "kv",
+  "logfmt",
+  "json_flat",
+  "json_nested",
+  "query_string",
+  "csv_positional",
+  "free_text"
+ ],
+ "removed_by_review": [
+  "client_id",
+  "rtt",
+  "session_id"
+ ],
+ "removed_held_out": 2
+}

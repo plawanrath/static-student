@@ -1,0 +1,89 @@
+{
+ "target": "extract latency + user id",
+ "fields": [
+  {
+   "role": "latency",
+   "type": "duration -> uint64 microseconds",
+   "synonyms": [
+    "latency",
+    "lat",
+    "elapsed",
+    "duration",
+    "rt",
+    "resp_time",
+    "took",
+    "time",
+    "request_time"
+   ],
+   "units": [
+    "ns",
+    "us",
+    "ms",
+    "s",
+    "min"
+   ]
+  },
+  {
+   "role": "user",
+   "type": "byte string <= 36",
+   "synonyms": [
+    "user",
+    "usr",
+    "uid",
+    "user_id",
+    "userId",
+    "account",
+    "principal",
+    "username",
+    "acct"
+   ],
+   "schemes": [
+    "decimal",
+    "hex",
+    "uuid",
+    "prefixed"
+   ]
+  }
+ ],
+ "near_miss": {
+  "durations": [
+   "db_time",
+   "ttfb",
+   "upstream_latency",
+   "timeout",
+   "latency_p99",
+   "queue_wait",
+   "dns_time"
+  ],
+  "ids": [
+   "request_id",
+   "trace_id",
+   "session",
+   "tenant",
+   "target_user",
+   "span_id",
+   "device"
+  ]
+ },
+ "defer_reasons": [
+  "target_missing",
+  "ambiguous_latency",
+  "non_numeric",
+  "unit_unknown",
+  "truncated",
+  "corrupted",
+  "out_of_range",
+  "id_too_long",
+  "multi_record"
+ ],
+ "containers": [
+  "kv",
+  "logfmt",
+  "json_flat",
+  "json_nested",
+  "query_string",
+  "csv_positional",
+  "free_text"
+ ],
+ "removed_held_out": 0
+}

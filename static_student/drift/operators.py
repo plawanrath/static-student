@@ -1,4 +1,4 @@
-"""In-curriculum drift operators D1-D8.
+"""In-curriculum drift operators D1-D8, D13, D14.
 
 Each operator maps (family, rng, severity in [0, 1], params) to a new family, or None when it does not apply.
 `params` supplies the value lists (aliases, delimiters, ...); the defaults below are the in-curriculum lists, and the
@@ -199,8 +199,41 @@ def d8_damage(fam, rng, s, p):
     return fam
 
 
+def d13_nested_shadow(fam, rng, s, p):
+    """A sub-object from another component carries the same leaf key as the target and comes first. A line regex has no notion of scope."""
+    if fam["container"] not in ("json_flat", "json_nested"):
+        return None
+    scope = rng.choice(T.FOREIGN_SCOPES)
+    for role in (["latency", "user"] if s > 0.5 else [rng.choice(["latency", "latency", "user"])]):
+        tgt = _slot(fam, role)
+        if not tgt or (tgt.get("path") or [None])[0] in T.FOREIGN_SCOPES:
+            continue
+        fam["slots"].insert(0, {"role": "distractor", "key": tgt["key"], "path": [scope], "value": copy.deepcopy(tgt["value"])})
+    fam["container"] = "json_nested"
+    return fam
+
+
+def d14_quoted_echo(fam, rng, s, p):
+    """A string field quotes a fragment of another line, with the target keys in it, before the real fields. A line regex has no notion of quoting."""
+    if fam["container"] not in ("kv", "logfmt", "json_flat", "json_nested"):
+        return None
+    lat, usr = _slot(fam, "latency"), _slot(fam, "user")
+    key = rng.choice(("msg", "error", "detail", "note", "last_event"))
+    if not lat or not usr or any(sl.get("key") == key for sl in fam["slots"]):
+        return None
+    v = lat["value"]
+    unit_text = {"suffix": v.get("unit_text", v["unit"]), "suffix_space": " " + v.get("unit_text", v["unit"])}.get(v.get("unit_pos", "suffix"), "")
+    assign = fam.get("assign", "=") if fam["container"] == "kv" else "="
+    fam["slots"].insert(0, {"role": "distractor", "key": key, "value": {"gen": "kv_echo", "keys": [lat["key"], usr["key"]], "assign": assign, "unit_text": unit_text}})
+    if fam["container"] == "kv":
+        fam["order"] = "fixed"
+        if fam.get("quote", "none") == "none":
+            fam["quote"] = "as_needed"  # quote the echoed fragment only; every other value keeps its step-0 surface
+    return fam
+
+
 OPERATORS = {"D1": d1_key_rename, "D2": d2_delimiters, "D3": d3_reorder_insert, "D4": d4_unit, "D5": d5_number_format,
-             "D6": d6_container, "D7": d7_quoting, "D8": d8_damage}
+             "D6": d6_container, "D7": d7_quoting, "D8": d8_damage, "D13": d13_nested_shadow, "D14": d14_quoted_echo}
 
 
 def apply(op_id: str, fam: dict, rng: random.Random, severity: float, params: dict | None = None,
@@ -214,7 +247,7 @@ def apply(op_id: str, fam: dict, rng: random.Random, severity: float, params: di
             return None
         out["defer_reason"] = T.surface_defer_reason(out)
         out.setdefault("trace", [])
-        if out != fam and not T.check_family(out, n=40, seed=rng.randrange(2**31)):
+        if out != fam and not T.check_family(out, n=150, seed=rng.randrange(2**31)):
             out["trace"] = [*fam.get("trace", []), op_id]
             return out
     return None

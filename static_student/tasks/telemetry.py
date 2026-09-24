@@ -45,15 +45,18 @@ K_USR = ("user", "usr", "uid", "user_id", "userId", "account", "principal", "use
 DISTRACTOR_DURATIONS = ("db_time", "ttfb", "upstream_latency", "timeout", "latency_p99", "queue_wait", "dns_time")
 DISTRACTOR_IDS = ("request_id", "trace_id", "session", "tenant", "target_user", "span_id", "device")
 
+FOREIGN_SCOPES = ("upstream", "db", "backend", "cache", "queue", "dns")  # a JSON sub-object under one of these is another component's data
+
 CONTAINERS = ("kv", "logfmt", "json_flat", "json_nested", "query_string", "csv_positional", "free_text")
-QUOTES = ("none", "double_all", "double_strings", "single_strings")
+QUOTES = ("none", "double_all", "double_strings", "single_strings", "as_needed")
 DEFER_REASONS = ("target_missing", "ambiguous_latency", "non_numeric", "unit_unknown", "truncated", "corrupted",
                  "out_of_range", "id_too_long", "multi_record", "decimal_comma")
 NUMFMTS = ("int", "decimal", "sci", "thousands")
 ID_SCHEMES = ("decimal", "hex", "uuid", "prefixed")
 
-_NUM_RE = re.compile(rb"(?:[1-9]\d{0,2}(?:,\d{3})+|\d+)(?:\.\d+)?(?:[eE][+-]?\d+)?\Z")
-_LAT_TOKEN_RE = re.compile(rb"(?:[1-9]\d{0,2}(?:,\d{3})+|\d+)(?:\.\d+)?(?:[eE][+-]?\d+)? ?(?:ns|us|\xc2\xb5s|ms|sec|s|min)\Z")
+MAX_NUMBER_BYTES = 40  # longer tokens are not latencies; the bound also keeps the exact conversion cheap for any span a model can point at
+_NUM_RE = re.compile(rb"(?:[1-9]\d{0,2}(?:,\d{3})+|\d+)(?:\.\d+)?(?:[eE][+-]?\d{1,2})?\Z")
+_LAT_TOKEN_RE = re.compile(rb"(?:[1-9]\d{0,2}(?:,\d{3})+|\d+)(?:\.\d+)?(?:[eE][+-]?\d{1,2})? ?(?:ns|us|\xc2\xb5s|ms|sec|s|min)\Z")
 _ID_RE = re.compile(rb"[A-Za-z0-9._:@/+-]+\Z")
 _JSON_NUM_RE = re.compile(r"-?(?:0|[1-9]\d*)(?:\.\d+)?(?:[eE][+-]?\d+)?\Z")
 _KEY_TAIL_RES = (re.compile(r"(?<=[a-z0-9])([A-Z][a-z]*)\Z"), re.compile(r"[_.\-]([A-Za-z]+)\Z"))  # latencyMs, latency_ms
@@ -91,7 +94,7 @@ def to_micros(number_text: bytes | str, unit: str) -> int | None:
     """Exact conversion of a rendered number to microseconds, truncated toward zero. None if not a number or out of
     range. Commas are accepted only as thousands separators (groups of exactly three digits)."""
     raw = number_text.encode() if isinstance(number_text, str) else bytes(number_text)
-    if not _NUM_RE.match(raw):
+    if len(raw) > MAX_NUMBER_BYTES or not _NUM_RE.match(raw):
         return None
     try:
         d = Decimal(raw.decode().replace(",", ""))
@@ -205,6 +208,12 @@ def _gen_id(rng: random.Random, v: dict) -> list[Seg]:
     return [(s, v.get("_tag"))]
 
 
+def _gen_kv_echo(rng: random.Random, v: dict) -> list[Seg]:
+    """A quoted fragment of some other log line: words, then key=value pairs. Inside a string value it is text, not a field."""
+    pairs = [f"{k}{v.get('assign', '=')}{val}" for k, val in zip(v["keys"], (f"{rng.randrange(1, 900)}{v.get('unit_text', '')}", f"{rng.choice(_ID_PREFIXES)}{rng.randrange(10, 99999)}"))]
+    return [(" ".join([rng.choice(_WORDS), *pairs]), None)]
+
+
 def _ts(rng: random.Random) -> tuple[int, int, int, int, int, int, int]:
     return (rng.randrange(2024, 2027), rng.randrange(1, 13), rng.randrange(1, 29), rng.randrange(24),
             rng.randrange(60), rng.randrange(60), rng.randrange(1000))
@@ -218,6 +227,7 @@ _MONTHS = ("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct",
 GENERATORS = {
     "duration": _gen_duration,
     "id": _gen_id,
+    "kv_echo": _gen_kv_echo,
     "hostname": _plain(lambda r, v: f"{r.choice(_HOSTS)}-{r.randrange(1, 40):02d}" + (".prod.internal" if r.random() < 0.3 else "")),
     "status": _plain(lambda r, v: str(r.choice((200, 200, 200, 201, 204, 301, 304, 400, 401, 403, 404, 429, 500, 502, 503)))),
     "path": _plain(lambda r, v: "/" + "/".join(r.choice(_PATH_PARTS) for _ in range(r.randrange(1, 4)))),
@@ -339,6 +349,8 @@ def validate_family(fam: dict) -> list[str]:
         elif s["role"] == "user":
             if v["gen"] != "id":
                 errs.append(f"slot {i}: user needs an id generator")
+        elif fam["container"] == "json_nested" and (s.get("path") or [None])[0] in FOREIGN_SCOPES:
+            pass  # another component's sub-object may reuse any leaf key: the path tells the fields apart
         elif keyed and base_key(key) in {base_key(k) for k in K_LAT + K_USR}:
             errs.append(f"slot {i}: distractor key {key!r} is a target alias")
     if fam["container"] == "free_text":
@@ -362,7 +374,8 @@ def validate_family(fam: dict) -> list[str]:
 def _quote_segs(segs: list[Seg], policy: str) -> tuple[list[Seg], bool]:
     text = "".join(t for t, _ in segs)
     numeric = bool(_JSON_NUM_RE.match(text))
-    q = {"none": "", "double_all": '"', "double_strings": "" if numeric else '"', "single_strings": "" if numeric else "'"}[policy]
+    q = {"none": "", "double_all": '"', "double_strings": "" if numeric else '"', "single_strings": "" if numeric else "'",
+         "as_needed": '"' if (" " in text or not text) else ""}[policy]
     return ([(q, None), *segs, (q, None)] if q else segs), bool(q)
 
 

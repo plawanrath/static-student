@@ -1,0 +1,400 @@
+{
+ "model": "S_w4",
+ "n_per_pool": 50000,
+ "by_no_match_rate": {
+  "0.00": {
+   "legacy_only": {
+    "n": 50000,
+    "p50_us": 1.0,
+    "p99_us": 2.0,
+    "mean_us": 0.95918,
+    "throughput_per_s": 968710.6,
+    "counters": {
+     "payloads": 50000,
+     "legacy_matched": 50000
+    }
+   },
+   "hybrid_legacy_first": {
+    "n": 50000,
+    "p50_us": 1.0,
+    "p99_us": 2.0,
+    "mean_us": 0.96166,
+    "throughput_per_s": 1016218.9,
+    "counters": {
+     "payloads": 50000,
+     "legacy_matched": 50000,
+     "no_match": 0,
+     "student_accepted": 0,
+     "student_deferred": 0,
+     "audited": 0,
+     "confident_disagreement": 0,
+     "audit_dropped": 0,
+     "budget_skipped": 0
+    }
+   },
+   "student_first": {
+    "n": 50000,
+    "p50_us": 13677.0,
+    "p99_us": 28887.0,
+    "mean_us": 14434.67412,
+    "throughput_per_s": 69.3,
+    "counters": {
+     "payloads": 50000,
+     "legacy_matched": 0,
+     "no_match": 0,
+     "student_accepted": 30333,
+     "student_deferred": 19667,
+     "audited": 0,
+     "confident_disagreement": 0,
+     "audit_dropped": 0,
+     "budget_skipped": 0
+    }
+   },
+   "hybrid_throughput_fraction_of_legacy": 1.0490428204254192,
+   "ratio_of_medians_hybrid_over_legacy": {
+    "point": 1.0,
+    "ci_low": 1.0,
+    "ci_high": 1.0,
+    "n": 50000,
+    "n_resamples": 10000
+   }
+  },
+  "0.01": {
+   "legacy_only": {
+    "n": 50000,
+    "p50_us": 1.0,
+    "p99_us": 2.0,
+    "mean_us": 0.98842,
+    "throughput_per_s": 935348.7,
+    "counters": {
+     "payloads": 50000,
+     "legacy_matched": 49500
+    }
+   },
+   "hybrid_legacy_first": {
+    "n": 50000,
+    "p50_us": 1.0,
+    "p99_us": 676.670000017657,
+    "mean_us": 174.0746,
+    "throughput_per_s": 5743.9,
+    "counters": {
+     "payloads": 50000,
+     "legacy_matched": 49500,
+     "no_match": 500,
+     "student_accepted": 399,
+     "student_deferred": 101,
+     "audited": 0,
+     "confident_disagreement": 0,
+     "audit_dropped": 0,
+     "budget_skipped": 0
+    }
+   },
+   "student_first": {
+    "n": 50000,
+    "p50_us": 13635.0,
+    "p99_us": 28776.020000000004,
+    "mean_us": 14402.48506,
+    "throughput_per_s": 69.4,
+    "counters": {
+     "payloads": 50000,
+     "legacy_matched": 0,
+     "no_match": 0,
+     "student_accepted": 30428,
+     "student_deferred": 19572,
+     "audited": 0,
+     "confident_disagreement": 0,
+     "audit_dropped": 0,
+     "budget_skipped": 0
+    }
+   },
+   "hybrid_throughput_fraction_of_legacy": 0.006140918354833871,
+   "ratio_of_medians_hybrid_over_legacy": {
+    "point": 1.0,
+    "ci_low": 1.0,
+    "ci_high": 1.0,
+    "n": 50000,
+    "n_resamples": 10000
+   }
+  },
+  "0.10": {
+   "legacy_only": {
+    "n": 50000,
+    "p50_us": 1.0,
+    "p99_us": 2.0,
+    "mean_us": 0.99916,
+    "throughput_per_s": 927988.1,
+    "counters": {
+     "payloads": 50000,
+     "legacy_matched": 45000
+    }
+   },
+   "hybrid_legacy_first": {
+    "n": 50000,
+    "p50_us": 1.0,
+    "p99_us": 22001.030000000006,
+    "mean_us": 1689.0963,
+    "throughput_per_s": 592.0,
+    "counters": {
+     "payloads": 50000,
+     "legacy_matched": 45000,
+     "no_match": 5000,
+     "student_accepted": 3572,
+     "student_deferred": 1428,
+     "audited": 0,
+     "confident_disagreement": 0,
+     "audit_dropped": 0,
+     "budget_skipped": 0
+    }
+   },
+   "student_first": {
+    "n": 50000,
+    "p50_us": 13817.0,
+    "p99_us": 28659.030000000006,
+    "mean_us": 14629.46576,
+    "throughput_per_s": 68.4,
+    "counters": {
+     "payloads": 50000,
+     "legacy_matched": 0,
+     "no_match": 0,
+     "student_accepted": 30870,
+     "student_deferred": 19130,
+     "audited": 0,
+     "confident_disagreement": 0,
+     "audit_dropped": 0,
+     "budget_skipped": 0
+    }
+   },
+   "hybrid_throughput_fraction_of_legacy": 0.0006379392149532952,
+   "ratio_of_medians_hybrid_over_legacy": {
+    "point": 1.0,
+    "ci_low": 1.0,
+    "ci_high": 1.0,
+    "n": 50000,
+    "n_resamples": 10000
+   }
+  },
+  "0.50": {
+   "legacy_only": {
+    "n": 50000,
+    "p50_us": 1.0,
+    "p99_us": 2.0,
+    "mean_us": 1.04118,
+    "throughput_per_s": 897730.5,
+    "counters": {
+     "payloads": 50000,
+     "legacy_matched": 25019
+    }
+   },
+   "hybrid_legacy_first": {
+    "n": 50000,
+    "p50_us": 12.0,
+    "p99_us": 25458.040000000008,
+    "mean_us": 8609.1574,
+    "throughput_per_s": 116.2,
+    "counters": {
+     "payloads": 50000,
+     "legacy_matched": 25019,
+     "no_match": 24981,
+     "student_accepted": 22649,
+     "student_deferred": 2332,
+     "audited": 0,
+     "confident_disagreement": 0,
+     "audit_dropped": 0,
+     "budget_skipped": 0
+    }
+   },
+   "student_first": {
+    "n": 50000,
+    "p50_us": 15612.0,
+    "p99_us": 29773.010000000002,
+    "mean_us": 16266.9328,
+    "throughput_per_s": 61.5,
+    "counters": {
+     "payloads": 50000,
+     "legacy_matched": 0,
+     "no_match": 0,
+     "student_accepted": 37875,
+     "student_deferred": 12125,
+     "audited": 0,
+     "confident_disagreement": 0,
+     "audit_dropped": 0,
+     "budget_skipped": 0
+    }
+   },
+   "hybrid_throughput_fraction_of_legacy": 0.00012943750936389038,
+   "ratio_of_medians_hybrid_over_legacy": {
+    "point": 12.0,
+    "ci_low": 8.0,
+    "ci_high": 9321.0,
+    "n": 50000,
+    "n_resamples": 10000
+   }
+  }
+ },
+ "by_audit_probability": {
+  "0.0:synchronous": {
+   "n": 50000,
+   "p50_us": 1.0,
+   "p99_us": 2.0,
+   "mean_us": 1.02208,
+   "throughput_per_s": 957524.2,
+   "counters": {
+    "payloads": 50000,
+    "legacy_matched": 50000,
+    "no_match": 0,
+    "student_accepted": 0,
+    "student_deferred": 0,
+    "audited": 0,
+    "confident_disagreement": 0,
+    "audit_dropped": 0,
+    "budget_skipped": 0
+   }
+  },
+  "0.0:asynchronous": {
+   "n": 50000,
+   "p50_us": 1.0,
+   "p99_us": 2.0,
+   "mean_us": 1.0386,
+   "throughput_per_s": 941992.1,
+   "counters": {
+    "payloads": 50000,
+    "legacy_matched": 50000,
+    "no_match": 0,
+    "student_accepted": 0,
+    "student_deferred": 0,
+    "audited": 0,
+    "confident_disagreement": 0,
+    "audit_dropped": 0,
+    "budget_skipped": 0
+   }
+  },
+  "0.001:synchronous": {
+   "n": 50000,
+   "p50_us": 1.0,
+   "p99_us": 2.0,
+   "mean_us": 13.91786,
+   "throughput_per_s": 71726.3,
+   "counters": {
+    "payloads": 50000,
+    "legacy_matched": 50000,
+    "no_match": 0,
+    "student_accepted": 0,
+    "student_deferred": 0,
+    "audited": 43,
+    "confident_disagreement": 0,
+    "audit_dropped": 0,
+    "budget_skipped": 0
+   }
+  },
+  "0.001:asynchronous": {
+   "n": 50000,
+   "p50_us": 1.0,
+   "p99_us": 2.0,
+   "mean_us": 1.03606,
+   "throughput_per_s": 944304.9,
+   "counters": {
+    "payloads": 50000,
+    "legacy_matched": 50000,
+    "no_match": 0,
+    "student_accepted": 0,
+    "student_deferred": 0,
+    "audited": 43,
+    "confident_disagreement": 0,
+    "audit_dropped": 0,
+    "budget_skipped": 0
+   }
+  },
+  "0.01:synchronous": {
+   "n": 50000,
+   "p50_us": 1.0,
+   "p99_us": 19.020000000004075,
+   "mean_us": 149.41056,
+   "throughput_per_s": 6691.8,
+   "counters": {
+    "payloads": 50000,
+    "legacy_matched": 50000,
+    "no_match": 0,
+    "student_accepted": 0,
+    "student_deferred": 0,
+    "audited": 495,
+    "confident_disagreement": 0,
+    "audit_dropped": 0,
+    "budget_skipped": 0
+   }
+  },
+  "0.01:asynchronous": {
+   "n": 50000,
+   "p50_us": 1.0,
+   "p99_us": 2.0,
+   "mean_us": 1.03432,
+   "throughput_per_s": 946109.6,
+   "counters": {
+    "payloads": 50000,
+    "legacy_matched": 50000,
+    "no_match": 0,
+    "student_accepted": 0,
+    "student_deferred": 0,
+    "audited": 495,
+    "confident_disagreement": 0,
+    "audit_dropped": 0,
+    "budget_skipped": 0
+   }
+  }
+ },
+ "by_budget": {
+  "1.0": {
+   "n": 50000,
+   "p50_us": 1.0,
+   "p99_us": 23099.010000000002,
+   "mean_us": 1772.10508,
+   "throughput_per_s": 564.3,
+   "counters": {
+    "payloads": 50000,
+    "legacy_matched": 45000,
+    "no_match": 5000,
+    "student_accepted": 3572,
+    "student_deferred": 1428,
+    "audited": 0,
+    "confident_disagreement": 0,
+    "audit_dropped": 0,
+    "budget_skipped": 0
+   }
+  },
+  "0.01": {
+   "n": 50000,
+   "p50_us": 1.0,
+   "p99_us": 90.44000001292443,
+   "mean_us": 176.74892,
+   "throughput_per_s": 5656.9,
+   "counters": {
+    "payloads": 50000,
+    "legacy_matched": 45000,
+    "no_match": 5000,
+    "student_accepted": 361,
+    "student_deferred": 139,
+    "audited": 0,
+    "confident_disagreement": 0,
+    "audit_dropped": 0,
+    "budget_skipped": 4500
+   }
+  },
+  "0.001": {
+   "n": 50000,
+   "p50_us": 1.0,
+   "p99_us": 2.0,
+   "mean_us": 18.68178,
+   "throughput_per_s": 53457.4,
+   "counters": {
+    "payloads": 50000,
+    "legacy_matched": 45000,
+    "no_match": 5000,
+    "student_accepted": 38,
+    "student_deferred": 12,
+    "audited": 0,
+    "confident_disagreement": 0,
+    "audit_dropped": 0,
+    "budget_skipped": 4950
+   }
+  }
+ }
+}

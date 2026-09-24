@@ -4,7 +4,7 @@ A timeline is fully determined by its config (YAML under data/drift/): seed, tra
 Poisson arrival rate per source and step, and the payload count. `sample` returns, per step, the family of every
 source plus the event log; `render_step` expands one step into labelled payloads.
 
-Tracks: in_curriculum (D1-D8, in-curriculum parameters), heldout_params (D1-D7 with unseen parameter values),
+Tracks: in_curriculum (D1-D8, D13, D14, in-curriculum parameters), heldout_params (D1-D7 with unseen parameter values),
 heldout_operators (D9-D12).
 """
 from __future__ import annotations
@@ -27,7 +27,7 @@ TRACKS = {
     "heldout_operators": (list(heldout.OPERATORS), None, heldout.OPERATORS),
     "none": ([], None, {}),  # drift-free control, for false-alarm rates
 }
-DEFAULTS = {"steps": 27, "sources": 8, "rate": 0.25, "payloads_per_source": 2000, "sources_file": "data/drift/sources_v0.json",
+DEFAULTS = {"steps": 27, "sources": 8, "rate": 0.1, "payloads_per_source": 2000, "sources_file": "data/drift/sources_v0.json",
             "only_operators": None}
 
 

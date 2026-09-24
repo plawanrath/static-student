@@ -1,0 +1,31 @@
+{
+ "model": "models/tel-mlx-S-w4",
+ "bits": 4,
+ "n": 3000,
+ "weight_bytes": 1140132,
+ "scratch_bytes": 1975816,
+ "build_seconds": 0.5,
+ "seconds": {
+  "c_kernel": 5.9,
+  "numpy_reference": 460.9
+ },
+ "c_vs_reference": {
+  "pointers_identical": 1.0,
+  "unit_identical": 1.0,
+  "score_bit_identical": true,
+  "score_max_abs_delta": 0.0,
+  "score_ulp_max": 0,
+  "defer_bit_identical": true,
+  "defer_max_abs_delta": 0.0
+ },
+ "c_vs_float_model": {
+  "pointers_identical": 0.999,
+  "unit_identical": 0.9986666666666667,
+  "score_max_abs_delta": 0.19932803511619568,
+  "defer_max_abs_delta": 0.31980302929878235
+ },
+ "G1a": {
+  "bit_exact_vs_reference": true,
+  "argmax_vs_float_model": false
+ }
+}

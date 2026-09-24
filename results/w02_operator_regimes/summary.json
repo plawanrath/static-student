@@ -1,0 +1,118 @@
+{
+ "payloads_per_instance": 1000,
+ "instances_per_source": 10,
+ "operators": {
+  "D1": {
+   "instances": 90,
+   "far": 89,
+   "benign": 1,
+   "near_or_both_share": 0.0,
+   "mean_silent_wrong": 0.0,
+   "max_silent_wrong": 0.0
+  },
+  "D2": {
+   "instances": 60,
+   "far": 57,
+   "benign": 3,
+   "near_or_both_share": 0.0,
+   "mean_silent_wrong": 0.0,
+   "max_silent_wrong": 0.0
+  },
+  "D3": {
+   "instances": 99,
+   "far": 21,
+   "benign": 78,
+   "near_or_both_share": 0.0,
+   "mean_silent_wrong": 0.0,
+   "max_silent_wrong": 0.0
+  },
+  "D4": {
+   "instances": 120,
+   "far": 97,
+   "benign": 23,
+   "near_or_both_share": 0.0,
+   "mean_silent_wrong": 0.0,
+   "max_silent_wrong": 0.0
+  },
+  "D5": {
+   "instances": 120,
+   "benign": 68,
+   "far": 52,
+   "near_or_both_share": 0.0,
+   "mean_silent_wrong": 0.0,
+   "max_silent_wrong": 0.0
+  },
+  "D6": {
+   "instances": 120,
+   "far": 117,
+   "benign": 3,
+   "near_or_both_share": 0.0,
+   "mean_silent_wrong": 0.0,
+   "max_silent_wrong": 0.0
+  },
+  "D7": {
+   "instances": 70,
+   "far": 42,
+   "benign": 28,
+   "near_or_both_share": 0.0,
+   "mean_silent_wrong": 0.0,
+   "max_silent_wrong": 0.0
+  },
+  "D8": {
+   "instances": 120,
+   "benign": 107,
+   "near": 13,
+   "near_or_both_share": 0.108,
+   "mean_silent_wrong": 0.0096,
+   "max_silent_wrong": 0.14
+  },
+  "D9": {
+   "instances": 110,
+   "far": 44,
+   "benign": 66,
+   "near_or_both_share": 0.0,
+   "mean_silent_wrong": 0.0,
+   "max_silent_wrong": 0.0
+  },
+  "D10": {
+   "instances": 85,
+   "far": 12,
+   "benign": 73,
+   "near_or_both_share": 0.0,
+   "mean_silent_wrong": 0.0,
+   "max_silent_wrong": 0.0
+  },
+  "D11": {
+   "instances": 120,
+   "far": 46,
+   "benign": 74,
+   "near_or_both_share": 0.0,
+   "mean_silent_wrong": 0.0,
+   "max_silent_wrong": 0.0
+  },
+  "D12": {
+   "instances": 97,
+   "far": 56,
+   "benign": 41,
+   "near_or_both_share": 0.0,
+   "mean_silent_wrong": 0.0,
+   "max_silent_wrong": 0.0
+  },
+  "D13": {
+   "instances": 26,
+   "near": 26,
+   "near_or_both_share": 1.0,
+   "mean_silent_wrong": 0.9984,
+   "max_silent_wrong": 1.0
+  },
+  "D14": {
+   "instances": 76,
+   "far": 20,
+   "near": 6,
+   "benign": 50,
+   "near_or_both_share": 0.079,
+   "mean_silent_wrong": 0.0789,
+   "max_silent_wrong": 1.0
+  }
+ }
+}
