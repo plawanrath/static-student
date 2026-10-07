@@ -1,0 +1,19 @@
+{
+ "models": [
+  "injection",
+  "sentiment",
+  "zeroshot",
+  "toxicity"
+ ],
+ "default_paths": [
+  "ort_int8_dynamic",
+  "torch_mps_fp16_b32",
+  "coreml_fp16"
+ ],
+ "models_with_gap_on_a_default_path_at_alpha_0.05": [
+  "injection",
+  "sentiment",
+  "toxicity"
+ ],
+ "GO": true
+}

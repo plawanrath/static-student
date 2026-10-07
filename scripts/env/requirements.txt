@@ -13,6 +13,11 @@ torch>=2.6
 # build-time teacher (never ships); Apple silicon only
 mlx-lm>=0.24 ; sys_platform == "darwin"
 huggingface_hub>=0.30
+safetensors>=0.4
 # engine baselines: export path
 onnx>=1.17
 onnxruntime>=1.20
+# deployment-path study: public encoder classifiers through PyTorch, ONNX Runtime (int8 dynamic) and Core ML
+transformers>=5.0
+pyarrow>=17
+coremltools>=8.0 ; sys_platform == "darwin"

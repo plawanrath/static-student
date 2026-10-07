@@ -1,0 +1,28 @@
+{
+ "spec": "specs/telemetry.spec",
+ "spec_sha256": "eb8d6ae4b5bebde44493e704b3cd42bda30967a9df7a623aa05e2dee6acc6450",
+ "model": "models/tel-mlx-M-w4",
+ "bits": 4,
+ "size": "M",
+ "weights_sha256": "215cb1ad22aefa859c82bba4fc629778685a11554a6e51d9707341e7d0fbbeb4",
+ "weight_bytes": 6299364,
+ "certificate": {
+  "alpha": 0.01,
+  "delta": 0.05,
+  "min_coverage": 0.5,
+  "tau": -3.1807548999786377,
+  "n_calibration": 20000,
+  "n_accepted": 15952,
+  "k_wrong": 57,
+  "coverage": 0.7976,
+  "empirical_risk": 0.0035732196589769306,
+  "p_value": 5.233927489762107e-21,
+  "grid_sha256": "190fe1e1830fd51ef9785a4e08e3443526000940e0ace817eb3bb48725f39f36",
+  "pool_sha256": "e06a4a53395c4486d3166ef7c06ca9df842d4e99a55efe9edd82c9aa88d5a28c",
+  "thresholds_tested": 96
+ },
+ "binary_bytes": 6428616,
+ "stripped_bytes": 6427312,
+ "seconds": 229.6,
+ "certificate_line": "SSCERT01 alpha=0.01 delta=0.05 tau=-3.1807549 coverage=0.7976 n=15952 k=57 weights=215cb1ad22aefa859c82bba4fc629778685a11554a6e51d9707341e7d0fbbeb4 pool=e06a4a53395c4486d3166ef7c06ca9df842d4e99a55efe9edd82c9aa88d5a28c grid=190fe1e1830fd51ef9785a4e08e3443526000940e0ace817eb3bb48725f39f36"
+}

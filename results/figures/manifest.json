@@ -1,0 +1,9 @@
+{
+  "gap_dotplot": [
+    "results/w02_cert_gap_pilot/sentiment/analysis.json",
+    "results/w02_cert_gap_pilot/injection/analysis.json",
+    "results/w02_cert_gap_pilot/zeroshot/analysis.json",
+    "results/w02_cert_gap_pilot/toxicity/analysis.json",
+    "results/w03_x86/compare_arm64_M3_Ultra_x86_IntelR_XeonR_Platinum_8488C.json"
+  ]
+}

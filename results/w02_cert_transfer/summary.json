@@ -1,0 +1,946 @@
+{
+ "spec": {
+  "alpha": 0.01,
+  "delta": 0.05,
+  "min_coverage": 0.5
+ },
+ "n_per_pool": 20000,
+ "configs": {
+  "tel_XS_w4": {
+   "model": "models/tel-mlx-XS-w4",
+   "fp32_model": "models/tel-mlx-XS-fp",
+   "kernel": "build/tel_XS_w4/ss_cli",
+   "pool_sha256": "e06a4a53395c4486d3166ef7c06ca9df842d4e99a55efe9edd82c9aa88d5a28c",
+   "paths": {
+    "kernel": {
+     "certified": true,
+     "tau": -0.030385877937078476,
+     "cal_coverage": 0.60805,
+     "cal_risk": 0.00846969821560727,
+     "shipped_test": {
+      "risk": 0.007609851894280337,
+      "risk_ci_low": 0.006119414258602994,
+      "risk_ci_high": 0.009200708948997662,
+      "coverage": 0.61105,
+      "coverage_ci_low": 0.60435,
+      "coverage_ci_high": 0.61775,
+      "n": 20000,
+      "n_accepted": 12221,
+      "n_resamples": 10000
+     },
+     "violates_alpha": false,
+     "coverage_minus_kernel_rule": {
+      "point": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0
+     },
+     "decisions_differing_from_kernel_rule": 0.0
+    },
+    "fp32_student": {
+     "certified": true,
+     "tau": -0.027999579906463623,
+     "cal_coverage": 0.6046,
+     "cal_risk": 0.008435329143235196,
+     "shipped_test": {
+      "risk": 0.007261924409968642,
+      "risk_ci_low": 0.005797805781544594,
+      "risk_ci_high": 0.00883204464043642,
+      "coverage": 0.6059,
+      "coverage_ci_low": 0.59914875,
+      "coverage_ci_high": 0.6126,
+      "n": 20000,
+      "n_accepted": 12118,
+      "n_resamples": 10000
+     },
+     "violates_alpha": false,
+     "coverage_minus_kernel_rule": {
+      "point": -0.005149999999999988,
+      "ci_low": -0.006199999999999983,
+      "ci_high": -0.004198750000000003
+     },
+     "decisions_differing_from_kernel_rule": 0.00515
+    },
+    "qat_cpu": {
+     "certified": true,
+     "tau": -0.026867439970374107,
+     "cal_coverage": 0.59885,
+     "cal_risk": 0.008349336227769892,
+     "shipped_test": {
+      "risk": 0.007211538461538462,
+      "risk_ci_low": 0.005754685958566261,
+      "risk_ci_high": 0.00878285024351609,
+      "coverage": 0.6032,
+      "coverage_ci_low": 0.59645,
+      "coverage_ci_high": 0.6099,
+      "n": 20000,
+      "n_accepted": 12064,
+      "n_resamples": 10000
+     },
+     "violates_alpha": false,
+     "coverage_minus_kernel_rule": {
+      "point": -0.007850000000000024,
+      "ci_low": -0.009099999999999997,
+      "ci_high": -0.006650000000000045
+     },
+     "decisions_differing_from_kernel_rule": 0.00785
+    },
+    "qat_mps": {
+     "certified": true,
+     "tau": -0.02701978012919426,
+     "cal_coverage": 0.59875,
+     "cal_risk": 0.008183716075156576,
+     "shipped_test": {
+      "risk": 0.0072049689440993785,
+      "risk_ci_low": 0.005750395861654145,
+      "risk_ci_high": 0.008775579055152465,
+      "coverage": 0.60375,
+      "coverage_ci_low": 0.597,
+      "coverage_ci_high": 0.6104,
+      "n": 20000,
+      "n_accepted": 12075,
+      "n_resamples": 10000
+     },
+     "violates_alpha": false,
+     "coverage_minus_kernel_rule": {
+      "point": -0.007299999999999973,
+      "ci_low": -0.008549999999999947,
+      "ci_high": -0.006149999999999989
+     },
+     "decisions_differing_from_kernel_rule": 0.0073
+    }
+   }
+  },
+  "tel_XS_w3": {
+   "model": "models/tel-mlx-XS-w3",
+   "fp32_model": "models/tel-mlx-XS-fp",
+   "kernel": "build/tel_XS_w3/ss_cli",
+   "pool_sha256": "e06a4a53395c4486d3166ef7c06ca9df842d4e99a55efe9edd82c9aa88d5a28c",
+   "paths": {
+    "kernel": {
+     "certified": true,
+     "tau": -0.03138367086648941,
+     "cal_coverage": 0.60725,
+     "cal_risk": 0.008233841086867023,
+     "shipped_test": {
+      "risk": 0.006970641298999508,
+      "risk_ci_low": 0.005535266290000344,
+      "risk_ci_high": 0.00850022811096062,
+      "coverage": 0.6097,
+      "coverage_ci_low": 0.6029,
+      "coverage_ci_high": 0.61635,
+      "n": 20000,
+      "n_accepted": 12194,
+      "n_resamples": 10000
+     },
+     "violates_alpha": false,
+     "coverage_minus_kernel_rule": {
+      "point": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0
+     },
+     "decisions_differing_from_kernel_rule": 0.0
+    },
+    "fp32_student": {
+     "certified": true,
+     "tau": -0.027999579906463623,
+     "cal_coverage": 0.6046,
+     "cal_risk": 0.008435329143235196,
+     "shipped_test": {
+      "risk": 0.006738208135762416,
+      "risk_ci_low": 0.005312084993359893,
+      "risk_ci_high": 0.0082541466787546,
+      "coverage": 0.60105,
+      "coverage_ci_low": 0.59425,
+      "coverage_ci_high": 0.60775,
+      "n": 20000,
+      "n_accepted": 12021,
+      "n_resamples": 10000
+     },
+     "violates_alpha": false,
+     "coverage_minus_kernel_rule": {
+      "point": -0.008650000000000047,
+      "ci_low": -0.009950000000000014,
+      "ci_high": -0.007350000000000079
+     },
+     "decisions_differing_from_kernel_rule": 0.00865
+    },
+    "qat_cpu": {
+     "certified": true,
+     "tau": -0.031214142218232155,
+     "cal_coverage": 0.60675,
+     "cal_risk": 0.008487845076225794,
+     "shipped_test": {
+      "risk": 0.0069763624425476034,
+      "risk_ci_low": 0.005536263560119059,
+      "risk_ci_high": 0.008506496433230013,
+      "coverage": 0.6092,
+      "coverage_ci_low": 0.60245,
+      "coverage_ci_high": 0.61585,
+      "n": 20000,
+      "n_accepted": 12184,
+      "n_resamples": 10000
+     },
+     "violates_alpha": false,
+     "coverage_minus_kernel_rule": {
+      "point": -0.000500000000000056,
+      "ci_low": -0.0008500000000000174,
+      "ci_high": -0.00019999999999997797
+     },
+     "decisions_differing_from_kernel_rule": 0.0005
+    },
+    "qat_mps": {
+     "certified": true,
+     "tau": -0.027658121660351753,
+     "cal_coverage": 0.5984,
+     "cal_risk": 0.007603609625668449,
+     "shipped_test": {
+      "risk": 0.006585528509503167,
+      "risk_ci_low": 0.005180920880832376,
+      "risk_ci_high": 0.008096522199264001,
+      "coverage": 0.5998,
+      "coverage_ci_low": 0.59305,
+      "coverage_ci_high": 0.6065,
+      "n": 20000,
+      "n_accepted": 11996,
+      "n_resamples": 10000
+     },
+     "violates_alpha": false,
+     "coverage_minus_kernel_rule": {
+      "point": -0.00990000000000002,
+      "ci_low": -0.011299999999999977,
+      "ci_high": -0.008550000000000058
+     },
+     "decisions_differing_from_kernel_rule": 0.0099
+    }
+   }
+  },
+  "tel_XS_w2": {
+   "model": "models/tel-mlx-XS-w2",
+   "fp32_model": "models/tel-mlx-XS-fp",
+   "kernel": "build/tel_XS_w2/ss_cli",
+   "pool_sha256": "e06a4a53395c4486d3166ef7c06ca9df842d4e99a55efe9edd82c9aa88d5a28c",
+   "paths": {
+    "kernel": {
+     "certified": true,
+     "tau": -0.03328247740864754,
+     "cal_coverage": 0.55265,
+     "cal_risk": 0.008414005247444133,
+     "shipped_test": {
+      "risk": 0.00889487870619946,
+      "risk_ci_low": 0.007186470606807319,
+      "risk_ci_high": 0.010662156197545243,
+      "coverage": 0.5565,
+      "coverage_ci_low": 0.54955,
+      "coverage_ci_high": 0.56335,
+      "n": 20000,
+      "n_accepted": 11130,
+      "n_resamples": 10000
+     },
+     "violates_alpha": false,
+     "coverage_minus_kernel_rule": {
+      "point": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0
+     },
+     "decisions_differing_from_kernel_rule": 0.0
+    },
+    "fp32_student": {
+     "certified": true,
+     "tau": -0.027999579906463623,
+     "cal_coverage": 0.6046,
+     "cal_risk": 0.008435329143235196,
+     "shipped_test": {
+      "risk": 0.008190686545186822,
+      "risk_ci_low": 0.006549135847798352,
+      "risk_ci_high": 0.009920934079323611,
+      "coverage": 0.5433,
+      "coverage_ci_low": 0.5363,
+      "coverage_ci_high": 0.55015,
+      "n": 20000,
+      "n_accepted": 10866,
+      "n_resamples": 10000
+     },
+     "violates_alpha": false,
+     "coverage_minus_kernel_rule": {
+      "point": -0.01319999999999999,
+      "ci_low": -0.014799999999999924,
+      "ci_high": -0.011600000000000055
+     },
+     "decisions_differing_from_kernel_rule": 0.0132
+    },
+    "qat_cpu": {
+     "certified": true,
+     "tau": -0.03353603556752205,
+     "cal_coverage": 0.5519,
+     "cal_risk": 0.008244247146222142,
+     "shipped_test": {
+      "risk": 0.008882110174053472,
+      "risk_ci_low": 0.0071746335613824055,
+      "risk_ci_high": 0.01064422106984249,
+      "coverage": 0.5573,
+      "coverage_ci_low": 0.55034875,
+      "coverage_ci_high": 0.56415,
+      "n": 20000,
+      "n_accepted": 11146,
+      "n_resamples": 10000
+     },
+     "violates_alpha": false,
+     "coverage_minus_kernel_rule": {
+      "point": 0.0008000000000000229,
+      "ci_low": 0.00044999999999995044,
+      "ci_high": 0.0011999999999999789
+     },
+     "decisions_differing_from_kernel_rule": 0.0008
+    },
+    "qat_mps": {
+     "certified": true,
+     "tau": -0.03369686007499695,
+     "cal_coverage": 0.55275,
+     "cal_risk": 0.00841248303934871,
+     "shipped_test": {
+      "risk": 0.008875739644970414,
+      "risk_ci_low": 0.00716974368166338,
+      "risk_ci_high": 0.010636523109118714,
+      "coverage": 0.5577,
+      "coverage_ci_low": 0.55075,
+      "coverage_ci_high": 0.5646,
+      "n": 20000,
+      "n_accepted": 11154,
+      "n_resamples": 10000
+     },
+     "violates_alpha": false,
+     "coverage_minus_kernel_rule": {
+      "point": 0.0011999999999999789,
+      "ci_low": 0.0007500000000000284,
+      "ci_high": 0.0017000000000000348
+     },
+     "decisions_differing_from_kernel_rule": 0.0012
+    }
+   }
+  },
+  "tel_S_w4": {
+   "model": "models/tel-mlx-S-w4",
+   "fp32_model": "models/tel-mlx-S-fp",
+   "kernel": "build/tel_S_w4/ss_cli",
+   "pool_sha256": "e06a4a53395c4486d3166ef7c06ca9df842d4e99a55efe9edd82c9aa88d5a28c",
+   "paths": {
+    "kernel": {
+     "certified": true,
+     "tau": -0.1438150852918625,
+     "cal_coverage": 0.78855,
+     "cal_risk": 0.005453046731342337,
+     "shipped_test": {
+      "risk": 0.004805564337654126,
+      "risk_ci_low": 0.0037543064646939576,
+      "risk_ci_high": 0.005911198564139154,
+      "coverage": 0.79075,
+      "coverage_ci_low": 0.7851487500000001,
+      "coverage_ci_high": 0.79635,
+      "n": 20000,
+      "n_accepted": 15815,
+      "n_resamples": 10000
+     },
+     "violates_alpha": false,
+     "coverage_minus_kernel_rule": {
+      "point": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0
+     },
+     "decisions_differing_from_kernel_rule": 0.0
+    },
+    "fp32_student": {
+     "certified": true,
+     "tau": -0.19133755564689636,
+     "cal_coverage": 0.79115,
+     "cal_risk": 0.007267901156544271,
+     "shipped_test": {
+      "risk": 0.005424156417533901,
+      "risk_ci_low": 0.004294000083760426,
+      "risk_ci_high": 0.0066175393210411,
+      "coverage": 0.79275,
+      "coverage_ci_low": 0.7872,
+      "coverage_ci_high": 0.7983,
+      "n": 20000,
+      "n_accepted": 15855,
+      "n_resamples": 10000
+     },
+     "violates_alpha": false,
+     "coverage_minus_kernel_rule": {
+      "point": 0.0020000000000000018,
+      "ci_low": 0.0013999999999999568,
+      "ci_high": 0.002650000000000041
+     },
+     "decisions_differing_from_kernel_rule": 0.002
+    },
+    "qat_cpu": {
+     "certified": true,
+     "tau": -0.15152710676193237,
+     "cal_coverage": 0.7885,
+     "cal_risk": 0.005326569435637286,
+     "shipped_test": {
+      "risk": 0.004866333817860077,
+      "risk_ci_low": 0.0038262588156671414,
+      "risk_ci_high": 0.005982318564901859,
+      "coverage": 0.79115,
+      "coverage_ci_low": 0.7855,
+      "coverage_ci_high": 0.7967512499999999,
+      "n": 20000,
+      "n_accepted": 15823,
+      "n_resamples": 10000
+     },
+     "violates_alpha": false,
+     "coverage_minus_kernel_rule": {
+      "point": 0.00040000000000006697,
+      "ci_low": 0.00014999999999998348,
+      "ci_high": 0.0007000000000000339
+     },
+     "decisions_differing_from_kernel_rule": 0.0004
+    },
+    "qat_mps": {
+     "certified": true,
+     "tau": -0.14794084429740906,
+     "cal_coverage": 0.7886,
+     "cal_risk": 0.005325893989348212,
+     "shipped_test": {
+      "risk": 0.004804045512010114,
+      "risk_ci_low": 0.0037528976827267296,
+      "risk_ci_high": 0.00590895447713558,
+      "coverage": 0.791,
+      "coverage_ci_low": 0.78535,
+      "coverage_ci_high": 0.7966,
+      "n": 20000,
+      "n_accepted": 15820,
+      "n_resamples": 10000
+     },
+     "violates_alpha": false,
+     "coverage_minus_kernel_rule": {
+      "point": 0.0002500000000000835,
+      "ci_low": 4.999999999999449e-05,
+      "ci_high": 0.0004999999999999449
+     },
+     "decisions_differing_from_kernel_rule": 0.00025
+    }
+   }
+  },
+  "tel_S_w3": {
+   "model": "models/tel-mlx-S-w3",
+   "fp32_model": "models/tel-mlx-S-fp",
+   "kernel": "build/tel_S_w3/ss_cli",
+   "pool_sha256": "e06a4a53395c4486d3166ef7c06ca9df842d4e99a55efe9edd82c9aa88d5a28c",
+   "paths": {
+    "kernel": {
+     "certified": true,
+     "tau": -2.331420660018921,
+     "cal_coverage": 0.798,
+     "cal_risk": 0.008458646616541353,
+     "shipped_test": {
+      "risk": 0.008558220889555223,
+      "risk_ci_low": 0.007137032591565501,
+      "risk_ci_high": 0.010039019924916473,
+      "coverage": 0.8004,
+      "coverage_ci_low": 0.79495,
+      "coverage_ci_high": 0.8059,
+      "n": 20000,
+      "n_accepted": 16008,
+      "n_resamples": 10000
+     },
+     "violates_alpha": false,
+     "coverage_minus_kernel_rule": {
+      "point": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0
+     },
+     "decisions_differing_from_kernel_rule": 0.0
+    },
+    "fp32_student": {
+     "certified": true,
+     "tau": -0.19133755564689636,
+     "cal_coverage": 0.79115,
+     "cal_risk": 0.007267901156544271,
+     "shipped_test": {
+      "risk": 0.005425867507886435,
+      "risk_ci_low": 0.004295363061242919,
+      "risk_ci_high": 0.006601319356035449,
+      "coverage": 0.7925,
+      "coverage_ci_low": 0.78695,
+      "coverage_ci_high": 0.79805,
+      "n": 20000,
+      "n_accepted": 15850,
+      "n_resamples": 10000
+     },
+     "violates_alpha": false,
+     "coverage_minus_kernel_rule": {
+      "point": -0.007900000000000018,
+      "ci_low": -0.009149999999999991,
+      "ci_high": -0.006700000000000039
+     },
+     "decisions_differing_from_kernel_rule": 0.0079
+    },
+    "qat_cpu": {
+     "certified": true,
+     "tau": -2.7488162517547607,
+     "cal_coverage": 0.79805,
+     "cal_risk": 0.008458116659357183,
+     "shipped_test": {
+      "risk": 0.008558220889555223,
+      "risk_ci_low": 0.007137032591565501,
+      "risk_ci_high": 0.010039019924916473,
+      "coverage": 0.8004,
+      "coverage_ci_low": 0.79495,
+      "coverage_ci_high": 0.8059,
+      "n": 20000,
+      "n_accepted": 16008,
+      "n_resamples": 10000
+     },
+     "violates_alpha": false,
+     "coverage_minus_kernel_rule": {
+      "point": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0
+     },
+     "decisions_differing_from_kernel_rule": 0.0
+    },
+    "qat_mps": {
+     "certified": true,
+     "tau": -1.9779536724090576,
+     "cal_coverage": 0.79795,
+     "cal_risk": 0.008521837207845103,
+     "shipped_test": {
+      "risk": 0.008496282876241644,
+      "risk_ci_low": 0.007091746358761667,
+      "risk_ci_high": 0.009960221380976715,
+      "coverage": 0.80035,
+      "coverage_ci_low": 0.7949,
+      "coverage_ci_high": 0.80585,
+      "n": 20000,
+      "n_accepted": 16007,
+      "n_resamples": 10000
+     },
+     "violates_alpha": false,
+     "coverage_minus_kernel_rule": {
+      "point": -4.999999999999449e-05,
+      "ci_low": -0.0001500000000000945,
+      "ci_high": 0.0
+     },
+     "decisions_differing_from_kernel_rule": 5e-05
+    }
+   }
+  },
+  "tel_S_w2": {
+   "model": "models/tel-mlx-S-w2",
+   "fp32_model": "models/tel-mlx-S-fp",
+   "kernel": "build/tel_S_w2/ss_cli",
+   "pool_sha256": "e06a4a53395c4486d3166ef7c06ca9df842d4e99a55efe9edd82c9aa88d5a28c",
+   "paths": {
+    "kernel": {
+     "certified": true,
+     "tau": -1.7900193929672241,
+     "cal_coverage": 0.79765,
+     "cal_risk": 0.00821162163856328,
+     "shipped_test": {
+      "risk": 0.00887056471764118,
+      "risk_ci_low": 0.007454328730419074,
+      "risk_ci_high": 0.010360155848065784,
+      "coverage": 0.8004,
+      "coverage_ci_low": 0.79485,
+      "coverage_ci_high": 0.80585,
+      "n": 20000,
+      "n_accepted": 16008,
+      "n_resamples": 10000
+     },
+     "violates_alpha": false,
+     "coverage_minus_kernel_rule": {
+      "point": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0
+     },
+     "decisions_differing_from_kernel_rule": 0.0
+    },
+    "fp32_student": {
+     "certified": true,
+     "tau": -0.19133755564689636,
+     "cal_coverage": 0.79115,
+     "cal_risk": 0.007267901156544271,
+     "shipped_test": {
+      "risk": 0.005429635709325083,
+      "risk_ci_low": 0.0042972631809302005,
+      "risk_ci_high": 0.006604478438467957,
+      "coverage": 0.79195,
+      "coverage_ci_low": 0.7863,
+      "coverage_ci_high": 0.79755,
+      "n": 20000,
+      "n_accepted": 15839,
+      "n_resamples": 10000
+     },
+     "violates_alpha": false,
+     "coverage_minus_kernel_rule": {
+      "point": -0.008449999999999958,
+      "ci_low": -0.009750000000000036,
+      "ci_high": -0.007199999999999984
+     },
+     "decisions_differing_from_kernel_rule": 0.00845
+    },
+    "qat_cpu": {
+     "certified": true,
+     "tau": -1.8490374088287354,
+     "cal_coverage": 0.7978,
+     "cal_risk": 0.008335422411631987,
+     "shipped_test": {
+      "risk": 0.00893247548254107,
+      "risk_ci_low": 0.007506098705197973,
+      "risk_ci_high": 0.010425120169798364,
+      "coverage": 0.80045,
+      "coverage_ci_low": 0.7949,
+      "coverage_ci_high": 0.8059,
+      "n": 20000,
+      "n_accepted": 16009,
+      "n_resamples": 10000
+     },
+     "violates_alpha": false,
+     "coverage_minus_kernel_rule": {
+      "point": 4.999999999999449e-05,
+      "ci_low": 0.0,
+      "ci_high": 0.0001500000000000945
+     },
+     "decisions_differing_from_kernel_rule": 5e-05
+    },
+    "qat_mps": {
+     "certified": true,
+     "tau": -1.9038563966751099,
+     "cal_coverage": 0.79775,
+     "cal_risk": 0.008335944844876214,
+     "shipped_test": {
+      "risk": 0.00893247548254107,
+      "risk_ci_low": 0.007506098705197973,
+      "risk_ci_high": 0.010425120169798364,
+      "coverage": 0.80045,
+      "coverage_ci_low": 0.7949,
+      "coverage_ci_high": 0.8059,
+      "n": 20000,
+      "n_accepted": 16009,
+      "n_resamples": 10000
+     },
+     "violates_alpha": false,
+     "coverage_minus_kernel_rule": {
+      "point": 4.999999999999449e-05,
+      "ci_low": 0.0,
+      "ci_high": 0.0001500000000000945
+     },
+     "decisions_differing_from_kernel_rule": 5e-05
+    }
+   }
+  },
+  "tel_M_w4": {
+   "model": "models/tel-mlx-M-w4",
+   "fp32_model": "models/tel-mlx-M-fp",
+   "kernel": "build/tel_M_w4/ss_cli",
+   "pool_sha256": "e06a4a53395c4486d3166ef7c06ca9df842d4e99a55efe9edd82c9aa88d5a28c",
+   "paths": {
+    "kernel": {
+     "certified": true,
+     "tau": -3.1807548999786377,
+     "cal_coverage": 0.7976,
+     "cal_risk": 0.0035732196589769306,
+     "shipped_test": {
+      "risk": 0.0033151935947957714,
+      "risk_ci_low": 0.002446053544422914,
+      "risk_ci_high": 0.0042302105606585585,
+      "coverage": 0.79935,
+      "coverage_ci_low": 0.79384875,
+      "coverage_ci_high": 0.8049,
+      "n": 20000,
+      "n_accepted": 15987,
+      "n_resamples": 10000
+     },
+     "violates_alpha": false,
+     "coverage_minus_kernel_rule": {
+      "point": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0
+     },
+     "decisions_differing_from_kernel_rule": 0.0
+    },
+    "fp32_student": {
+     "certified": true,
+     "tau": -2.167616844177246,
+     "cal_coverage": 0.7965,
+     "cal_risk": 0.0035153797865662274,
+     "shipped_test": {
+      "risk": 0.0033151935947957714,
+      "risk_ci_low": 0.002446053544422914,
+      "risk_ci_high": 0.0042302105606585585,
+      "coverage": 0.79935,
+      "coverage_ci_low": 0.79384875,
+      "coverage_ci_high": 0.8049,
+      "n": 20000,
+      "n_accepted": 15987,
+      "n_resamples": 10000
+     },
+     "violates_alpha": false,
+     "coverage_minus_kernel_rule": {
+      "point": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0
+     },
+     "decisions_differing_from_kernel_rule": 0.0
+    },
+    "qat_cpu": {
+     "certified": true,
+     "tau": -3.0923781394958496,
+     "cal_coverage": 0.79755,
+     "cal_risk": 0.003636135665475519,
+     "shipped_test": {
+      "risk": 0.0033151935947957714,
+      "risk_ci_low": 0.002446053544422914,
+      "risk_ci_high": 0.0042302105606585585,
+      "coverage": 0.79935,
+      "coverage_ci_low": 0.79384875,
+      "coverage_ci_high": 0.8049,
+      "n": 20000,
+      "n_accepted": 15987,
+      "n_resamples": 10000
+     },
+     "violates_alpha": false,
+     "coverage_minus_kernel_rule": {
+      "point": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0
+     },
+     "decisions_differing_from_kernel_rule": 0.0
+    },
+    "qat_mps": {
+     "certified": true,
+     "tau": -3.139155387878418,
+     "cal_coverage": 0.79745,
+     "cal_risk": 0.003511191924258574,
+     "shipped_test": {
+      "risk": 0.0033151935947957714,
+      "risk_ci_low": 0.002446053544422914,
+      "risk_ci_high": 0.0042302105606585585,
+      "coverage": 0.79935,
+      "coverage_ci_low": 0.79384875,
+      "coverage_ci_high": 0.8049,
+      "n": 20000,
+      "n_accepted": 15987,
+      "n_resamples": 10000
+     },
+     "violates_alpha": false,
+     "coverage_minus_kernel_rule": {
+      "point": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0
+     },
+     "decisions_differing_from_kernel_rule": 0.0
+    }
+   }
+  },
+  "tel_M_w3": {
+   "model": "models/tel-mlx-M-w3",
+   "fp32_model": "models/tel-mlx-M-fp",
+   "kernel": "build/tel_M_w3/ss_cli",
+   "pool_sha256": "e06a4a53395c4486d3166ef7c06ca9df842d4e99a55efe9edd82c9aa88d5a28c",
+   "paths": {
+    "kernel": {
+     "certified": true,
+     "tau": -2.8321337699890137,
+     "cal_coverage": 0.79705,
+     "cal_risk": 0.003199297409196412,
+     "shipped_test": {
+      "risk": 0.0038153615211408555,
+      "risk_ci_low": 0.0028859938338641057,
+      "risk_ci_high": 0.004805599459982366,
+      "coverage": 0.7994,
+      "coverage_ci_low": 0.7939487500000001,
+      "coverage_ci_high": 0.80495,
+      "n": 20000,
+      "n_accepted": 15988,
+      "n_resamples": 10000
+     },
+     "violates_alpha": false,
+     "coverage_minus_kernel_rule": {
+      "point": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0
+     },
+     "decisions_differing_from_kernel_rule": 0.0
+    },
+    "fp32_student": {
+     "certified": true,
+     "tau": -2.167616844177246,
+     "cal_coverage": 0.7965,
+     "cal_risk": 0.0035153797865662274,
+     "shipped_test": {
+      "risk": 0.0038153615211408555,
+      "risk_ci_low": 0.0028859938338641057,
+      "risk_ci_high": 0.004805599459982366,
+      "coverage": 0.7994,
+      "coverage_ci_low": 0.7939487500000001,
+      "coverage_ci_high": 0.80495,
+      "n": 20000,
+      "n_accepted": 15988,
+      "n_resamples": 10000
+     },
+     "violates_alpha": false,
+     "coverage_minus_kernel_rule": {
+      "point": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0
+     },
+     "decisions_differing_from_kernel_rule": 0.0
+    },
+    "qat_cpu": {
+     "certified": true,
+     "tau": -2.0547797679901123,
+     "cal_coverage": 0.7969,
+     "cal_risk": 0.0031998996109925963,
+     "shipped_test": {
+      "risk": 0.0038153615211408555,
+      "risk_ci_low": 0.0028859938338641057,
+      "risk_ci_high": 0.004805599459982366,
+      "coverage": 0.7994,
+      "coverage_ci_low": 0.7939487500000001,
+      "coverage_ci_high": 0.80495,
+      "n": 20000,
+      "n_accepted": 15988,
+      "n_resamples": 10000
+     },
+     "violates_alpha": false,
+     "coverage_minus_kernel_rule": {
+      "point": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0
+     },
+     "decisions_differing_from_kernel_rule": 0.0
+    },
+    "qat_mps": {
+     "certified": true,
+     "tau": -2.2263436317443848,
+     "cal_coverage": 0.79725,
+     "cal_risk": 0.003449357165255566,
+     "shipped_test": {
+      "risk": 0.0038153615211408555,
+      "risk_ci_low": 0.0028859938338641057,
+      "risk_ci_high": 0.004805599459982366,
+      "coverage": 0.7994,
+      "coverage_ci_low": 0.7939487500000001,
+      "coverage_ci_high": 0.80495,
+      "n": 20000,
+      "n_accepted": 15988,
+      "n_resamples": 10000
+     },
+     "violates_alpha": false,
+     "coverage_minus_kernel_rule": {
+      "point": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0
+     },
+     "decisions_differing_from_kernel_rule": 0.0
+    }
+   }
+  },
+  "tel_M_w2": {
+   "model": "models/tel-mlx-M-w2",
+   "fp32_model": "models/tel-mlx-M-fp",
+   "kernel": "build/tel_M_w2/ss_cli",
+   "pool_sha256": "e06a4a53395c4486d3166ef7c06ca9df842d4e99a55efe9edd82c9aa88d5a28c",
+   "paths": {
+    "kernel": {
+     "certified": true,
+     "tau": -2.430750608444214,
+     "cal_coverage": 0.7976,
+     "cal_risk": 0.0029463390170511535,
+     "shipped_test": {
+      "risk": 0.0031871016122984627,
+      "risk_ci_low": 0.002320614901119175,
+      "risk_ci_high": 0.0040683482506102524,
+      "coverage": 0.8001,
+      "coverage_ci_low": 0.79455,
+      "coverage_ci_high": 0.8056,
+      "n": 20000,
+      "n_accepted": 16002,
+      "n_resamples": 10000
+     },
+     "violates_alpha": false,
+     "coverage_minus_kernel_rule": {
+      "point": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0
+     },
+     "decisions_differing_from_kernel_rule": 0.0
+    },
+    "fp32_student": {
+     "certified": true,
+     "tau": -2.167616844177246,
+     "cal_coverage": 0.7965,
+     "cal_risk": 0.0035153797865662274,
+     "shipped_test": {
+      "risk": 0.0031248046997062683,
+      "risk_ci_low": 0.0022545019594605617,
+      "risk_ci_high": 0.004007037365489807,
+      "coverage": 0.80005,
+      "coverage_ci_low": 0.79449875,
+      "coverage_ci_high": 0.80555,
+      "n": 20000,
+      "n_accepted": 16001,
+      "n_resamples": 10000
+     },
+     "violates_alpha": false,
+     "coverage_minus_kernel_rule": {
+      "point": -4.999999999999449e-05,
+      "ci_low": -0.0001500000000000945,
+      "ci_high": 0.0
+     },
+     "decisions_differing_from_kernel_rule": 5e-05
+    },
+    "qat_cpu": {
+     "certified": true,
+     "tau": -2.8606698513031006,
+     "cal_coverage": 0.79775,
+     "cal_risk": 0.0030084612973989345,
+     "shipped_test": {
+      "risk": 0.0031871016122984627,
+      "risk_ci_low": 0.002320614901119175,
+      "risk_ci_high": 0.0040683482506102524,
+      "coverage": 0.8001,
+      "coverage_ci_low": 0.79455,
+      "coverage_ci_high": 0.8056,
+      "n": 20000,
+      "n_accepted": 16002,
+      "n_resamples": 10000
+     },
+     "violates_alpha": false,
+     "coverage_minus_kernel_rule": {
+      "point": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0
+     },
+     "decisions_differing_from_kernel_rule": 0.0
+    },
+    "qat_mps": {
+     "certified": true,
+     "tau": -2.7652153968811035,
+     "cal_coverage": 0.79785,
+     "cal_risk": 0.003070752647740803,
+     "shipped_test": {
+      "risk": 0.0031871016122984627,
+      "risk_ci_low": 0.002320614901119175,
+      "risk_ci_high": 0.0040683482506102524,
+      "coverage": 0.8001,
+      "coverage_ci_low": 0.79455,
+      "coverage_ci_high": 0.8056,
+      "n": 20000,
+      "n_accepted": 16002,
+      "n_resamples": 10000
+     },
+     "violates_alpha": false,
+     "coverage_minus_kernel_rule": {
+      "point": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0
+     },
+     "decisions_differing_from_kernel_rule": 0.0
+    }
+   }
+  }
+ }
+}

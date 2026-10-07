@@ -1,0 +1,55 @@
+{
+ "model": "models/modernbert-base-civil",
+ "revision": "local:c99f27f558339d07",
+ "pools": {
+  "dev": 2000,
+  "cal": 4000,
+  "test": 4000
+ },
+ "token_ids_sha256": "897a2fdfcd092d1a78496f7ee90e439805ec210b3f3e0426e5af2e0266fce179",
+ "seed": 20260926,
+ "max_len": 256,
+ "label_rate": {
+  "dev": 0.925,
+  "cal": 0.9185,
+  "test": 0.9205
+ },
+ "paths": {
+  "torch_cpu_fp32_b1": {
+   "ok": true,
+   "seconds": 304.7
+  },
+  "torch_cpu_fp32_b32": {
+   "ok": true,
+   "seconds": 242.2
+  },
+  "torch_mps_fp16_b32": {
+   "ok": true,
+   "seconds": 52.0
+  },
+  "ort_fp32_t1": {
+   "ok": true,
+   "seconds": 1649.9
+  },
+  "ort_fp32_t8": {
+   "ok": true,
+   "seconds": 338.6
+  },
+  "ort_int8_dynamic": {
+   "ok": true,
+   "seconds": 188.1
+  },
+  "coreml_fp16": {
+   "ok": true,
+   "seconds": 185.4
+  },
+  "ort_int8_perchannel": {
+   "ok": true,
+   "seconds": 193.3
+  },
+  "ort_int8_matmul_only": {
+   "ok": true,
+   "seconds": 174.3
+  }
+ }
+}

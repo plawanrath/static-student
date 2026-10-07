@@ -1,0 +1,11 @@
+{
+ "platform": "Linux-7.0.0-1013-aws-x86_64-with-glibc2.39",
+ "machine": "x86_64",
+ "python": "3.12.3",
+ "cpu": "Intel(R) Xeon(R) Platinum 8488C",
+ "numpy": "2.4.6",
+ "onnxruntime": "1.30.0",
+ "torch": "2.14.0+cpu",
+ "transformers": "5.17.0",
+ "cc": "cc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0"
+}

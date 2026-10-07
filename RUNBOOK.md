@@ -34,6 +34,19 @@ bash scripts/data/fetch_logevol.sh                                           # L
 git clone https://github.com/ua-parser/uap-core.git data/raw/uap-core        # full history; scripts pin the commit
 ```
 
+## 2b. Released checkpoints instead of training
+
+Every `models/<name>/` directory below is published as `plawanrath/static-student-<name>` on the Hugging Face Hub
+(collection: https://huggingface.co/collections/plawanrath/static-student). To skip the training rows:
+
+```bash
+.venv/bin/python scripts/release/download_hf.py tel-mlx-S-w4 tel-mlx-S-fp     # -> models/<name>/, ready for the commands below
+.venv/bin/python scripts/release/download_hf.py --all                        # all 25 (2.5 GB)
+```
+
+To regenerate the release from local `models/`: `scripts/release/export_hf.py` writes `release/<name>/` (safetensors,
+config, model card) and `scripts/release/upload_hf.py` creates or updates the Hub repos and the collection.
+
 ## 3. Experiments
 
 One runner per experiment under `scripts/wNN_*.py`, writing `results/wNN_<exp>/` (summary JSON + per-row JSONL).
@@ -58,10 +71,17 @@ Long runs: `.venv/bin/python scripts/... 2>&1 | tee logs/<name>.log`.
 | `models/tel-stub12k-v2-{S,XS}-w{4,3,2}/` (QAT ladder, each stage distilled from the float student; about 5 h) | `bash scripts/w02_qat_chain.sh` |
 | `data/curriculum/telemetry-mlx-s0-x12k/`, `models/tel-mlx-*`, `results/w02_certify_pilot_tel-mlx-*/` (teacher curriculum expanded with drift rewrites; S and XS; 4/3/2-bit ladder; one certificate per model; about 5 h) | `bash scripts/w02_teacher_students_chain.sh` |
 | `build/gen_<model>/` + `results/w03_kernel_parity_<model>/` (generate C, build it, compare the kernel with the NumPy reference bit for bit and with the float model) | `.venv/bin/python scripts/w03_kernel_parity.py --model models/tel-mlx-S-w4 --n 10000` |
+| `results/w02_cert_transfer/` (a threshold calibrated on the 32-bit student, the QAT model on CPU, and on the Apple GPU, applied to the compiled kernel of all nine shipped configurations; needs `build/tel_*` from `w03_build_all.sh`) | `.venv/bin/python scripts/w02_cert_transfer.py` |
+| `results/w02_cert_gap_pilot/` (threshold calibrated on fp32 PyTorch, applied on ORT fp32/int8, MPS fp16, Core ML; 4 public/fine-tuned encoders) | `.venv/bin/python scripts/w02_finetune_modernbert.py --size base && .venv/bin/python scripts/w02_cert_gap_pilot.py --model all` |
+| `results/w02_contract_search_spike/` (8 ORT artifacts per model, 200 re-splits, four routes; needs the pilot's scores) | `caffeinate -dimsu .venv/bin/python scripts/w02_contract_search_spike.py` |
+| `models/modernbert-{base,large}-civil/` (fine-tune on Civil Comments; base 13 min, large 29 min on MPS) | `.venv/bin/python scripts/w02_finetune_modernbert.py --size large --lr 2e-5` |
+| `build/mb_toxicity_large_w8/`, `results/w03_modernbert_toxicity_large_w8/` (compile ModernBERT-large as constants, parity vs the integer reference, accuracy vs fp32, guarantee record; 26 min) | `.venv/bin/python scripts/w03_modernbert_build.py --model toxicity_large --bits 8 --jobs 16` |
+| `build/x86_bundle/` → `results/w03_x86/<machine>/` → `results/w03_x86/compare_*.json` (re-derive every guarantee on a second machine from identical bytes) | `.venv/bin/python scripts/w03_x86_reproduce.py export`, then `run --tag <machine>` on each machine, then `compare --ref <a> --other <b>` |
 | retrain every QAT stage under ADR-0009, certify each, then run both parity checks (about 3 h) | `bash scripts/w03_requantize_chain.sh` |
 | `build/<name>/ss_hybrid` (one command from a spec line and a trained student to a certified binary; no binary if the contract cannot be certified) | `.venv/bin/python -m static_student.build --spec specs/telemetry.spec --model models/tel-mlx-S-w4 --out build/tel_S_w4` |
 | the certificate carried by a built binary | `build/<name>/ss_hybrid --certificate` |
-| `results/w03_startup/` (start-to-first-struct for the null binary, every built configuration and ONNX Runtime, measured by a C parent) | `.venv/bin/python scripts/w03_startup.py --launches 400` |
+| `results/w03_startup/` (start-to-first-struct for the null binary, every built configuration and ONNX Runtime, measured by a C parent) | `.venv/bin/python scripts/w03_startup.py --launches 1000` (idle machine; needs the two rows below first, or ONNX Runtime is silently left out) |
 | `build/onnx/<name>/student.onnx` (export for the engine baselines) | `.venv/bin/python -m static_student.export_onnx --model models/tel-mlx-S-fp --out build/onnx/tel_S_fp` |
+| `build/ort_first_struct` (the ONNX Runtime start-up host; needs `brew install onnxruntime re2` and `make -C csrc`) | `ORT=$(brew --prefix onnxruntime); cc -O3 -std=c11 -Icsrc -c csrc/ss_struct.c -o build/ss_struct_ort.o && c++ -O3 -std=c++17 -Icsrc -I$ORT/include/onnxruntime csrc/baselines/ort_first_struct.cc build/ss_struct_ort.o build/legacy_telemetry.o -L$ORT/lib -lonnxruntime -Wl,-rpath,$ORT/lib $(pkg-config --libs re2) -o build/ort_first_struct` |
 | a certified binary for every configuration | `bash scripts/w03_build_all.sh` |
-| `results/w03_throughput/` (per-payload latency and throughput against the legacy parser, swept over no-match rate, audit probability with and without the asynchronous queue, and student budget) | `.venv/bin/python scripts/w03_throughput.py --model S_w4 --n 200000` |
+| `results/w03_throughput/` (per-payload latency and throughput against the legacy parser, swept over no-match rate, audit probability with and without the asynchronous queue, and student budget) | `.venv/bin/python scripts/w03_throughput.py --model S_w4 --n 50000` (idle machine) |

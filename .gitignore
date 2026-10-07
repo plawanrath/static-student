@@ -11,7 +11,7 @@ CLAUDE.local.md
 venv/
 .env
 .env.*
-models/
+models/*
 checkpoints/
 wandb/
 outputs/
@@ -44,3 +44,10 @@ data/curriculum/telemetry-stub-s3-12k/families.jsonl
 # third-party downloads whose source may disappear: never tracked; they travel in the private state bundle only
 data/irreplaceable/
 data/curriculum/telemetry-mlx-s0-x12k/families.jsonl
+# compiled artifacts copied into result bundles by scripts/w03_x86_reproduce.py; the JSON/TXT records next to them are tracked
+results/**/ss_cli
+results/**/*.o
+results/**/*.npz
+# local export of the released checkpoints (scripts/release/export_hf.py)
+/release/
+!models/README.md

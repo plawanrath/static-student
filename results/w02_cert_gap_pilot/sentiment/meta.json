@@ -1,0 +1,55 @@
+{
+ "model": "distilbert/distilbert-base-uncased-finetuned-sst-2-english",
+ "revision": "714eb0fa89d2f80546fda750413ed43d93601a13",
+ "pools": {
+  "dev": 2000,
+  "cal": 4000,
+  "test": 4000
+ },
+ "token_ids_sha256": "1c8c4c828ae6e82b600bcb9287fa927f8835945b77a69a707ea5bd923cddd6ce",
+ "seed": 20260926,
+ "max_len": 256,
+ "label_rate": {
+  "dev": 0.5235,
+  "cal": 0.5045,
+  "test": 0.508
+ },
+ "paths": {
+  "torch_cpu_fp32_b1": {
+   "ok": true,
+   "seconds": 85.0
+  },
+  "torch_cpu_fp32_b32": {
+   "ok": true,
+   "seconds": 17.6
+  },
+  "torch_mps_fp16_b32": {
+   "ok": true,
+   "seconds": 5.3
+  },
+  "ort_fp32_t1": {
+   "ok": true,
+   "seconds": 236.8
+  },
+  "ort_fp32_t8": {
+   "ok": true,
+   "seconds": 45.9
+  },
+  "ort_int8_dynamic": {
+   "ok": true,
+   "seconds": 23.1
+  },
+  "coreml_fp16": {
+   "ok": true,
+   "seconds": 84.0
+  },
+  "ort_int8_perchannel": {
+   "ok": true,
+   "seconds": 25.2
+  },
+  "ort_int8_matmul_only": {
+   "ok": true,
+   "seconds": 23.6
+  }
+ }
+}

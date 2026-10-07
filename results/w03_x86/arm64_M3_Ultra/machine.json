@@ -1,0 +1,11 @@
+{
+ "platform": "macOS-26.5-arm64-arm-64bit",
+ "machine": "arm64",
+ "python": "3.11.11",
+ "cpu": "Apple M3 Ultra",
+ "numpy": "2.4.6",
+ "onnxruntime": "1.30.0",
+ "torch": "2.14.0",
+ "transformers": "5.17.0",
+ "cc": "Apple clang version 17.0.0 (clang-1700.0.13.5)"
+}

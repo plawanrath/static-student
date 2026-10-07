@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this code or these checkpoints, please cite them as below."
+type: software
+title: "static-student: Weights as Constants — compiling distilled task models into executables as read-only data"
+authors:
+  - family-names: Rath
+    given-names: Plawan Kumar
+repository-code: "https://github.com/plawanrath/static-student"
+url: "https://github.com/plawanrath/static-student"
+license: Apache-2.0
+version: 0.1.0
+date-released: 2026-10-06
+keywords:
+  - model compilation
+  - quantization-aware training
+  - knowledge distillation
+  - selective prediction
+  - certified deferral
+  - byte-level encoder
+abstract: >-
+  A build pipeline that distills a tiny byte-level task model from a one-line spec, trains it
+  quantization-aware at 2/3/4 bit, certifies a deferral threshold on the exact integer kernel that
+  ships, and links the weights into a native binary as a read-only constant array. Released with
+  the trained student checkpoints and two fine-tuned ModernBERT toxicity classifiers. The research
+  project was concluded without a publication; code and checkpoints are released as-is.

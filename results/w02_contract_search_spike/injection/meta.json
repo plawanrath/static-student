@@ -1,0 +1,47 @@
+{
+ "model": "protectai/deberta-v3-base-prompt-injection-v2",
+ "revision": "90c9989b1a342275dd0d1a95aad283c04e075671",
+ "token_ids_sha256": "255ea575c1672ea1875862877373260e9d283d4c1e5c8cbfb7249d2a4a2edd0d",
+ "recipes": {
+  "fp32": {
+   "ok": true,
+   "bytes": 738628840,
+   "latency_ms": 22.973062499659136
+  },
+  "dyn": {
+   "ok": true,
+   "bytes": 243986035,
+   "latency_ms": 13.186562500777654
+  },
+  "dyn_pc": {
+   "ok": true,
+   "bytes": 244404969,
+   "latency_ms": 13.31712500541471
+  },
+  "dyn_mm": {
+   "ok": true,
+   "bytes": 539127965,
+   "latency_ms": 13.288458503666334
+  },
+  "dyn_mm_pc": {
+   "ok": true,
+   "bytes": 539546899,
+   "latency_ms": 13.311479502590373
+  },
+  "dyn_rr": {
+   "ok": true,
+   "bytes": 243986035,
+   "latency_ms": 13.06558300711913
+  },
+  "qdq": {
+   "ok": true,
+   "bytes": 186699442,
+   "latency_ms": 29.211854496679734
+  },
+  "qdq_pc": {
+   "ok": true,
+   "bytes": 187125524,
+   "latency_ms": 34.226833493448794
+  }
+ }
+}

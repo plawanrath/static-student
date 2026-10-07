@@ -1,0 +1,105 @@
+{
+ "other": {
+  "platform": "Linux-7.0.0-1013-aws-x86_64-with-glibc2.39",
+  "machine": "x86_64",
+  "cflags": [
+   "-O3",
+   "-std=c11",
+   "-ffp-contract=off",
+   "-march=native"
+  ]
+ },
+ "builds": {
+  "toxicity_large_w8": {
+   "outputs_byte_identical": {
+    "dev": true,
+    "cal": true,
+    "test": true
+   },
+   "records": {
+    "0.05": {
+     "other": {
+      "alpha": 0.05,
+      "delta": 0.05,
+      "min_coverage": 0.0,
+      "tau": 0.6276293992996216,
+      "n_calibration": 4000,
+      "n_accepted": 3825,
+      "k_wrong": 167,
+      "coverage": 0.95625,
+      "empirical_risk": 0.04366013071895425,
+      "p_value": 0.03696314692383612,
+      "grid_sha256": "fe85ee7e7c84fb2929420045cf3207d14edf3910524f06da78a1db9c844b5738",
+      "pool_sha256": "",
+      "thresholds_tested": 92
+     },
+     "identical_to_shipped": true
+    },
+    "0.02": {
+     "other": {
+      "alpha": 0.02,
+      "delta": 0.05,
+      "min_coverage": 0.0,
+      "tau": 0.835282027721405,
+      "n_calibration": 4000,
+      "n_accepted": 3374,
+      "k_wrong": 49,
+      "coverage": 0.8435,
+      "empirical_risk": 0.014522821576763486,
+      "p_value": 0.01075067002363711,
+      "grid_sha256": "fe85ee7e7c84fb2929420045cf3207d14edf3910524f06da78a1db9c844b5738",
+      "pool_sha256": "",
+      "thresholds_tested": 82
+     },
+     "identical_to_shipped": true
+    }
+   }
+  },
+  "toxicity_large_w4": {
+   "outputs_byte_identical": {
+    "dev": true,
+    "cal": true,
+    "test": true
+   },
+   "records": {
+    "0.05": {
+     "other": {
+      "alpha": 0.05,
+      "delta": 0.05,
+      "min_coverage": 0.0,
+      "tau": 0.6337224841117859,
+      "n_calibration": 4000,
+      "n_accepted": 3773,
+      "k_wrong": 157,
+      "coverage": 0.94325,
+      "empirical_risk": 0.04161144977471508,
+      "p_value": 0.008642393924622814,
+      "grid_sha256": "7c3bf5efa503ae57a146f4c34884e77526300d0b2f8c65f317be3e106a5d8230",
+      "pool_sha256": "",
+      "thresholds_tested": 91
+     },
+     "identical_to_shipped": true
+    },
+    "0.02": {
+     "other": {
+      "alpha": 0.02,
+      "delta": 0.05,
+      "min_coverage": 0.0,
+      "tau": 0.8240896463394165,
+      "n_calibration": 4000,
+      "n_accepted": 3303,
+      "k_wrong": 50,
+      "coverage": 0.82575,
+      "empirical_risk": 0.015137753557372086,
+      "p_value": 0.022974940688279783,
+      "grid_sha256": "7c3bf5efa503ae57a146f4c34884e77526300d0b2f8c65f317be3e106a5d8230",
+      "pool_sha256": "",
+      "thresholds_tested": 80
+     },
+     "identical_to_shipped": true
+    }
+   }
+  }
+ },
+ "H-X3_modernbert": true
+}

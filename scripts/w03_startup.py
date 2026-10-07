@@ -77,6 +77,9 @@ def main() -> None:
         onnx = REPO / "build" / "onnx" / g / "student.onnx"
         if ort_exe.exists() and onnx.exists():
             modes[f"onnxruntime_{g}"] = [str(ort_exe), str(onnx)]
+        else:
+            print(f"WARNING: ONNX Runtime baseline {g} left out: {ort_exe if not ort_exe.exists() else onnx} is missing "
+                  "(see RUNBOOK)", flush=True)
     if len(modes) == 1:
         raise SystemExit("no built binaries found: run scripts/w03_build_all.sh first")
 

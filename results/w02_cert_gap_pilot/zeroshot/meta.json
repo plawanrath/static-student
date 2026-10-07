@@ -1,0 +1,55 @@
+{
+ "model": "MoritzLaurer/deberta-v3-large-zeroshot-v2.0",
+ "revision": "cf44676c28ba7312e5c5f8f8d2c22b3e0c9cdae2",
+ "pools": {
+  "dev": 2000,
+  "cal": 4000,
+  "test": 4000
+ },
+ "token_ids_sha256": "b46bd00ecacd366f8abba7e19a6cdcea196c5040242e25d27ff74db1c8b7ebef",
+ "seed": 20260926,
+ "max_len": 256,
+ "label_rate": {
+  "dev": 0.7545,
+  "cal": 0.7475,
+  "test": 0.751
+ },
+ "paths": {
+  "torch_cpu_fp32_b1": {
+   "ok": true,
+   "seconds": 1130.6
+  },
+  "torch_cpu_fp32_b32": {
+   "ok": true,
+   "seconds": 452.0
+  },
+  "torch_mps_fp16_b32": {
+   "ok": true,
+   "seconds": 97.1
+  },
+  "ort_fp32_t1": {
+   "ok": true,
+   "seconds": 3619.0
+  },
+  "ort_fp32_t8": {
+   "ok": true,
+   "seconds": 657.7
+  },
+  "ort_int8_dynamic": {
+   "ok": true,
+   "seconds": 340.2
+  },
+  "coreml_fp16": {
+   "ok": false,
+   "error": "ValueError: Op \"scale.1\" (op_type: sqrt) Input x=\"198\" expects tensor or scalar of dtype from type domain ['fp16', 'fp32'] but got int32"
+  },
+  "ort_int8_perchannel": {
+   "ok": true,
+   "seconds": 347.2
+  },
+  "ort_int8_matmul_only": {
+   "ok": true,
+   "seconds": 337.9
+  }
+ }
+}

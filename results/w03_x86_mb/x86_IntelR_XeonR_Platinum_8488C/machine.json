@@ -1,0 +1,10 @@
+{
+ "platform": "Linux-7.0.0-1013-aws-x86_64-with-glibc2.39",
+ "machine": "x86_64",
+ "cflags": [
+  "-O3",
+  "-std=c11",
+  "-ffp-contract=off",
+  "-march=native"
+ ]
+}

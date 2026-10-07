@@ -1,0 +1,77 @@
+{
+ "model": "toxicity_large",
+ "machine": {
+  "cpu": "Apple M3 Ultra",
+  "platform": "macOS-26.5-arm64-arm-64bit"
+ },
+ "probe_inputs": 200,
+ "mean_tokens": 72.2,
+ "paths": {
+  "ours_w8_t1": {
+   "mean_ms_per_input": 746.5880902049685,
+   "start_to_first_decision_ms_median": 90.4285840006196,
+   "binary_bytes": 442969016,
+   "weight_bytes": 439499648,
+   "threads": 1
+  },
+  "ours_w8_t8": {
+   "mean_ms_per_input": 338.71210229495773,
+   "start_to_first_decision_ms_median": 38.59404149261536,
+   "binary_bytes": 442969016,
+   "weight_bytes": 439499648,
+   "threads": 8
+  },
+  "ours_w4_t1": {
+   "mean_ms_per_input": 765.2975787500327,
+   "start_to_first_decision_ms_median": 106.1779790034052,
+   "binary_bytes": 269543480,
+   "weight_bytes": 267402112,
+   "threads": 1
+  },
+  "ours_w4_t8": {
+   "mean_ms_per_input": 344.9640885400004,
+   "start_to_first_decision_ms_median": 39.11662499740487,
+   "binary_bytes": 269543480,
+   "weight_bytes": 267402112,
+   "threads": 8
+  },
+  "ort_fp32_t1": {
+   "mean_ms_per_input": 477.4511291046656,
+   "median_ms_per_input": 344.5614999945974,
+   "session_create_plus_first_ms": 969.7074169962434,
+   "model_bytes": 1584183551,
+   "threads": 1
+  },
+  "ort_fp32_t8": {
+   "mean_ms_per_input": 78.9553881341999,
+   "median_ms_per_input": 59.95620848261751,
+   "session_create_plus_first_ms": 874.7707080037799,
+   "model_bytes": 1584183551,
+   "threads": 8
+  },
+  "ort_int8_dynamic_t1": {
+   "mean_ms_per_input": 159.55994225500035,
+   "median_ms_per_input": 114.02920800901484,
+   "session_create_plus_first_ms": 498.79045799025334,
+   "model_bytes": 397287177,
+   "threads": 1
+  },
+  "ort_int8_dynamic_t8": {
+   "mean_ms_per_input": 35.29076119943056,
+   "median_ms_per_input": 27.419520993134938,
+   "session_create_plus_first_ms": 446.1644580005668,
+   "model_bytes": 397287177,
+   "threads": 8
+  },
+  "torch_fp32_t1": {
+   "mean_ms_per_input": 62.999141265754595,
+   "median_ms_per_input": 53.771666513057426,
+   "threads": 1
+  },
+  "torch_fp32_t8": {
+   "mean_ms_per_input": 60.81773458077805,
+   "median_ms_per_input": 57.36910400446504,
+   "threads": 8
+  }
+ }
+}

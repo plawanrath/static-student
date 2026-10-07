@@ -1,0 +1,47 @@
+{
+ "model": "models/modernbert-base-civil",
+ "revision": "local:c99f27f558339d07",
+ "token_ids_sha256": "897a2fdfcd092d1a78496f7ee90e439805ec210b3f3e0426e5af2e0266fce179",
+ "recipes": {
+  "fp32": {
+   "ok": true,
+   "bytes": 599052421,
+   "latency_ms": 23.615125006472226
+  },
+  "dyn": {
+   "ok": true,
+   "bytes": 150675014,
+   "latency_ms": 13.385917009145487
+  },
+  "dyn_pc": {
+   "ok": true,
+   "bytes": 151355148,
+   "latency_ms": 13.624625004013069
+  },
+  "dyn_mm": {
+   "ok": true,
+   "bytes": 266722434,
+   "latency_ms": 13.473229002556764
+  },
+  "dyn_mm_pc": {
+   "ok": true,
+   "bytes": 267402568,
+   "latency_ms": 13.426853503915481
+  },
+  "dyn_rr": {
+   "ok": true,
+   "bytes": 150675014,
+   "latency_ms": 13.315833501110319
+  },
+  "qdq": {
+   "ok": true,
+   "bytes": 151395923,
+   "latency_ms": 17.053729003237095
+  },
+  "qdq_pc": {
+   "ok": true,
+   "bytes": 152077253,
+   "latency_ms": 17.24060400010785
+  }
+ }
+}

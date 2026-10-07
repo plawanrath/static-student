@@ -1,0 +1,47 @@
+{
+ "model": "distilbert/distilbert-base-uncased-finetuned-sst-2-english",
+ "revision": "714eb0fa89d2f80546fda750413ed43d93601a13",
+ "token_ids_sha256": "1c8c4c828ae6e82b600bcb9287fa927f8835945b77a69a707ea5bd923cddd6ce",
+ "recipes": {
+  "fp32": {
+   "ok": true,
+   "bytes": 267942746,
+   "latency_ms": 4.533625004114583
+  },
+  "dyn": {
+   "ok": true,
+   "bytes": 67364068,
+   "latency_ms": 2.264999500766862
+  },
+  "dyn_pc": {
+   "ok": true,
+   "bytes": 67575462,
+   "latency_ms": 2.291395496285986
+  },
+  "dyn_mm": {
+   "ok": true,
+   "bytes": 138865388,
+   "latency_ms": 2.26668750110548
+  },
+  "dyn_mm_pc": {
+   "ok": true,
+   "bytes": 139076782,
+   "latency_ms": 2.277104496897664
+  },
+  "dyn_rr": {
+   "ok": true,
+   "bytes": 67364068,
+   "latency_ms": 2.2156464983709157
+  },
+  "qdq": {
+   "ok": true,
+   "bytes": 67438609,
+   "latency_ms": 2.859999491192866
+  },
+  "qdq_pc": {
+   "ok": true,
+   "bytes": 67656683,
+   "latency_ms": 2.8712709972751327
+  }
+ }
+}

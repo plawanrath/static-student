@@ -1,0 +1,91 @@
+{
+ "model": "toxicity_large",
+ "source": "models/modernbert-large-civil",
+ "revision": "local:5ba7e27be4f97c6d",
+ "bits": 4,
+ "weight_bytes": 267402112,
+ "weights_sha256": "7f8b6cdf95637297182ee781b64ae4991b46e1403747226534d60f6d0be7a129",
+ "kernel_sha256": "f939f9e9533aa307f52a9cbb8d1f0949f6b0024aa2f378b94da0dd6b207257eb",
+ "binary_bytes": 269560168,
+ "pools": {
+  "dev": 2000,
+  "cal": 4000,
+  "test": 4000
+ },
+ "token_ids_sha256": "897a2fdfcd092d1a78496f7ee90e439805ec210b3f3e0426e5af2e0266fce179",
+ "parity": {
+  "n": 1000,
+  "bit_exact": 1000
+ },
+ "accuracy": {
+  "float_fp32": 0.9315,
+  "kernel": 0.932,
+  "argmax_agreement": 0.989
+ },
+ "GC": {
+  "bit_exact_all": true,
+  "accuracy_within_2pp": true,
+  "pass": true
+ },
+ "guarantee": {
+  "0.05": {
+   "passes": true,
+   "record": {
+    "alpha": 0.05,
+    "delta": 0.05,
+    "min_coverage": 0.0,
+    "tau": 0.6337224841117859,
+    "n_calibration": 4000,
+    "n_accepted": 3773,
+    "k_wrong": 157,
+    "coverage": 0.94325,
+    "empirical_risk": 0.04161144977471508,
+    "p_value": 0.008642393924622814,
+    "grid_sha256": "7c3bf5efa503ae57a146f4c34884e77526300d0b2f8c65f317be3e106a5d8230",
+    "pool_sha256": "",
+    "thresholds_tested": 91
+   },
+   "test": {
+    "risk": 0.0448871181938911,
+    "risk_ci_low": 0.03837953091684435,
+    "risk_ci_high": 0.05157365776249669,
+    "coverage": 0.94125,
+    "coverage_ci_low": 0.93375,
+    "coverage_ci_high": 0.94825,
+    "n": 4000,
+    "n_accepted": 3765,
+    "n_resamples": 10000
+   }
+  },
+  "0.02": {
+   "passes": true,
+   "record": {
+    "alpha": 0.02,
+    "delta": 0.05,
+    "min_coverage": 0.0,
+    "tau": 0.8240896463394165,
+    "n_calibration": 4000,
+    "n_accepted": 3303,
+    "k_wrong": 50,
+    "coverage": 0.82575,
+    "empirical_risk": 0.015137753557372086,
+    "p_value": 0.022974940688279783,
+    "grid_sha256": "7c3bf5efa503ae57a146f4c34884e77526300d0b2f8c65f317be3e106a5d8230",
+    "pool_sha256": "",
+    "thresholds_tested": 80
+   },
+   "test": {
+    "risk": 0.01574326369966697,
+    "risk_ci_low": 0.011746899522208074,
+    "risk_ci_high": 0.020192887281494876,
+    "coverage": 0.82575,
+    "coverage_ci_low": 0.814,
+    "coverage_ci_high": 0.8375,
+    "n": 4000,
+    "n_accepted": 3303,
+    "n_resamples": 10000
+   }
+  }
+ },
+ "seconds": 1180.9
+}

@@ -1,0 +1,481 @@
+{
+ "model": "MoritzLaurer/deberta-v3-large-zeroshot-v2.0",
+ "revision": "cf44676c28ba7312e5c5f8f8d2c22b3e0c9cdae2",
+ "pools": {
+  "dev": 2000,
+  "cal": 4000,
+  "test": 4000
+ },
+ "label_rate": {
+  "dev": 0.7545,
+  "cal": 0.7475,
+  "test": 0.751
+ },
+ "failed_paths": {
+  "coreml_fp16": "ValueError: Op \"scale.1\" (op_type: sqrt) Input x=\"198\" expects tensor or scalar of dtype from type domain ['fp16', 'fp32'] but got int32"
+ },
+ "alphas": {
+  "0.05": {
+   "reference_calibrated": true,
+   "tau_ref": 0.668621941166065,
+   "ref_cal_coverage": 0.99875,
+   "paths": {
+    "ort_fp32_t1": {
+     "accept_flip": 0.0,
+     "argmax_flip": 0.0,
+     "max_abs_prob_diff": 1.2005866365294438e-05,
+     "risk_at_tau_ref": {
+      "risk": 0.014518147684605758,
+      "risk_ci_low": 0.011005433949783093,
+      "risk_ci_high": 0.018513885414060547,
+      "coverage": 0.99875,
+      "coverage_ci_low": 0.9975,
+      "coverage_ci_high": 0.99975,
+      "n": 4000,
+      "n_accepted": 3995,
+      "n_resamples": 10000
+     },
+     "risk_ci_above_alpha": false,
+     "recalibrated": {
+      "ok": true,
+      "tau": 0.6686146115726651,
+      "coverage": 0.99875,
+      "delta_cov_tau_ref_minus_own": {
+       "point": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0
+      }
+     },
+     "gap": false
+    },
+    "ort_fp32_t8": {
+     "accept_flip": 0.0,
+     "argmax_flip": 0.0,
+     "max_abs_prob_diff": 1.2005866365294438e-05,
+     "risk_at_tau_ref": {
+      "risk": 0.014518147684605758,
+      "risk_ci_low": 0.011005433949783093,
+      "risk_ci_high": 0.018513885414060547,
+      "coverage": 0.99875,
+      "coverage_ci_low": 0.9975,
+      "coverage_ci_high": 0.99975,
+      "n": 4000,
+      "n_accepted": 3995,
+      "n_resamples": 10000
+     },
+     "risk_ci_above_alpha": false,
+     "recalibrated": {
+      "ok": true,
+      "tau": 0.6686146115726651,
+      "coverage": 0.99875,
+      "delta_cov_tau_ref_minus_own": {
+       "point": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0
+      }
+     },
+     "gap": false
+    },
+    "ort_int8_dynamic": {
+     "accept_flip": 0.0065,
+     "argmax_flip": 0.0115,
+     "max_abs_prob_diff": 0.4832804290859605,
+     "risk_at_tau_ref": {
+      "risk": 0.015841086245914005,
+      "risk_ci_low": 0.012069399044505909,
+      "risk_ci_high": 0.01984924623115578,
+      "coverage": 0.99425,
+      "coverage_ci_low": 0.99175,
+      "coverage_ci_high": 0.9965,
+      "n": 4000,
+      "n_accepted": 3977,
+      "n_resamples": 10000
+     },
+     "risk_ci_above_alpha": false,
+     "recalibrated": {
+      "ok": true,
+      "tau": 0.6129468277172546,
+      "coverage": 0.99625,
+      "delta_cov_tau_ref_minus_own": {
+       "point": -0.0020000000000000018,
+       "ci_low": -0.0035000000000000586,
+       "ci_high": -0.0007500000000000284
+      }
+     },
+     "gap": false
+    },
+    "ort_int8_matmul_only": {
+     "accept_flip": 0.007,
+     "argmax_flip": 0.0105,
+     "max_abs_prob_diff": 0.4922598309790531,
+     "risk_at_tau_ref": {
+      "risk": 0.01710691823899371,
+      "risk_ci_low": 0.013101454407679668,
+      "risk_ci_high": 0.02134605725765947,
+      "coverage": 0.99375,
+      "coverage_ci_low": 0.99125,
+      "coverage_ci_high": 0.996,
+      "n": 4000,
+      "n_accepted": 3975,
+      "n_resamples": 10000
+     },
+     "risk_ci_above_alpha": false,
+     "recalibrated": {
+      "ok": true,
+      "tau": 0.5202699331138069,
+      "coverage": 0.9995,
+      "delta_cov_tau_ref_minus_own": {
+       "point": -0.005750000000000033,
+       "ci_low": -0.00824999999999998,
+       "ci_high": -0.0035000000000000586
+      }
+     },
+     "gap": false
+    },
+    "ort_int8_perchannel": {
+     "accept_flip": 0.006,
+     "argmax_flip": 0.011,
+     "max_abs_prob_diff": 0.4847354097625063,
+     "risk_at_tau_ref": {
+      "risk": 0.016838401608444332,
+      "risk_ci_low": 0.013045578008104866,
+      "risk_ci_high": 0.02088050314465409,
+      "coverage": 0.99475,
+      "coverage_ci_low": 0.99225,
+      "coverage_ci_high": 0.997,
+      "n": 4000,
+      "n_accepted": 3979,
+      "n_resamples": 10000
+     },
+     "risk_ci_above_alpha": false,
+     "recalibrated": {
+      "ok": true,
+      "tau": 0.5423621219106307,
+      "coverage": 0.99875,
+      "delta_cov_tau_ref_minus_own": {
+       "point": -0.0040000000000000036,
+       "ci_low": -0.006000000000000005,
+       "ci_high": -0.0022499999999999742
+      }
+     },
+     "gap": false
+    },
+    "torch_cpu_fp32_b1": {
+     "accept_flip": 0.0,
+     "argmax_flip": 0.0,
+     "max_abs_prob_diff": 0.0,
+     "risk_at_tau_ref": {
+      "risk": 0.014518147684605758,
+      "risk_ci_low": 0.011005433949783093,
+      "risk_ci_high": 0.018513885414060547,
+      "coverage": 0.99875,
+      "coverage_ci_low": 0.9975,
+      "coverage_ci_high": 0.99975,
+      "n": 4000,
+      "n_accepted": 3995,
+      "n_resamples": 10000
+     },
+     "risk_ci_above_alpha": false,
+     "recalibrated": {
+      "ok": true,
+      "tau": 0.668621941166065,
+      "coverage": 0.99875,
+      "delta_cov_tau_ref_minus_own": {
+       "point": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0
+      }
+     },
+     "gap": false
+    },
+    "torch_cpu_fp32_b32": {
+     "accept_flip": 0.0,
+     "argmax_flip": 0.0,
+     "max_abs_prob_diff": 1.2200130750095184e-07,
+     "risk_at_tau_ref": {
+      "risk": 0.014518147684605758,
+      "risk_ci_low": 0.011005433949783093,
+      "risk_ci_high": 0.018513885414060547,
+      "coverage": 0.99875,
+      "coverage_ci_low": 0.9975,
+      "coverage_ci_high": 0.99975,
+      "n": 4000,
+      "n_accepted": 3995,
+      "n_resamples": 10000
+     },
+     "risk_ci_above_alpha": false,
+     "recalibrated": {
+      "ok": true,
+      "tau": 0.6686220204044657,
+      "coverage": 0.99875,
+      "delta_cov_tau_ref_minus_own": {
+       "point": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0
+      }
+     },
+     "gap": false
+    },
+    "torch_mps_fp16_b32": {
+     "accept_flip": 0.0,
+     "argmax_flip": 0.0,
+     "max_abs_prob_diff": 0.0031248442024205403,
+     "risk_at_tau_ref": {
+      "risk": 0.014518147684605758,
+      "risk_ci_low": 0.011005433949783093,
+      "risk_ci_high": 0.018513885414060547,
+      "coverage": 0.99875,
+      "coverage_ci_low": 0.9975,
+      "coverage_ci_high": 0.99975,
+      "n": 4000,
+      "n_accepted": 3995,
+      "n_resamples": 10000
+     },
+     "risk_ci_above_alpha": false,
+     "recalibrated": {
+      "ok": true,
+      "tau": 0.6700147903606295,
+      "coverage": 0.99875,
+      "delta_cov_tau_ref_minus_own": {
+       "point": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0
+      }
+     },
+     "gap": false
+    }
+   }
+  },
+  "0.02": {
+   "reference_calibrated": true,
+   "tau_ref": 0.98406949243354,
+   "ref_cal_coverage": 0.981,
+   "paths": {
+    "ort_fp32_t1": {
+     "accept_flip": 0.0,
+     "argmax_flip": 0.0,
+     "max_abs_prob_diff": 1.2005866365294438e-05,
+     "risk_at_tau_ref": {
+      "risk": 0.010678871090770405,
+      "risk_ci_low": 0.007623888182973317,
+      "risk_ci_high": 0.013994910941475827,
+      "coverage": 0.98325,
+      "coverage_ci_low": 0.979,
+      "coverage_ci_high": 0.987,
+      "n": 4000,
+      "n_accepted": 3933,
+      "n_resamples": 10000
+     },
+     "risk_ci_above_alpha": false,
+     "recalibrated": {
+      "ok": true,
+      "tau": 0.9840693690915161,
+      "coverage": 0.98325,
+      "delta_cov_tau_ref_minus_own": {
+       "point": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0
+      }
+     },
+     "gap": false
+    },
+    "ort_fp32_t8": {
+     "accept_flip": 0.0,
+     "argmax_flip": 0.0,
+     "max_abs_prob_diff": 1.2005866365294438e-05,
+     "risk_at_tau_ref": {
+      "risk": 0.010678871090770405,
+      "risk_ci_low": 0.007623888182973317,
+      "risk_ci_high": 0.013994910941475827,
+      "coverage": 0.98325,
+      "coverage_ci_low": 0.979,
+      "coverage_ci_high": 0.987,
+      "n": 4000,
+      "n_accepted": 3933,
+      "n_resamples": 10000
+     },
+     "risk_ci_above_alpha": false,
+     "recalibrated": {
+      "ok": true,
+      "tau": 0.9840693690915161,
+      "coverage": 0.98325,
+      "delta_cov_tau_ref_minus_own": {
+       "point": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0
+      }
+     },
+     "gap": false
+    },
+    "ort_int8_dynamic": {
+     "accept_flip": 0.3145,
+     "argmax_flip": 0.0115,
+     "max_abs_prob_diff": 0.4832804290859605,
+     "risk_at_tau_ref": {
+      "risk": 0.004102946661693398,
+      "risk_ci_low": 0.001864975755315181,
+      "risk_ci_high": 0.006696428571428571,
+      "coverage": 0.67025,
+      "coverage_ci_low": 0.65575,
+      "coverage_ci_high": 0.68475,
+      "n": 4000,
+      "n_accepted": 2681,
+      "n_resamples": 10000
+     },
+     "risk_ci_above_alpha": false,
+     "recalibrated": {
+      "ok": true,
+      "tau": 0.8271908243456256,
+      "coverage": 0.985,
+      "delta_cov_tau_ref_minus_own": {
+       "point": -0.31475,
+       "ci_low": -0.32900000000000007,
+       "ci_high": -0.3005
+      }
+     },
+     "gap": true
+    },
+    "ort_int8_matmul_only": {
+     "accept_flip": 0.316,
+     "argmax_flip": 0.0105,
+     "max_abs_prob_diff": 0.4922598309790531,
+     "risk_at_tau_ref": {
+      "risk": 0.00485981308411215,
+      "risk_ci_low": 0.002554604972860325,
+      "risk_ci_high": 0.007613682756489226,
+      "coverage": 0.66875,
+      "coverage_ci_low": 0.65425,
+      "coverage_ci_high": 0.68375,
+      "n": 4000,
+      "n_accepted": 2675,
+      "n_resamples": 10000
+     },
+     "risk_ci_above_alpha": false,
+     "recalibrated": {
+      "ok": true,
+      "tau": 0.8410493117203263,
+      "coverage": 0.98125,
+      "delta_cov_tau_ref_minus_own": {
+       "point": -0.3125,
+       "ci_low": -0.32675,
+       "ci_high": -0.29799999999999993
+      }
+     },
+     "gap": true
+    },
+    "ort_int8_perchannel": {
+     "accept_flip": 0.31625,
+     "argmax_flip": 0.011,
+     "max_abs_prob_diff": 0.4847354097625063,
+     "risk_at_tau_ref": {
+      "risk": 0.004487658937920718,
+      "risk_ci_low": 0.002232952808495933,
+      "risk_ci_high": 0.007140172867343104,
+      "coverage": 0.6685,
+      "coverage_ci_low": 0.65375,
+      "coverage_ci_high": 0.6835,
+      "n": 4000,
+      "n_accepted": 2674,
+      "n_resamples": 10000
+     },
+     "risk_ci_above_alpha": false,
+     "recalibrated": {
+      "ok": true,
+      "tau": 0.8123908861551091,
+      "coverage": 0.9865,
+      "delta_cov_tau_ref_minus_own": {
+       "point": -0.31800000000000006,
+       "ci_low": -0.33250625,
+       "ci_high": -0.30325
+      }
+     },
+     "gap": true
+    },
+    "torch_cpu_fp32_b1": {
+     "accept_flip": 0.0,
+     "argmax_flip": 0.0,
+     "max_abs_prob_diff": 0.0,
+     "risk_at_tau_ref": {
+      "risk": 0.010678871090770405,
+      "risk_ci_low": 0.007623888182973317,
+      "risk_ci_high": 0.013994910941475827,
+      "coverage": 0.98325,
+      "coverage_ci_low": 0.979,
+      "coverage_ci_high": 0.987,
+      "n": 4000,
+      "n_accepted": 3933,
+      "n_resamples": 10000
+     },
+     "risk_ci_above_alpha": false,
+     "recalibrated": {
+      "ok": true,
+      "tau": 0.98406949243354,
+      "coverage": 0.98325,
+      "delta_cov_tau_ref_minus_own": {
+       "point": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0
+      }
+     },
+     "gap": false
+    },
+    "torch_cpu_fp32_b32": {
+     "accept_flip": 0.0,
+     "argmax_flip": 0.0,
+     "max_abs_prob_diff": 1.2200130750095184e-07,
+     "risk_at_tau_ref": {
+      "risk": 0.010678871090770405,
+      "risk_ci_low": 0.007623888182973317,
+      "risk_ci_high": 0.013994910941475827,
+      "coverage": 0.98325,
+      "coverage_ci_low": 0.979,
+      "coverage_ci_high": 0.987,
+      "n": 4000,
+      "n_accepted": 3933,
+      "n_resamples": 10000
+     },
+     "risk_ci_above_alpha": false,
+     "recalibrated": {
+      "ok": true,
+      "tau": 0.9840694961711626,
+      "coverage": 0.98325,
+      "delta_cov_tau_ref_minus_own": {
+       "point": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0
+      }
+     },
+     "gap": false
+    },
+    "torch_mps_fp16_b32": {
+     "accept_flip": 0.0,
+     "argmax_flip": 0.0,
+     "max_abs_prob_diff": 0.0031248442024205403,
+     "risk_at_tau_ref": {
+      "risk": 0.010678871090770405,
+      "risk_ci_low": 0.007623888182973317,
+      "risk_ci_high": 0.013994910941475827,
+      "coverage": 0.98325,
+      "coverage_ci_low": 0.979,
+      "coverage_ci_high": 0.987,
+      "n": 4000,
+      "n_accepted": 3933,
+      "n_resamples": 10000
+     },
+     "risk_ci_above_alpha": false,
+     "recalibrated": {
+      "ok": true,
+      "tau": 0.9840630063592165,
+      "coverage": 0.98325,
+      "delta_cov_tau_ref_minus_own": {
+       "point": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0
+      }
+     },
+     "gap": false
+    }
+   }
+  }
+ }
+}

@@ -5,3 +5,7 @@ pandas>=2.2.0
 matplotlib>=3.9.0
 pytest>=8.3.0
 pytest-xdist>=3.6.0
+# the student, quantization, release and oracle tests import torch (CPU wheels keep the CI install small)
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch>=2.6
+safetensors>=0.4

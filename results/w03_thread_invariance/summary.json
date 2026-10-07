@@ -1,0 +1,36 @@
+{
+ "model": "toxicity_large",
+ "machine": "macOS-26.5-arm64-arm-64bit",
+ "inputs": 4000,
+ "builds": {
+  "w8": {
+   "threads_1": {
+    "identical_lines": 4000,
+    "of": 4000
+   },
+   "threads_8": {
+    "identical_lines": 4000,
+    "of": 4000
+   },
+   "portable_threads_1": {
+    "identical_lines": 4000,
+    "of": 4000
+   }
+  },
+  "w4": {
+   "threads_1": {
+    "identical_lines": 4000,
+    "of": 4000
+   },
+   "threads_8": {
+    "identical_lines": 4000,
+    "of": 4000
+   },
+   "portable_threads_1": {
+    "identical_lines": 4000,
+    "of": 4000
+   }
+  }
+ },
+ "all_identical": true
+}
