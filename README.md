@@ -6,7 +6,7 @@ Compiling distilled task models into executables as read-only data.
 > research did not reach a publishable result and is not being continued. The code, the measured results and all
 > trained checkpoints are released so that the pipeline and the models can be reused. The checkpoints are on the
 > Hugging Face Hub in the collection
-> **[plawanrath/static-student](https://huggingface.co/collections/plawanrath/static-student)**; every model card
+> **[plawanrath/static-student](https://huggingface.co/collections/plawanrath/static-student-weights-as-constants-checkpoints-6ac5c510784a04a1bb253d0a)**; every model card
 > links back here. Please see [Citing](#citing) if you use any of it.
 
 ## What it does
@@ -117,6 +117,7 @@ memory and is only required to write new curricula.
   author  = {Rath, Plawan Kumar},
   title   = {static-student: Weights as Constants --- compiling distilled task models into executables as read-only data},
   year    = {2026},
+  doi     = {10.5281/zenodo.23202887},
   url     = {https://github.com/plawanrath/static-student},
   license = {Apache-2.0},
   version = {0.1.0}

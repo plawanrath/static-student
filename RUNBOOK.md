@@ -37,7 +37,7 @@ git clone https://github.com/ua-parser/uap-core.git data/raw/uap-core        # f
 ## 2b. Released checkpoints instead of training
 
 Every `models/<name>/` directory below is published as `plawanrath/static-student-<name>` on the Hugging Face Hub
-(collection: https://huggingface.co/collections/plawanrath/static-student). To skip the training rows:
+(collection: https://huggingface.co/collections/plawanrath/static-student-weights-as-constants-checkpoints-6ac5c510784a04a1bb253d0a). To skip the training rows:
 
 ```bash
 .venv/bin/python scripts/release/download_hf.py tel-mlx-S-w4 tel-mlx-S-fp     # -> models/<name>/, ready for the commands below

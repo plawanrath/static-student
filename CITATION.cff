@@ -5,6 +5,11 @@ title: "static-student: Weights as Constants — compiling distilled task models
 authors:
   - family-names: Rath
     given-names: Plawan Kumar
+doi: 10.5281/zenodo.23202887
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.23202887
+    description: Zenodo archive of the released code (concept DOI, all versions)
 repository-code: "https://github.com/plawanrath/static-student"
 url: "https://github.com/plawanrath/static-student"
 license: Apache-2.0

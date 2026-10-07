@@ -10,16 +10,15 @@ NAMESPACE = "plawanrath"
 PREFIX = "static-student-"
 GITHUB = "https://github.com/plawanrath/static-student"
 COLLECTION_TITLE = "static-student: Weights as Constants checkpoints"
-COLLECTION_DESCRIPTION = (
-    "Byte-level telemetry students (float and 4/3/2-bit QAT, XS/S/M) and two ModernBERT toxicity classifiers "
-    "from the static-student project (weights compiled into native binaries as read-only constants). "
-    f"Code, RUNBOOK and results: {GITHUB}"
+COLLECTION_DESCRIPTION = (  # the Hub caps this at 150 characters
+    "Byte-level telemetry students (float, 4/3/2-bit QAT) and ModernBERT toxicity classifiers, compiled into binaries as constants."
 )
 
 BIBTEX = """@software{rath2026staticstudent,
   author  = {Rath, Plawan Kumar},
   title   = {static-student: Weights as Constants --- compiling distilled task models into executables as read-only data},
   year    = {2026},
+  doi     = {10.5281/zenodo.23202887},
   url     = {https://github.com/plawanrath/static-student},
   license = {Apache-2.0},
   version = {0.1.0}

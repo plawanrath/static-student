@@ -3,7 +3,7 @@
 The trained checkpoints are not stored in this repository. All 25 are on the Hugging Face Hub, Apache-2.0, one repo
 per directory name, in the collection **plawanrath/static-student**:
 
-https://huggingface.co/collections/plawanrath/static-student
+https://huggingface.co/collections/plawanrath/static-student-weights-as-constants-checkpoints-6ac5c510784a04a1bb253d0a
 
 | directory here | Hub repo |
 |---|---|

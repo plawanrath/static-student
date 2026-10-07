@@ -10,7 +10,7 @@ keywords = ["model-compilation", "quantization-aware-training", "distillation", 
 
 [project.urls]
 Repository = "https://github.com/plawanrath/static-student"
-Checkpoints = "https://huggingface.co/collections/plawanrath/static-student"
+Checkpoints = "https://huggingface.co/collections/plawanrath/static-student-weights-as-constants-checkpoints-6ac5c510784a04a1bb253d0a"
 
 [build-system]
 requires = ["setuptools>=68"]
